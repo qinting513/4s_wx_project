@@ -1,0 +1,206 @@
+.my_index_body .header_box{
+    padding-bottom: 30rpx; 
+    background: white;
+    padding-top: 48rpx;
+}
+.my_index_body .header_box .person_info_box .detail_box{
+    display: flex;
+    justify-content: space-between;
+}
+.img_info_box{
+    display: flex;
+}
+.my_index_body .header_box .person_info_box .detail_box .person_img{
+    width: 116rpx;
+    height: 116rpx;
+    margin: auto  35rpx auto 38rpx;
+    border-radius: 100%;
+}
+.my_index_body .header_box .person_info_box .detail_box .info_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.my_index_body .header_box .person_info_box .detail_box .name_{
+    color: #333333;
+    font-size: 33rpx;
+    font-weight: bold;
+}
+.my_index_body .header_box .person_info_box .detail_box .level_{
+    font-size: 25rpx;
+    color: #838383;
+    margin-left: 6rpx;
+}
+.my_index_body .header_box .person_info_box .detail_box .info_box .img_{
+    width: 24rpx;
+}
+.my_index_body .header_box .person_info_box .detail_box .option_box{
+    text-align: center;
+}
+.my_index_body .header_box .person_info_box .detail_box .option_box .img_box{
+    position: relative;
+    display: inline-block;
+}
+.my_index_body .header_box .person_info_box .detail_box .option_box .dot_{
+    width: 13rpx;
+    height: 13rpx;
+    border-radius: 100%;
+    background: #FF0000;
+    position: absolute;
+    right: -5rpx;
+    top: -5rpx;
+}
+.my_index_body .header_box .person_info_box .detail_box .option_box .img_{
+    width: 40rpx;
+    margin-bottom: 30rpx;
+}
+.my_index_body .header_box .person_info_box .detail_box .option_box .get_integral{
+    color: white;
+    background: #FF0000;
+    font-size: 25rpx;
+    padding: 9rpx 12rpx 9rpx 25rpx;
+    border-radius: 40rpx 0 0 40rpx;
+}
+.my_index_body .header_box .person_info_box .edit_info_btn {
+    color: #333333;
+    font-size: 19rpx;
+    border: 2rpx solid #999999;
+    border-radius: 40rpx;
+    width: 136rpx;
+    text-align: center;
+    padding: 6rpx 0;
+    margin: 22rpx;
+}
+.my_index_body .header_box .person_info_box .tab_box{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 16rpx;
+}
+.my_index_body .header_box .person_info_box .tab_box .tab_{
+    text-align: center;
+}
+.my_index_body .header_box .person_info_box .tab_box .img_{
+    width: 56rpx;
+}
+.my_index_body .header_box .person_info_box .tab_box .text_{
+    font-size: 25rpx;
+    color: #333333;
+}
+.my_index_body .my_get_info_box{
+    background: white;
+    margin: 14rpx auto;
+    overflow: hidden;
+}
+.my_index_body .my_get_info_box .get_detail_box{
+    display: flex;
+    color: #333333;
+    font-size: 25rpx;
+    text-align: center;
+    padding: 14rpx 22rpx 44rpx;
+    justify-content: space-around;
+    border-bottom: 2rpx solid #F4F4F4;
+}
+.my_index_body .my_get_info_box .get_detail_box .detail_{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 13rpx;
+}
+.my_index_body .my_get_info_box .get_detail_box .vip_detail .img_{
+    width: 60rpx;
+    height: 53rpx;
+    margin: auto auto 25rpx;
+}
+.my_index_body .my_get_info_box .get_detail_box .detail_ .num_{
+    height: 53rpx;
+    line-height: 53rpx;
+    font-size: 33rpx;
+}
+.my_index_body .my_get_info_box .get_detail_box .coupon_detail .num_{
+    color: #333333;
+}
+.my_index_body .my_get_info_box .get_detail_box .integral_detail .num_{
+    color: #567BFF;
+}
+.my_index_body .my_get_info_box .change_box{
+    display: flex;
+    justify-content: space-between;
+    margin: 12rpx 20rpx;
+    padding: 20rpx 28rpx 20rpx 10rpx;
+    background: #F6F8FA;
+}
+.my_index_body .my_get_info_box .change_box .title_{
+    color: #333333;
+    font-size: 29rpx;
+    margin-right: 18rpx;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.my_index_body .my_get_info_box .change_box .yellow_{
+    color: #FFC41F;
+    font-size: 21rpx;
+    vertical-align: middle;
+}
+.my_index_body .my_get_info_box .change_box .btn_{
+    color: #999999;
+    font-size: 22rpx;
+    border: 2rpx solid currentColor;
+    border-radius: 44rpx;
+    line-height: 2;
+    padding: 0 22rpx;
+}
+.my_index_body .go_rise_vip{
+    background: white;
+    padding: 24rpx 20rpx 25rpx;
+}
+.my_index_body .go_rise_vip .img_{
+    width: 100%;
+    height: 215rpx;
+}
+.my_index_body .vip_tool_box{
+    background: white;
+    padding: 30rpx 0;
+    margin: 14rpx auto 83rpx;
+}
+.my_index_body .vip_tool_box .label_{
+    color: #333333;
+    font-size: 32rpx;
+    padding: 0 30rpx;
+}
+.my_index_body .vip_tool_box .detail_box{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 25rpx;
+    color: #333333;
+}
+.my_index_body .vip_tool_box .detail_box .detail_{
+    margin-top: 62rpx;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-right: 86rpx; */
+}
+.my_index_body .vip_tool_box .detail_box .detail_:nth-child(4){
+    margin-right: 0;
+}
+.my_index_body .vip_tool_box .detail_box .detail_ .img_{
+    margin-bottom: 32rpx;
+}
+.my_index_body .vip_tool_box .detail_box .detail_:nth-child(1) .img_{
+    width: 45rpx;
+}
+.my_index_body .vip_tool_box .detail_box .detail_:nth-child(2) .img_{
+    width: 40rpx;
+}
+.my_index_body .vip_tool_box .detail_box .detail_:nth-child(3) .img_{
+    width: 45rpx;
+}
+.my_index_body .vip_tool_box .detail_box .detail_:nth-child(4) .img_{
+    width: 48rpx;
+}
+.my_index_body .vip_tool_box .detail_box .detail_:nth-child(5) .img_{
+    width: 47rpx;
+}

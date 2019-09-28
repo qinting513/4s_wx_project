@@ -1,0 +1,9 @@
+@import "../../utils/wxss/page/input_sel.wxss";
+/* 头部导航 */
+.book_test_drive_body .header_box .img_{
+    height: 180rpx;
+}
+.book_test_drive_body .option_btn{
+    margin-top: 222rpx;
+    margin-bottom: 80rpx;
+}

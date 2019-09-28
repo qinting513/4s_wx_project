@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "更多积分商品",
+  "usingComponents": {
+    "GoodGoodsListComView": "../../../components/GoodGoodsListComView/GoodGoodsListComView"
+  }
+}

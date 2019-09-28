@@ -1,0 +1,7 @@
+.home_active_swiper_box{
+    width: 100%;
+}
+.home_active_swiper_box .slide_image{
+    width: 100%;
+    height: 320rpx;
+}

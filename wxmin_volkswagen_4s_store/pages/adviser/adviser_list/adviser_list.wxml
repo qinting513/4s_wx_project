@@ -1,0 +1,34 @@
+<view class="adviser_list_body">
+    <view class="detail_box">
+        <block wx:for="{{list}}" wx:key="{{item.id}}">
+            <view class="detail_" bindtap="goDetailFn" data-id="{{item.id}}">
+                <view class="img_box">
+                    <image lazy-load="true"class="img_" src="{{item.nick}}" mode="aspectFill" />
+                </view>
+                <view class="info_box">
+                    <view class="info_">
+                        <view class="label_">姓名</view>
+                        <view class="content_">{{item.name}}</view>
+                    </view>
+                    <view class="info_">
+                        <view class="label_">等级</view>
+                        <view class="content_">{{item.level}}</view>
+                    </view>
+                    <view class="info_">
+                        <view class="label_">经验</view>
+                        <view class="content_">{{item.experience}}</view>
+                    </view>
+                    <view class="info_">
+                        <view class="label_">服务台次</view>
+                        <view class="content_">{{item.number}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="no_data">
+            <text class="line_">——</text>
+            <text class="text_">已经到底了</text>
+            <text class="line_">——</text>
+        </view>
+    </view>
+</view>

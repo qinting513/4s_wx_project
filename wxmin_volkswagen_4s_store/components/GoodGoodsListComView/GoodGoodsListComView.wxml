@@ -1,0 +1,14 @@
+<view class="good_goods_list_com_view_body">
+    <block wx:for="{{list}}" wx:key="{{item}}">
+        <view class="detail_" bindtap="goGoodsDeatilFn" data-id="{{1}}">
+            <view class="img_box">
+                <image lazy-load="true" class="img_" src="{{img}}" mode="aspectFill" />
+            </view>
+            <view class="info_box">
+                <view class="name_ pubTextTwohidden">中粮每日坚果（30包）中粮每日坚果（30包）中粮每...</view>
+                <view class="price_">¥129.00</view>
+                <view class="integral_price">积分购买仅¥99.99</view>
+            </view>
+        </view>
+    </block>
+</view>

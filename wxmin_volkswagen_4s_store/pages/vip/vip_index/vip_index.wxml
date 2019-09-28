@@ -1,0 +1,48 @@
+<view class="vip_index_body vip_pub">
+    <view class="header_box">
+        <image lazy-load="true"src="{{vipBg}}" class="img_" mode="widthFix"/>
+        <view class="vip_detail_info_box">
+            <view class="vip_card_label_box">
+                <view class="name_box">
+                    <view class="chi_">大众会员俱乐部</view>
+                    <view class="eng_">DA ZHONG JULE</view>
+                </view>
+                <view class="level_">普通会员</view>
+            </view>
+            <view class="owned_info">
+                <view class="name_">嗨皮哥</view>
+                <view class="pho_">13997968123</view>
+            </view>
+            <view class="card_info">
+                <view class="car_num">卡号：39415976987</view>
+                <view class="integral_">可用积分：19998</view>
+            </view>
+            <view class="time_box">
+                <view class="time_">有效期：2019/12/31</view>
+                <view class="rechange_btn_" bindtap="goVipchargeFn">立即充值</view>
+            </view>
+        </view>
+    </view>
+    <view class="go_rise_level_box_pub" bindtap="goVipRiseFn">
+        <image lazy-load="true"src="{{ossImgAddre + 'vip/rise_level.png'}}" class="img_" mode="widthFix"/>
+    </view>
+    <view class="other_equity_box">
+        <view class="title_box">
+            <view class="title_">会员权益</view>
+            <view class="rule_">
+                <text class="text_">升级规则</text>
+                <image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />
+            </view>
+        </view>
+        <view class="has_equity_box">当前已享受<text class="num_">7</text>项权益</view>
+        <view class="detail_box">
+            <block wx:for="{{otherEquity}}" wx:key="{{item.id}}">
+                <view class="detail_">
+                    <image lazy-load="true"src="{{ossImgAddre + 'vip/' + item.img_}}" class="img_" mode="widthFix"/>
+                    <view class="label_">{{item.text}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <GoodGoodsView />
+</view>

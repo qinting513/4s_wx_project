@@ -1,0 +1,40 @@
+<view class="invite_friends_body">
+    <view class="invite_text">
+        <image lazy-load="true"class="img_" src="{{ossImgAddre + 'invite_friend/invite_friend_text.png'}}" mode="widthFix" />
+    </view>
+    <view class="my_reward_box">
+        <image lazy-load="true"class="img_" src="{{ossImgAddre + 'invite_friend/invite_friend_integral.png'}}" mode="widthFix" />
+        <view class="text_box">
+            <view class="title_">累计获得积分奖励</view>
+            <view class="num_">218</view>
+        </view>
+    </view>
+    <view class="invite_result_box">
+        <view class="title_">
+            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'invite_friend/invite_friend_title_l.png'}}" mode="widthFix" />
+            <text class="text_">邀请战绩</text>
+            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'invite_friend/invite_friend_title_r.png'}}" mode="widthFix" />
+        </view>
+        <view class="detail_box">
+            <block wx:for="{{list}}" wx:key="{{item}}">
+                <view class="detail_">
+                    <view class="info_box">
+                        <view class="img_box">
+                            <image lazy-load="true"class="img_" src="{{img}}" mode="aspectFill" />
+                        </view>
+                        <view class="name_phone_box">
+                            <view class="name_">高欢欢</view>
+                            <view class="phone_">139****9769</view>
+                        </view>
+                    </view>
+                    <view class="num_">
+                        +5
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="option_btn">
+        邀请好友
+    </view>
+</view>

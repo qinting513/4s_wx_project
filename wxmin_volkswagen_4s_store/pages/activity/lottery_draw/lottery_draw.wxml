@@ -1,0 +1,22 @@
+<view class="lottery_draw_body">
+    <view class="header_box">
+        <image class="img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/title_bg.png'}}" mode="widthFix" />
+        <swiper class="win_list_swiper_box" autoplay="true" interval="5000" duration="1000" circular="true" vertical="true" >
+            <block wx:for="{{winlistSwiper}}" wx:key="{{item.id}}">
+                <swiper-item>
+                        <view class="detail_">{{item.content}}</view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <DrawView />
+    <view class="rule_win_log_box">
+        <view class="btn_box">
+            <block wx:for="{{tabArr}}" wx:key="{{item}}">
+                <view class="btn_" bindtap="changeTabFn" data-id="{{item.id}}">{{item.text}}</view>
+            </block>
+        </view>
+        <ActivityRule wx:if="{{currentTab === 1}}"/>
+        <MyWinLogView wx:if="{{currentTab === 2}}" />
+    </view>
+</view>

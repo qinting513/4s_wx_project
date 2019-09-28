@@ -1,0 +1,13 @@
+ 
+.marquee_box {
+  position: relative;
+}
+.marquee_text {
+   white-space: nowrap;
+   position: absolute;
+   display: inline-block;
+   top: 0;
+   display: flex;
+   color: black;
+   /* font-size: 28rpx; */
+}

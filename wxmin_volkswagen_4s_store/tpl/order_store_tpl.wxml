@@ -1,0 +1,7 @@
+<template name="order_store_tpl">
+	<view class="store_detail_body">
+        <view class="name_">长沙一汽大汉4S店有限公司</view>
+        <view class="address_ detail_">长沙中南汽配城中南汽车世界E-08栋</view>
+        <view class="time_ detail_">预约时间：2019-4-20 08:30</view>
+    </view>
+</template>

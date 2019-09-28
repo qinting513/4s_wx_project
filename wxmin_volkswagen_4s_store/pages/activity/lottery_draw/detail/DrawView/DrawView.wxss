@@ -1,0 +1,92 @@
+/* 活动 */
+.lottery_draw_activity_box{
+    background: #466EFC;
+    padding: 12rpx;
+    border-radius: 20rpx;
+    font-size: 20rpx;
+    color: #63687B;
+}
+.lottery_draw_activity_box .detail_border_box{
+    background: url('https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/activity_lottery_draw/light_2.png') #6F8EFC no-repeat;
+    background-size: 100% 100%; 
+    border-radius: 20rpx;
+    padding: 38rpx;
+}
+.lottery_draw_activity_box .detail_border_box.bg_2{
+    background: url('https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/activity_lottery_draw/light_1.png') #6F8EFC no-repeat;
+    background-size: 100% 100%;
+}
+.lottery_draw_activity_box .detail_border_box .detail_box{
+    background: #3A63F6;
+    border-radius: 20rpx;
+    padding: 10rpx;
+}
+.lottery_draw_activity_box .draw_detail_box .img_{
+    width: 77rpx;
+    height: 76rpx;
+    margin-top: 26rpx;
+}
+.lottery_draw_activity_box .draw_detail_box .text_{
+    padding: 0 10rpx;
+}
+.lottery_draw_activity_box .draw_detail_box .detail_{
+    width: 156rpx;
+    height: 156rpx;
+    background: url('https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/activity_lottery_draw/squre_bg.png') no-repeat;
+    background-size:contain; 
+    border-radius: 10rpx;
+    text-align: center;
+    position: relative;
+}
+.lottery_draw_activity_box .draw_detail_box .detail_.bg_layer{
+    position: relative;
+}
+.lottery_draw_activity_box .draw_detail_box .detail_.bg_layer:before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 142rpx;
+    height: 142rpx;
+    background:rgba(0,0,0,.4);
+    top: 8rpx;
+    left: 8rpx;
+    z-index: 2;
+    border-radius: 10rpx;
+}
+.lottery_draw_activity_box .line_one_box,
+.lottery_draw_activity_box .line_three_box,
+.lottery_draw_activity_box .line_two_box{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.lottery_draw_activity_box .line_three_box{
+    flex-direction: row-reverse;
+}
+.lottery_draw_activity_box .line_two_box .left_box{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.lottery_draw_activity_box .line_two_box .left_box .detail_:nth-child(1),
+.lottery_draw_activity_box .line_two_box .right_box .detail_:nth-child(1){
+    margin-bottom: 3rpx;
+}
+.lottery_draw_activity_box .line_two_box .click_img_box .click_img_{
+    width: 312rpx;
+}
+.has_draw_num_box{
+    position: relative;
+    width: 588rpx;
+    margin: 20rpx auto;
+}
+.has_draw_num_box .img_{
+    width: 100%;
+}
+.has_draw_num_box .num_{
+    color: white;
+    font-size: 36rpx;
+    position: absolute;
+    bottom: 30rpx;
+    left: 172rpx;
+}

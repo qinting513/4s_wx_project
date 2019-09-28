@@ -1,0 +1,18 @@
+<view class="info_list_body">
+    <view class="info_list_pub">
+        <block wx:for="{{list}}" wx:key="{{item.id}}">
+            <view class="detail_" bindtap="goDetailFn" data-id="{{item.id}}">
+                <view class="left_">
+                    <view class="title_ pubTextTwohidden">{{item.title}}</view>
+                    <view class="author_time_box">
+                        <view class="author_">{{item.author}}</view>
+                        <view class="time_">{{item.time}}</view>
+                    </view>
+                </view>
+                <view class="right_">
+                    <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill" />
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

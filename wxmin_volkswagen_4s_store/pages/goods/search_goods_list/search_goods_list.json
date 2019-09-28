@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "搜索跳转列表",
+  "usingComponents": {
+    "GoodGoodsListComView": "../../../components/GoodGoodsListComView/GoodGoodsListComView"
+  }
+}

@@ -1,0 +1,3 @@
+<view class='scrollx'>
+  <view style='transform:translateX({{marquee}}px)'>{{text}}</view>
+</view>

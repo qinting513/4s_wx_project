@@ -1,0 +1,315 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.6",
+	"appid": "wx7adf1c37b367eda3",
+	"projectname": "wxmin_volkswagen_4s_store",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 39,
+			"list": [
+				{
+					"id": 0,
+					"name": "一键救援",
+					"pathName": "pages/rescue_index/rescue_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预约保养",
+					"pathName": "pages/book_maintain/book_maintain",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "热销车型",
+					"pathName": "pages/hot_sel_car_type/hot_sel_car_type",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约试驾",
+					"pathName": "pages/book_test_drive/book_test_drive",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "品牌门店",
+					"pathName": "pages/brand_store/brand_store",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "顾问列表",
+					"pathName": "pages/adviser/adviser_list/adviser_list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "顾问详情",
+					"pathName": "pages/adviser/adviser_detail/adviser_detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的车",
+					"pathName": "pages/my_car/my_car_list/my_car_list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改车辆",
+					"pathName": "pages/my_car/my_car_update/my_car_update",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "资讯列表",
+					"pathName": "pages/information/info_list/info_list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "资讯详情",
+					"pathName": "pages/information/info_detail/info_detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my_index/my_index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "编辑个人信息",
+					"pathName": "pages/my/my_info_edit/my_info_edit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "服务订单",
+					"pathName": "pages/my/ser_order/ser_order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "积分订单",
+					"pathName": "pages/my/integral_order/integral_order",
+					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "积分订单详情",
+					"pathName": "pages/my/integral_order_detail/integral_order_detail",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "服务订单详情",
+					"pathName": "pages/my/ser_order_detail/ser_order_detail",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "投诉建议",
+					"pathName": "pages/my/complaint_suggestion/complaint_suggestion",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地址列表",
+					"pathName": "pages/address/address_list/address_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加地址",
+					"pathName": "pages/address/address_add/address_add",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改地址",
+					"pathName": "pages/address/address_update/address_update",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "邀请朋友",
+					"pathName": "pages/my/invite_friends/invite_friends",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员中心",
+					"pathName": "pages/vip/vip_index/vip_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员充值",
+					"pathName": "pages/vip/vip_recharge/vip_recharge",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 24,
+					"name": "积分商品列表",
+					"pathName": "pages/goods/good_goods_list/good_goods_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 25,
+					"name": "搜索页",
+					"pathName": "pages/goods/search_goods/search_goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索商品列表页",
+					"pathName": "pages/search_goods_list/search_goods_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/goods/goods_detail/goods_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分商品下单",
+					"pathName": "pages/goods/goods_ordering/goods_ordering",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "汽车列表",
+					"pathName": "pages/car/car_list/car_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "汽车详情",
+					"pathName": "pages/car/car_detail/car_detail",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": 31,
+					"name": "汽车海报",
+					"pathName": "pages/car/car_poster/car_poster",
+					"query": "sn=1&carDetailImg=https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/demo_img/new_car2.png",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的积分",
+					"pathName": "pages/my/my_integral/my_integral",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "绑定手机号码",
+					"pathName": "pages/binding_phone/binding_phone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/authorization/authorization",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "签到",
+					"pathName": "pages/activity/sign_in/sign_in",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员升级",
+					"pathName": "pages/vip/vip_level_rise/vip_level_rise",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "抽奖",
+					"pathName": "pages/activity/lottery_draw/lottery_draw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的卡券",
+					"pathName": "pages/my/my_coupon/my_coupon",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 39,
+					"name": "测试marquee",
+					"pathName": "pages/marquue/Marquue",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

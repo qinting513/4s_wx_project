@@ -1,0 +1,36 @@
+<import src="../../../tpl/order_store_tpl.wxml" />
+<import src="../../../tpl/order_detail_info_tpl.wxml" />
+<view class="integral_order_detail_body order_detail_pub">
+    <view class="detail_box">
+        <template is="order_store_tpl" data="{{storeInfo}}"/>
+        <view class="goods_detail_body">
+            <view class="order_title"><view class="line_"></view>商品详情</view>
+            <view class="goods_detail_box">
+                <view class="goods_detail_ pub_order_goods_detail">
+                    <image lazy-load="true"class="goods_img" src="{{img}}" mode="aspectFill" />
+                    <view class="goods_info_box">
+                        <view class="name_ text_hidden_ellipsis">中粮每日坚果（30包）每日坚果..00</view>
+                        <view class="specifications_">规格：水果套餐</view>
+                        <view class="integral_">积分99.99</view>
+                    </view>
+                    <view class="num_">X1</view>
+                </view>
+                <view class="total_box">
+                    <view class="detail_">
+                        <view class="label_">商品总价</view>
+                        <view class="content_">积分99.99</view>
+                    </view>
+                    <view class="detail_">
+                        <view class="label_">实付款</view>
+                        <view class="content_">¥0.00</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <template is="order_detail_info_tpl" data="{{orderDetail}}"/>
+    </view>
+    <view class="bottom_more_btn_pub">
+        <view class="cancel_ btn gray_bg">取消预约</view>
+        <view class="contact_ btn blue_bg">联系门店</view>
+    </view>
+</view>

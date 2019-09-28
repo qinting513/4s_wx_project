@@ -1,0 +1,34 @@
+.star_model_pub .content_{
+    background: url('https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/star_model/bg.png') no-repeat;
+    background-size: 100% 100%;
+    width: 570rpx;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.star_model_pub .content_ .content_detail_box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.star_model_pub .star_img,
+.star_model_pub .close_img{
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.star_model_pub .star_img{
+    width: 250rpx;
+    top: -128rpx;
+}
+.star_model_pub .close_img{
+    width: 64rpx;
+    bottom: -147rpx;
+}
+.star_model_pub .content_ .info_box{
+    text-align: center;
+    padding: 125rpx 85rpx 16rpx;
+}

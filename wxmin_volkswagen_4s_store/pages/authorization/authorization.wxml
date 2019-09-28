@@ -1,0 +1,8 @@
+<view class="authorization_body">
+    <view class="welcom_text">欢迎加入大众会员俱乐部</view>
+    <view class="sure_box">
+        <view class="label_">请确认授权以下信息</view>
+        <view class="text_">获取你的公开信息（昵称、头像等）</view>
+    </view>
+    <view class="option_btn">微信授权</view>
+</view>

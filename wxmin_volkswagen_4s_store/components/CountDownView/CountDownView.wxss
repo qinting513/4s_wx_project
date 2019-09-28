@@ -1,0 +1,13 @@
+.send_code{
+    color: white;
+    background: #567BFF; 
+    font-size: 22rpx;
+    width: 130rpx;
+    padding: 8rpx 10rpx;
+    border-radius: 4rpx;
+    text-align: center;
+}
+.send_code.wait_{
+    background: #999999;
+    width: 150rpx;
+}

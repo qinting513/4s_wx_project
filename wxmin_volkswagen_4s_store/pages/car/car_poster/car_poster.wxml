@@ -1,0 +1,31 @@
+<view class="car_poster_body">
+    <view class="detail_box">
+        <canvas style="width:568rpx; height:828rpx;" canvas-id="shareCanvas">
+			<cover-view wx:if="{{isShowOpensetting}}" class="open_set_box">
+				<cover-view class="title_">
+					<cover-view>
+						您未开通保存图片的授权
+					</cover-view>
+					<cover-view>
+					~点击下方按钮进行设置,才可保存图片~
+					</cover-view>
+				</cover-view>
+				<cover-view class="flex_box btn_box">
+					<button class="detail_" bindtap="openSettingFn">打开设置页</button> 
+					<button class="detail_" bindtap="cancelOpenSettingFn">取消</button> 
+				</cover-view>
+			</cover-view>
+		</canvas>
+        <view class="option_btn" bindtap="savePhotoFn">
+            保存相册
+        </view>
+    </view>
+    <view class="img_bg_box">
+        <block wx:for="{{list}}" wx:key="{{item}}">
+            <view class="img_bg_ {{selBgInfo.id===item.id?'layer_':''}}" bindtap="selBgFn" data-sel-bg-info="{{item}}">
+                <image wx:if="{{selBgInfo.id===item.id}}" lazy-load="true"class="sel_img_" src="{{ossImgAddre + 'select_icon.png'}}" mode="widthFix" />
+                <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill" />
+            </view>
+        </block>
+    </view>
+</view>

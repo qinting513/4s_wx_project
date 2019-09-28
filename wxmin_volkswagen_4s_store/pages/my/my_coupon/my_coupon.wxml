@@ -1,0 +1,42 @@
+<view class="my_coupon_body">
+    <view class="pub_tab_box">
+        <block wx:for="{{tabArr}}" wx:key="{{item.id}}">
+            <view class="tab_ {{currentTab === item.id ? 'active_': ''}}" bindtap="changeTabFn" data-item="{{item}}">
+                <text class="text_">
+                    {{item.text}}
+                </text>
+            </view>
+        </block>
+    </view>
+    <view class="detail_box">
+        <block wx:for="{{4}}" wx:key="{{item}}">
+            <view class="detail_ {{index>1 ? 'is_disable_use': ''}}" bindtap="goDetailFn" data-path="INTEGRALORDERDETAIL" data-id="{{item.id}}">
+                <view class="left_">
+                    <view class="title_" wx:if="{{index===0 ||index === 3}}">
+                        <text class="num_">8</text>
+                        <text class="unit_">折</text>
+                    </view>
+                    <view class="title_ money_title" wx:if="{{index===1}}">
+                        <text class="unit_">￥</text>
+                        <text class="num_">188</text>
+                    </view>
+                    <view class="title_" wx:if="{{index===2}}">
+                        <text class="text_">免费</text>
+                    </view>
+                    <view class="des_">四轮定位使用券</view>
+                </view>
+                <view class="right_">
+                    <view class="label_">
+                        <view class="title_">使用说明：</view>
+                        <botton class="used_btn" wx:if="{{index<=1}}">使用</botton>
+                        <botton class="used_btn" wx:if="{{index>1}}">已使用</botton>
+                    </view>
+                    <view class="content_">1.满2000元可使用；2.有效期至2019-05-30；3.不可跨店使用。</view>
+                </view>
+            </view>
+        </block>
+        <view class="no_more_box">
+            没有更多优惠券了哦~~
+        </view>
+    </view>
+</view>

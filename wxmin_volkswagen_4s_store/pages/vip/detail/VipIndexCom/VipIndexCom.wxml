@@ -1,0 +1,49 @@
+<view class="vip_index_com_body">
+    <view class="vip_type_box">
+        <view class="title_">了解大众会员卡</view>
+        <swiper class="vip_type_swiper_box"
+            indicator-dots="{{false}}"
+            autoplay="{{false}}"
+            interval="{{5000}}"
+            duration="{{1000}}"
+            current="{{currentVipTap}}"
+            bindchange="swiperChange"
+            >
+            <block wx:for="{{vipTapList}}" wx:key="{{item.id}}">
+                <swiper-item class="detail_">
+                    <image lazy-load="true"src="{{item.img}}" class="slide_image {{currentVipTap==index ? 'active': ''}}" mode="widthFix"/>
+                    <view class="content_">
+                        测试
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="dots">
+            <block wx:for="{{vipTapList}}" wx:key="unique">
+            <view class="dot {{index == currentVipTap ? ' active' : ''}}"></view>
+            </block>
+        </view>
+    </view>
+    <view class="base_equity_box">
+        <block wx:for="{{baseEquity}}" wx:key="{{item.id}}">
+            <view class="detail_">
+                <image lazy-load="true"src="{{ossImgAddre + 'vip/' + item.img_}}" class="img_" mode="widthFix"/>
+                <view class="label_">{{item.text}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="other_equity_box">
+        <view class="title_">会员权益</view>
+        <view class="detail_box">
+            <block wx:for="{{otherEquity}}" wx:key="{{item.id}}">
+                <view class="detail_">
+                    <image lazy-load="true"src="{{ossImgAddre + 'vip/' + item.img_}}" class="img_" mode="widthFix"/>
+                    <view class="label_">{{item.text}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="option_btn">
+        马上开通<text class="small_">(立省800元)</text>
+    </view>
+</view>

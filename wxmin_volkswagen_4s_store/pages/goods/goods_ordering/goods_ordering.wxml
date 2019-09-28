@@ -1,0 +1,56 @@
+<view class="goods_ordering_body">
+    <view class="detail_box">
+        <view class="recive_address_box">
+            <view class="left_">
+                <view class="name_phone_box">
+                    <view class="name_">
+                        <image lazy-load="true"src="{{ossImgAddre + 'address_main.png'}}" class="address_img_" mode="widthFix"/>
+                        高欢欢
+                    </view>
+                    <view class="phone_">13969099769</view>
+                </view>
+                <view class="address_">长沙中南汽配城中南汽车世界E-08栋</view>
+            </view>
+            <view class="right_">
+                <image lazy-load="true"src="{{ossImgAddre + 'next_black.png'}}" class="next_img_" mode="widthFix"/>
+            </view>
+        </view>
+        <view class="order_info_box">
+            <view class="pub_order_goods_detail">
+                <image lazy-load="true"class="goods_img" src="{{img}}" mode="aspectFill" />
+                <view class="goods_info_box">
+                    <view class="name_ text_hidden_ellipsis">中粮每日坚果（30包）每日坚果..00</view>
+                    <view class="specifications_">规格：水果套餐</view>
+                    <view class="integral_">积分99.99</view>
+                </view>
+                <view class="num_">X1</view>
+            </view>
+            <view class="other_info_box">
+                <view class="detail_">
+                    <view class="label_">购买数量</view>
+                    <view class="content_ pub_option_num_box">
+                        <view class="opt_ reduce_ {{num===1? 'cant': ''}}" bindtap="optionNumFn" data-opt="-1">-</view>
+                        <view class="number_">{{num}}</view>
+                        <view class="opt_ add_" bindtap="optionNumFn" data-opt="1">+</view>
+                    </view>
+                </view>
+                <view class="detail_">
+                    <view class="label_">取货方式</view>
+                    <view class="content_">到店自取</view>
+                </view>
+                <view class="detail_">
+                    <view class="label_">支付方式</view>
+                    <view class="content_">积分支付</view>
+                </view>
+                <view class="detail_">
+                    <view class="label_">使用积分</view>
+                    <view class="content_">-99.99积分</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom_box">
+        <view class="total_">总计：¥0.00</view>
+        <view class="right_pay">立即支付</view>
+    </view>
+</view>

@@ -1,0 +1,37 @@
+.order_detail_pub .store_detail_body{
+    margin: 4rpx auto 2rpx;
+    background: white;
+    padding: 32rpx 42rpx 36rpx;
+}
+.order_detail_pub .store_detail_body .name_{
+    color: #333333;
+    font-size: 28rpx;
+    margin-bottom: 19rpx;
+}
+.order_detail_pub .store_detail_body .detail_{
+    font-size: 26rpx;
+    color: #999999;
+    line-height: 1.5;
+}
+.order_detail_pub .store_detail_body .address_{
+    margin-bottom: 15rpx;
+}
+.order_detail_pub .order_detail_info_body{
+    background: white;
+    padding: 20rpx 30rpx 40rpx;
+}
+.order_detail_pub .order_detail_info_body .order_title{
+    margin-bottom: 18rpx; 
+}
+.order_detail_pub .order_detail_info_body .order_detail_box{
+    padding-left: 8rpx;
+}
+.order_detail_pub .order_detail_info_body .order_detail_box .detail_{
+    display: flex;
+    color: #666666;
+    font-size: 26rpx;
+    margin-top: 28rpx;
+}
+.order_detail_pub .order_detail_info_body .order_detail_box .label_{
+    width: 188rpx;
+}

@@ -1,0 +1,16 @@
+<view class="home_tab_ad_box">
+        <!-- tab -->
+    <view class="home_tab_box">
+        <block wx:for="{{tabArr}}" wx:key="{{item.id}}">
+            <view class="detail_" data-path="{{item.path}}" bindtap="goOtherPageFn">
+                <image lazy-load="true"class="img_" src="{{item.img}}" mode="widthFix"/>
+                <view class="label">
+                    {{item.label}}
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="home_ad_box" bindtap="goLotteryDrawFn">
+        <image lazy-load="true" class="img_" src="{{ossImgAddre + 'demo_img/home_banner.png'}}" mode="aspectFill"/>
+    </view>
+</view>

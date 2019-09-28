@@ -1,0 +1,57 @@
+@import "../../../utils/wxss/page/vip_pub.wxss";
+.vip_level_rise_body .vip_type_box{
+    background: white;
+ }
+ .vip_level_rise_body .vip_type_box{
+    background: white;
+    padding-bottom: 20rpx;
+ }
+ .vip_level_rise_body .vip_type_box .vip_type_swiper_box{
+    height: 406rpx!important;
+ }
+ .vip_level_rise_body .vip_type_box .title_{
+    color: #4F6DD7;
+    font-size: 26rpx;
+    padding: 20rpx 0 27rpx;
+    text-align: center;
+ }
+ .vip_level_rise_body .vip_type_box .vip_type_swiper_box .detail_{
+    text-align: center;
+    /* padding: 20rpx; */
+    padding-bottom: 50rpx;
+    position: relative;
+ }
+ .vip_level_rise_body .vip_type_box .vip_type_swiper_box .slide_image{
+   width: 100%;
+   transform: scale(0.9);
+   transition: all 0.3s ease;
+ }
+ .vip_level_rise_body .vip_type_box .vip_type_swiper_box .slide_image.active{
+    transform: scale(1);
+ }
+ .vip_level_rise_body .vip_type_box .vip_type_swiper_box .content_{
+    position: absolute;
+    top: 0;
+ }
+ .vip_level_rise_body .vip_type_box .dots{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+ }
+ .vip_level_rise_body .vip_type_box .dots .dot{
+    width: 56rpx;
+    display: inline-flex;
+    height: 8rpx;
+    margin-left: 24rpx;
+    justify-content:space-between;
+    border-radius: 8rpx;
+    transition: all .6s;
+    background: #F4F4F4;
+ }
+ .vip_level_rise_body .vip_type_box .dots .dot.active{
+    background:#567BFF;   
+ }
+ /* 其他权益 */
+ .vip_level_rise_body .other_equity_box .title_box{
+    padding-left: 53rpx;
+ }

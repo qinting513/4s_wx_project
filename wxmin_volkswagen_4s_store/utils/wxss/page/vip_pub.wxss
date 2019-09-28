@@ -1,0 +1,71 @@
+ /* 基本权益 */
+ .vip_pub .base_equity_box{
+    width: 100%;
+    margin-top: 20rpx;
+    background: white;
+    padding: 20rpx 0 30rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4rpx 4rpx 0 rgba(12,5,31,0.2);
+    border-radius: 4rpx;
+ }
+ .vip_pub .base_equity_box .detail_{
+    text-align: center;
+    width: calc(100% / 3);
+ }
+ .vip_pub .base_equity_box .detail_:nth-child(n+4){
+    margin-top: 32rpx;
+ }
+ .vip_pub .base_equity_box .detail_:nth-child(3n){
+    margin-right: 0;
+ }
+ .vip_pub .base_equity_box .img_{
+    width: 55rpx;
+    margin-bottom: 25rpx;
+ }
+ /* 会员权益 */
+ .vip_pub .other_equity_box{
+    margin-top: 20rpx;
+    background: white;
+    padding: 46rpx 0 53rpx ;
+    font-size: 26rpx;
+    box-shadow: 0 4rpx 4rpx 0 rgba(12,5,31,0.2);
+    border-radius: 4rpx;
+ }
+ .vip_pub .other_equity_box .detail_box{
+    display: flex;
+    padding: 0 50rpx;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+ .vip_pub .other_equity_box .title_box{
+    padding: 0 20rpx 0 32rpx;
+    font-size: 33rpx;
+    font-weight: bold;
+    margin-bottom: 66rpx;
+    display: flex;
+    justify-content: space-between;
+ }
+ .vip_pub .other_equity_box .detail_{
+    width: 25%;
+    text-align: center;
+ }
+ .vip_pub .other_equity_box .detail_:nth-child(n+5){
+    margin-top: 45rpx;
+ }
+ .vip_pub .other_equity_box .detail_:nth-child(4n){
+    margin-right: 0;
+ }
+ .vip_pub .other_equity_box .img_{
+    width: 47rpx;
+    margin-bottom: 28rpx;
+ }
+ .vip_pub .option_btn{
+    margin: 55rpx auto 16rpx;
+ }
+ .vip_pub .option_btn .small_{
+    font-size: 28rpx;
+ }

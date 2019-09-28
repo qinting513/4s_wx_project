@@ -1,0 +1,75 @@
+<view class="my_index_body">
+    <view class="header_box">
+        <view class="person_info_box">
+            <view class="detail_box">
+                <view class="img_info_box">
+                    <image lazy-load="true" class="person_img" src="{{img}}" mode="aspectFill" />
+                    <view class="info_box">
+                        <view class="name_">嗨皮哥</view>
+                        <view class="level_">
+                            <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'my/vip_label.png'}}" mode="widthFix" />
+                            普通会员
+                        </view>
+                    </view>
+                </view>
+                <view class="option_box">
+                    <view class="img_box">
+                        <view class="dot_"></view>
+                        <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'call_black.png'}}" mode="widthFix" />
+                    </view>
+                    <view class="get_integral" bindtap="goOtherModelFn" data-path="SIGNIN" data-pathforce="../../activity/">
+                        签到赚积分
+                    </view>
+                </view>
+            </view>
+            <view class="edit_info_btn" bindtap="goOtherFn" data-path="MYINFOEDIT">
+                编辑个人资料
+            </view>
+            <view class="tab_box">
+                <block wx:for="{{tabArr}}" wx:key="{{item.id}}">
+                    <view class="tab_" bindtap="goOtherFn" data-path="{{item.path}}">
+                        <image lazy-load="true" class="img_" src="{{item.img}}" mode="widthFix" />
+                        <view class="text_">{{item.text}}</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="my_get_info_box">
+        <view class="get_detail_box">
+            <view class="detail_ vip_detail" bindtap="goOtherModelFn" data-path="VIPLEVELRISE" data-pathforce="../../vip/">
+                <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'my/vip.png'}}" mode="aspectFill" />
+                <view class="label_">会员权益</view>
+            </view>
+             <view class="detail_ coupon_detail" bindtap="goOtherFn" data-path="MYCOUPON">
+                <view class="num_">1</view>
+                <view class="label_">我的卡券</view>
+            </view>
+             <view class="detail_ integral_detail" bindtap="goOtherFn" data-path="MYINTEGRAL">
+                <view class="num_">4888</view>
+                <view class="label_">我的积分</view>
+            </view>
+        </view>
+        <view class="change_box">
+            <view class="change_info">
+                <text class="title_">严选好礼</text>
+                <text class="yellow_">可用会员积分兑换</text>
+            </view>
+            <view class="btn_" bindtap="goOtherModelFn" data-path="GOODGOODSLIST" data-pathforce="../../../../../">立即兑换</view>
+        </view>
+    </view>
+    <view class="go_rise_vip" bindtap="goOtherModelFn" data-path="VIPLEVELRISE" data-pathforce="../../vip/">
+        <image lazy-load="true"class="img_" src="{{img}}" mode="aspactFill" />
+    </view>
+    <view class="vip_tool_box">
+        <view class="label_">会员工具</view>
+        <view class="detail_box">
+            <block wx:for="{{vipToolArr}}" wx:key="{{item.id}}">
+                <view class="detail_" bindtap="goOtherFn" data-path="{{item.path}}">
+                    <image lazy-load="true"class="img_" src="{{item.img}}" mode="widthFix" />
+                    <view class="text_">{{item.text}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

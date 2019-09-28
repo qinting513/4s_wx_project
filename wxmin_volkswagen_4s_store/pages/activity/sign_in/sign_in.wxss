@@ -1,0 +1,105 @@
+.sign_in_body{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: white;
+}
+.sign_in_body .header_box{
+    position: relative;
+}
+.sign_in_body .header_box .img_{
+    width: 100%;
+}
+.sign_in_body .header_box .sign_in_date_box{
+    position: absolute;
+    bottom: 112rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24rpx;
+    background: #567BFF;
+    border-radius: 40rpx;
+    padding: 14rpx 24rpx;
+}
+.sign_in_body .detail_box .today_date{
+    font-size: 30rpx;
+    color: #666666;
+    font-weight: bold;
+    padding: 24rpx 22rpx 44rpx;
+}
+.sign_in_body .detail_box .week_box{
+    font-size: 22rpx;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 49rpx 44rpx;
+}
+.sign_in_body .day_box{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 6rpx;
+}
+.sign_in_body .day_box .space_{
+    width: calc(100% / 7 - 6rpx);
+    margin-right: 6rpx;
+}
+.sign_in_body .day_box .detail_{
+    width: calc(100% / 7 - 6rpx);
+    height: 92rpx;
+    margin-right: 6rpx;
+    margin-bottom: 6rpx;
+    color: #666666;
+    border: 2rpx solid #D7D7D7;
+    padding: 11rpx 11rpx 0;
+}
+.sign_in_body .day_box .detail_ .state_{
+    text-align: center;
+}
+.sign_in_body .day_box .detail_ .num_{
+    font-size: 24rpx;
+}
+.sign_in_body .day_box .detail_ .img_get_nomal{
+    width: 33rpx;
+    vertical-align: inherit;
+}
+.sign_in_body .day_box .detail_ .img_get_special{
+    width: 31rpx;
+    vertical-align: 2rpx;
+}
+.sign_in_body .day_box .missed_sign{
+    color: #999999;
+}
+.sign_in_body .day_box .missed_sign .state_{
+    font-size: 22rpx;
+    margin-top: 10rpx;
+}
+.sign_in_body .day_box .signed_{
+    background: #567BFF;
+    color: white;
+}
+.sign_in_body .warn_box{
+    color: #6CA6FF;
+    font-size: 28rpx;
+    padding: 20rpx 34rpx;
+}
+/* 提示文字 */
+.sign_in_body .warn_box .dot_{
+    display: inline-block;
+    width: 8rpx;
+    height: 8rpx;
+    background: #FF0000;
+    vertical-align: middle;
+}
+.sign_in_body .sign_btn{
+    width: 450rpx;
+    margin: 10rpx auto 47rpx;
+    text-align: center;
+    color: white;
+    padding: 27rpx;
+    border-radius: 140rpx;
+    background: #567BFF;
+}
+.sign_in_body .sign_btn.is_sign{
+    background: #D1D1D1;
+}

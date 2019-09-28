@@ -1,0 +1,86 @@
+.my_coupon_body{
+    background: #F3F3F3;
+}
+.my_coupon_body .pub_tab_box{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.my_coupon_body .detail_box{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 128rpx;
+}
+.my_coupon_body .detail_box .detail_{
+    display: flex;
+    justify-content: center;
+    width: 706rpx;
+    height: 200rpx;
+    margin: auto 30rpx 30rpx;
+    box-shadow: 0 4rpx 8rpx 0 rgba(22,1,52,0.2);
+}
+.my_coupon_body .detail_box .detail_ .left_{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 48rpx;
+    color: white;
+    background: #567BFF;
+    border-radius: 10rpx 0 0 10rpx;
+    text-align: center;
+    padding:  5rpx;
+    width: 400rpx;
+    box-shadow: 0 4rpx 8rpx 0 rgba(22,1,52,0.2);
+}
+.my_coupon_body .detail_box .detail_ .text_{
+    font-size: 36rpx;
+}
+.my_coupon_body .detail_box .detail_ .left_ .unit_,
+.my_coupon_body .detail_box .detail_ .left_ .des_{
+    font-size: 28rpx;
+}
+.my_coupon_body .detail_box .detail_ .left_ .des_{
+    margin-top: 15rpx;
+}
+.my_coupon_body .detail_box .detail_ .right_{
+    background: white;
+    padding: 27rpx 25rpx 20rpx 24rpx;
+}
+.my_coupon_body .detail_box .detail_ .right_ .content_{
+    color: #999999;
+    font-size: 24rpx;
+}
+.my_coupon_body .detail_box .detail_ .right_ .label_{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rpx;
+}
+.my_coupon_body .detail_box .detail_ .right_ .label_ .title_{
+    font-size: 28rpx;
+}
+.my_coupon_body .detail_box .detail_ .right_ .label_ .used_btn{
+    color: #567BFF;
+    font-size: 24rpx;
+    width: 120rpx;
+    text-align: center;
+    padding: 5rpx 5rpx;
+    border: 2rpx solid currentColor;
+    border-radius: 40rpx;
+}
+.my_coupon_body .detail_box .detail_.is_disable_use .left_{
+    background: #DBDBDB;
+    color: #666666;
+}
+.my_coupon_body .detail_box .detail_.is_disable_use .right_ .label_ .used_btn{
+    color: #FEFEFF;
+    background: #CBC9CA;
+    border: 0;
+}
+.my_coupon_body .no_more_box{
+    text-align: center;
+    font-size: 24rpx;
+    color: #CBC9CA;
+    margin: 10rpx auto 140rpx;
+}

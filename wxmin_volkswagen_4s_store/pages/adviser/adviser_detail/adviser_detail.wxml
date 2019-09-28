@@ -1,0 +1,25 @@
+<view class="adviser_detail_body">
+    <view class="header_box">
+        <image lazy-load="true"class="img_" src="{{img}}" mode="aspactfill" />
+    </view>
+    <view class="detail_box">
+        <view class="img_box">
+            <image lazy-load="true"class="img_" src="{{detailInfo.nick}}" mode="aspactfill" />
+        </view>
+        <view class="welcome_text">
+            你好！我是您的专属顾问
+        </view>
+        <view class="store_name">
+            长沙大众4S店
+        </view>
+        <view class="name_join">
+            市场-周星驰
+        </view>
+        <view class="tel_">
+            18979699928
+        </view>
+        <view class="call_">
+            拨打电话
+        </view>
+    </view>
+</view> 

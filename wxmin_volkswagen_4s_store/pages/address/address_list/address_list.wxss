@@ -1,0 +1,79 @@
+.address_list_body{
+    background: #F3F3F3;
+    border-top: 2rpx solid #f3f3f3;
+}
+.white_bg{
+    background: white;
+}
+.white_bg, .white_bg .bottom_btn{
+    background: white!important;
+}
+.address_list_body .detail_box .detail_{
+    background: white;
+    border-bottom: 10rpx solid #f3f3f3;
+}
+.address_list_body .address_detail_box{
+    padding: 36rpx 36rpx 26rpx;
+    border-bottom: 2rpx solid #f3f3f3;
+}
+.address_list_body .address_detail_box .name_phone{
+    display: flex;
+    justify-content: space-between;
+    color: #333333;
+    font-size: 28rpx;
+    margin-bottom: 18rpx;
+}
+.address_list_body .address_detail_box .name_phone .img_{
+    width: 26rpx;
+}
+.address_list_body .address_detail_box .address_{
+    color: #999999;
+    font-size: 26rpx;
+    line-height: 1.5;
+}
+.address_list_body .option_address_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28rpx;
+    padding: 35rpx 35rpx 33rpx 40rpx;
+    color: #999999;
+}
+.address_list_body .option_address_box .text_{
+    vertical-align: middle;
+    margin-left: 5rpx;
+}
+.address_list_body .option_address_box .detault_{
+    color: #567BFF;
+}
+.address_list_body .option_address_box .edit_address_box{
+    display: flex;
+}
+.address_list_body .option_address_box .default_img{
+    width: 30rpx;
+}
+.address_list_body .option_address_box .edit_{
+    margin-right: 44rpx;
+}
+.address_list_body .option_address_box .edit_img{
+    width: 26rpx;
+}
+.address_list_body .option_address_box .del_img_{
+    width: 28rpx;
+}
+.address_list_body .no_data_box{
+    padding-top: 92rpx;
+    text-align: center;
+    color: #333333;
+    font-size: 32rpx;
+}
+.address_list_body .no_data_box .img_{
+    width: 568rpx;
+    margin-top: 13rpx;
+}
+.address_list_body .bottom_btn_pub{
+    background: #F3F3F3;
+}
+.address_list_body .bottom_btn_pub .option_btn{
+    margin-top: 20rpx;
+}

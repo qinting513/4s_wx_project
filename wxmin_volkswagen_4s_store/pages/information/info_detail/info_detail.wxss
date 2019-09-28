@@ -1,0 +1,93 @@
+.info_detail_body{
+    background: white;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.info_detail_body .detail_box{
+    padding: 42rpx 22rpx 20rpx;
+}
+.info_detail_body .detail_box .title_box{
+    color: black;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.info_detail_body .detail_box .author_box{
+    display: flex;
+    font-size: 26rpx;
+    color: #999999;
+    padding: 36rpx 0;
+}
+.info_detail_body .detail_box .author_box .img_{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+    margin-right: 18rpx;
+}
+.info_detail_body .detail_box .author_box .name_time_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info_detail_body .detail_box .detail_info_box{
+    margin-bottom: 30rpx;
+    font-size: 30rpx;
+    color: #333333;
+}
+.info_detail_body .detail_box .detail_info_box .img_{
+    width: 100%;
+    margin-top: 30rpx;
+}
+.info_detail_body .detail_box .look_box{
+    display: flex;
+    padding-top: 20rpx;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2rpx solid #F3F3F3;
+    font-size: 26rpx;
+    color: #999999;
+}
+.info_detail_body .detail_box .look_box .look_detail_box{
+    display: flex;
+    align-items: center;
+}
+.info_detail_body .detail_box .look_box .look_img_box{
+    display: flex;
+}
+.info_detail_body .detail_box .look_box .look_img_box .img_{
+    width: 48rpx;
+    height: 48rpx;
+    border-radius: 100%;
+    margin-left: -15rpx;
+    border: 2rpx solid white;
+}
+.info_detail_body .detail_box .look_box .look_img_box .img_:nth-child(1){
+    z-index: 5;
+}
+.info_detail_body .detail_box .look_box .look_img_box .img_:nth-child(2){
+    z-index: 4;
+}
+.info_detail_body .detail_box .look_box .look_img_box .img_:nth-child(3){
+    z-index: 3;
+}
+.info_detail_body .detail_box .look_box .look_img_box .img_:nth-child(4){
+    z-index: 2;
+}
+.info_detail_body .detail_box .look_box  .look_detail_{
+    margin-left: 6rpx;
+}
+.info_detail_body .detail_box .look_box .look_detail_ .img_{
+    width: 26rpx;
+}
+.info_detail_body .about_list_box{
+    border-top: 10rpx solid #F3F3F3;
+}
+.info_detail_body .about_list_box .title_label{
+    font-size: 32rpx;
+    color: #333333;
+    padding: 30rpx 24rpx 28rpx;
+    border-bottom: 2rpx solid #F3F3F3;
+}
+.info_detail_body .about_list_box .info_list_pub{
+    margin: auto 8rpx;
+}

@@ -1,0 +1,12 @@
+.scrollx{
+    width: 100%;
+    background: #d3f2dd;
+    height: 68rpx;
+    line-height: 68rpx;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.scrollx view{
+    letter-spacing: 1px;
+    height: 68rpx;
+}

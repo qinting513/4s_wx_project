@@ -1,0 +1,55 @@
+<view class="address_add_body edit_add_pub fixed_pub_body">
+    <view class="detail_box">
+        <view class="detail_">
+            <view class="label_">联系人</view>
+            <view class="content_">
+                <input type="text" maxlength="8" placeholder="请输入联系人姓名" />
+            </view>
+        </view>
+        <view class="detail_">
+            <view class="label_">手机号</view>
+            <view class="content_">
+                <input type="number" maxlength="11" placeholder="请输入联系人手机号码" />
+            </view>
+        </view>
+        <view class="detail_">
+            <view class="label_">所在地区</view>
+            <view class="content_">
+                <picker bindchange="bindPickerStoreFn" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <view class="pick_content_">
+                        <view class="picker text_hidden_ellipsis" wx:if="{{selArea}}">
+                            <image lazy-load="true"class="address_img_" src="{{ossImgAddre + 'address_main.png'}}" mode="widthFix" />
+                            {{selArea}}
+                        </view>
+                        <view class="picker no_sel" wx:if="{{!selArea}}">
+                            <image lazy-load="true"class="address_img_" src="{{ossImgAddre + 'address_main.png'}}" mode="widthFix" />
+                            点击选择
+                        </view>
+                        <view class="next_">
+                            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />
+                        </view>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view class="detail_">
+            <view class="label_">详细地址</view>
+            <view class="content_">
+                <input type="number" maxlength="50" placeholder="请输入详细地址" />
+            </view>
+        </view>
+        <view class="address_option_box">
+            <view class="option_ default_">
+                <image lazy-load="true"class="default_img" src="{{ossImgAddre + 'sel.png'}}" mode="widthFix" />
+                默认地址
+            </view>
+            <view class="option_ wx_">
+                <image lazy-load="true"class="wx_img" src="{{ossImgAddre + 'wx_label.png'}}" mode="widthFix" />
+                一键导入微信地址
+            </view>
+        </view>
+    </view>
+    <view class="bottom_btn_pub">
+        <view class="option_btn">保存</view>
+    </view>
+</view>

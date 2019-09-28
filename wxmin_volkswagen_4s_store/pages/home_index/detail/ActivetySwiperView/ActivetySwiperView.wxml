@@ -1,0 +1,14 @@
+<view class="home_active_swiper_box">
+    <swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    >
+        <block wx:for="{{imgUrls}}" wx:key="{{item.id}}">
+            <swiper-item>
+                <image lazy-load="true"src="{{item.img}}" mode="widthFix" class="slide_image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

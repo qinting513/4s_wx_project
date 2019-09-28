@@ -1,0 +1,13 @@
+<view class="detail_box rule_box">
+    <view class="title_">
+        <image class="title_img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/rule_title.png'}}" mode="widthFix" />
+    </view>
+    <view class="detail_">
+        <view class="title_s">活动细则：</view>
+        <block wx:for="{{3}}" wx:key="{{item}}">
+            <view class="detail_s">
+                afkasfaskjfkalsdflas是打发死灵法师劳动法卡设计费卡萨丁你放假卡萨DNF阿斯顿福建卡设计费看见爱上对方碍事法师法师的发生的发生
+            </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,110 @@
+.map_page_body{
+    width: 100%;
+    color: #333333;
+    overflow: hidden;
+    background: white;
+}
+.map_current_adr{
+    padding: 10rpx 24rpx;
+    background: white;
+    font-size: 28rpx;
+}
+.map_contant map {
+    width: 100%;
+    height: 890rpx;
+}
+/* 右边操作 */
+.map_right_box{
+    position: absolute;
+    right: 8rpx;
+    top: 154rpx;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 8px 7px 1px rgba(22,1,52,0.29);
+    border-radius:10px;
+    padding: 0 24rpx;
+}
+.map_right_box .img_{
+    width: 53rpx;
+    margin-bottom: 12rpx;
+}
+.map_right_box .detail_box{
+    padding: 24rpx 0;
+}
+.map_right_box .detail_box:nth-child(1){
+    border-bottom: 2rpx solid #f4f4f4;
+}
+.map_right_box .text{
+    font-size: 28rpx;
+    color: #666666;
+    font-weight: bold;
+}
+/* 底部信息 */
+.map_bottom_box{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    background: white;
+    height: calc(100% - 890rpx -26rpx);
+    padding: 30rpx 60rpx 26rpx 24rpx;
+    bottom: 0;
+}
+.base_info_tel_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 基本信息 */
+.map_bottom_box .base_info{
+    width: 520rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.map_bottom_box .store_name{
+    font-size: 36rpx;
+}
+.map_bottom_box .store_address{
+    font-size: 28rpx;
+    line-height: 1.5;
+    margin: 32rpx auto 20rpx;
+    display: flex;
+    align-items: flex-start;
+}
+.map_bottom_box .store_address .address_img{
+    width: 22rpx;
+    margin-right: 10rpx;
+}
+/* 电话 */
+.map_bottom_box .tel_box{
+    position: relative;
+}
+.map_bottom_box .tel_box::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 2rpx;
+    height: 100%;
+    background: #F4F4F4;
+    top: 0;
+    left: -50rpx;
+}
+.map_bottom_box .tel_box .tel_img{
+    width: 80rpx;
+    height: 80rpx;
+}
+
+/* 最近距离 */
+.map_bottom_box .store_distance_lately{
+    font-size: 28rpx;
+    display: flex;
+}
+.map_bottom_box .store_distance_lately .lately_{
+    display: flex;
+    align-items: center;
+    margin-left: 114rpx;
+}
+.map_bottom_box .store_distance_lately .lately_ .next_img{
+    width: 12rpx;
+    margin-left: 10rpx;
+}

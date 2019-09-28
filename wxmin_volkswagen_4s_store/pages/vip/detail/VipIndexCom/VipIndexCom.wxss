@@ -1,0 +1,119 @@
+.vip_index_com_body .vip_type_box{
+    background: white;
+}
+.vip_index_com_body .vip_type_box{
+    background: white;
+    padding-bottom: 20rpx;
+}
+.vip_index_com_body .vip_type_box .title_{
+    color: #4F6DD7;
+    font-size: 26rpx;
+    padding: 20rpx 0 27rpx;
+    text-align: center;
+}
+.vip_index_com_body .vip_type_box .vip_type_swiper_box .detail_{
+    text-align: center;
+    padding-bottom: 50rpx;
+    position: relative;
+}
+.vip_index_com_body .vip_type_box .vip_type_swiper_box .slide_image{
+    width: 600rpx;
+    overflow: hidden;
+    transition: transform 500ms;
+    transform: scale(0.95, 0.9);  /* 因为非主图看不清，所以可以变形处理 */
+    border-radius: 8px;
+    box-shadow: 0px 6rpx 10rpx 0 rgba(179,154,139,1);
+}
+.slide_image.active{
+    transform: scale(1,1);
+}
+.vip_index_com_body .vip_type_box .vip_type_swiper_box .content_{
+    position: absolute;
+    top: 0;
+}
+.vip_index_com_body .vip_type_box .dots{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+}
+.vip_index_com_body .vip_type_box .dots .dot{
+    display: inline-flex;
+    width: 56rpx;
+    height: 8rpx;
+    margin-left: 24rpx;
+    justify-content:space-between;
+    border-radius: 8rpx;
+    transition: all .6s;
+    background: #F4F4F4;
+}
+.vip_index_com_body .vip_type_box .dots .dot.active{
+    background:#567BFF;   
+}
+/* 基本权益 */
+.vip_index_com_body .base_equity_box{
+    margin-top: 20rpx;
+    background: white;
+    padding: 20rpx 70rpx 30rpx;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 4rpx 4rpx 0 rgba(12,5,31,0.2);
+    border-radius: 4rpx;
+}
+.vip_index_com_body .base_equity_box .detail_{
+    margin-right: 150rpx;
+    text-align: center;
+}
+.vip_index_com_body .base_equity_box .detail_:nth-child(n+4){
+    margin-top: 32rpx;
+}
+.vip_index_com_body .base_equity_box .detail_:nth-child(3n){
+    margin-right: 0;
+}
+.vip_index_com_body .base_equity_box .img_{
+    width: 55rpx;
+    margin-bottom: 25rpx;
+}
+/* 其他权益 */
+.vip_index_com_body .other_equity_box{
+    margin-top: 20rpx;
+    background: white;
+    padding: 46rpx 63rpx 53rpx 102rpx;
+    font-size: 26rpx;
+    box-shadow: 0 4rpx 4rpx 0 rgba(12,5,31,0.2);
+    border-radius: 4rpx;
+}
+.vip_index_com_body .other_equity_box .detail_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8rpx;
+}
+.vip_index_com_body .other_equity_box .title_{
+    font-size: 33rpx;
+    font-weight: bold;
+    margin-bottom: 66rpx;
+}
+.vip_index_com_body .other_equity_box .detail_{
+    margin-right: 58rpx;
+    text-align: center;
+}
+.vip_index_com_body .other_equity_box .detail_:nth-child(n+5){
+    margin-top: 45rpx;
+}
+.vip_index_com_body .other_equity_box .detail_:nth-child(4n){
+    margin-right: 0;
+}
+.vip_index_com_body .other_equity_box .img_{
+    width: 47rpx;
+    margin-bottom: 28rpx;
+}
+.vip_index_com_body .option_btn{
+    margin: 55rpx auto 16rpx;
+}
+.vip_index_com_body .option_btn .small_{
+    font-size: 28rpx;
+}

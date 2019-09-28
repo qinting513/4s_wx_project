@@ -1,0 +1,19 @@
+.car_list_body{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #F3F3F3;
+}
+.car_list_body .detail_box{
+  padding: 20rpx 40rpx 100rpx;
+}
+.car_list_body .detail_box .detail_{
+  margin-bottom: 30rpx;
+  border-radius: 4rpx;
+  box-shadow: 0 5rpx 14rpx 0 rgba(22,1,52,0.5);
+}
+.car_list_body .detail_box .detail_ .img_{
+  width: 670rpx;
+  height: 340rpx;
+  border-radius: 4rpx;
+}

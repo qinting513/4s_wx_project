@@ -1,0 +1,5 @@
+@import "../../utils/wxss/page/input_sel.wxss";
+/* 头部导航 */
+.book_maintain_body .header_box .img_{
+    height: 180rpx;
+}

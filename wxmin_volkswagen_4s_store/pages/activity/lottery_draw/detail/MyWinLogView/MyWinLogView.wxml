@@ -1,0 +1,34 @@
+<view class="detail_box win_log_box">
+    <view class="title_">
+        <image class="title_img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/win_title.png'}}" mode="widthFix" />
+    </view>
+    <view class="detail_">
+        <image class="bg_img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/win_record.png'}}" mode="aspectFill"/>
+        <view class="log_box">
+            <view class="tab_th">
+                <view class="td_ time_">中奖时间</view>
+                <view class="td_ val_">所中奖品</view>
+            </view>
+            <scroll-view
+                scroll-y
+                class="log_detail_box"
+                bindscrolltoupper="upperLogFn"
+                bindscrolltolower="lowerLogFn"
+            >
+                <block wx:for="{{8}}" wx:key="{{item}}">
+                    <view class="log_">
+                        <view class="time_">2019-05-08 19:22:34</view>
+                        <view class="win_val {{item < 3 ? 'is_got': ''}} {{item !== 3 ? 'get_integral': ''}}" wx-if="{{index!==3}}">
+                            <image wx:if="{{item < 3}}" class="had_sent_recode" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/had_sent_recode.png'}}" mode="widthFix" />
+                            10个金币
+                        </view>
+                        <view class="win_val {{item === 3 ? 'is_got': ''}} {{item === 3 ? 'get_other': ''}}" wx-if="{{index===3}}">
+                            <image wx:if="{{item === 3}}" class="had_sent_recode" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/had_sent_recode.png'}}" mode="widthFix" />
+                            HUAWEI Mate 20Por
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+</view>

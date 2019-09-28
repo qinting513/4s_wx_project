@@ -1,0 +1,92 @@
+.invite_friends_body{
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: auto;
+    background: url('https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/invite_friend/invite_friends_bg.png') no-repeat;
+    background-size: cover; 
+}
+.invite_friends_body .invite_text{
+    text-align: center;
+    margin-top: 62rpx;
+}
+.invite_friends_body .invite_text .img_{
+    width: 421rpx;
+}
+.invite_friends_body .my_reward_box{
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.invite_friends_body .my_reward_box .img_{
+    width: 615rpx;
+}
+.invite_friends_body .my_reward_box .text_box{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.invite_friends_body .my_reward_box .text_box .title_{
+    font-size: 27rpx;
+}
+.invite_friends_body .my_reward_box .text_box .num_{
+    font-size: 67rpx;
+    margin-top: 20rpx;
+}
+.invite_friends_body .invite_result_box{
+    margin: 22rpx;
+    background: white;
+    border-radius: 10rpx;
+    padding: 20rpx;
+}
+.invite_friends_body .invite_result_box .title_{
+    color: #D5AC4F;
+    font-size: 36rpx;
+    font-weight: bold;
+    padding: 12rpx 12rpx 34rpx;
+    text-align: center;
+}
+.invite_friends_body .invite_result_box .title_ .img_{
+    width: 47rpx;
+}
+.invite_friends_body .invite_result_box .title_ .text_{
+    margin: auto 16rpx;
+    vertical-align: middle;
+}
+.invite_friends_body .invite_result_box .detail_box{
+    background: #FFF7E4;
+    padding: 12rpx 36rpx 28rpx 27rpx;
+}
+.invite_friends_body .invite_result_box .detail_box .detail_{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32rpx;
+    align-items: center;
+}
+.invite_friends_body .invite_result_box .detail_box .detail_ .info_box{
+    display: flex;
+}
+.invite_friends_body .invite_result_box .detail_box .detail_ .img_box{
+    margin-right: 20rpx;
+}
+.invite_friends_body .invite_result_box .detail_box .detail_ .name_{
+    font-size: 28rpx;
+    color: #333333;
+}
+.invite_friends_body .invite_result_box .detail_box .detail_ .phone_{
+    color: #999999;
+    font-size: 24rpx;
+}
+.invite_friends_body .invite_result_box .detail_box .detail_ .img_{
+    width: 68rpx;
+    height: 68rpx;
+    border-radius: 100%;
+}
+.invite_friends_body .invite_result_box .detail_box .detail_ .num_{
+    color: #FE0000;
+    font-size: 36rpx;
+}
+.invite_friends_body .option_btn{
+    margin-top: 12rpx;
+}

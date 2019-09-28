@@ -1,0 +1,36 @@
+@import "utils/wxss/public.wxss";
+page{
+  background: #F4F4F4;
+  color: #333333;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+view,text,textarea{
+  -webkit-overflow-scrolling:touch;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	word-break: break-all;
+}
+image{
+  vertical-align: middle;
+  height:auto;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+button {
+  font-size: 28rpx;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+button::after {
+  border: none;
+}

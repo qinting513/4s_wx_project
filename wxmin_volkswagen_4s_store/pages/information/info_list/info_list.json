@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资讯列表",
+  "usingComponents": {
+    "InfoListCom": "../../../components/info_list_com/info_list_com"
+  }
+}

@@ -1,0 +1,28 @@
+.home_weather_body{
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10rpx 22rpx;
+}
+.home_weather_body .label_img{
+  width: 30rpx;
+  margin-right: 20rpx;
+}
+.home_weather_body .info_box{
+    font-size: 28rpx;
+    color: #333333;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-between;
+}
+.home_weather_body .info_box .weather_{
+  white-space: nowrap;
+  background: white;
+  padding-right: 10rpx;
+  z-index:2;
+}
+.home_weather_body .info_box .other_info_{
+  margin-left: 20rpx;
+  white-space: nowrap;
+}

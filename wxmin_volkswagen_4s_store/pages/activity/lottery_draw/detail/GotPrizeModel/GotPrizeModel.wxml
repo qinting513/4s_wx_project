@@ -1,0 +1,25 @@
+<view class="got_prize_model_body star_model_pub">
+    <view class="mask_box"></view>
+    <view class="content_">
+        <view class="content_detail_box">
+            <image class="star_img" lazy-load="{{true}}" src="{{ ossImgAddre + 'star_model/star.png'}}" mode="widthFix" />
+            <view class="info_box">
+                <view class="title_">哇！中奖了</view>
+                <view class="get_label">恭喜你获得</view>
+                <view class="get_prize_box">
+                    <view class="img_box">
+                        <image class="img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/gift_start.png'}}" mode="aspectFix" />
+                    </view>
+                    <view class="prize_detail_">
+                        <view class="name_">
+                            车载空气净化器车载空气净化器一个
+                        </view>
+                        <view class="receive_method">实物奖品请前往当前门店领取</view>
+                    </view>
+                </view>
+                <view class="look_go_">奖励请前往中奖纪录查看</view>
+            </view>
+            <image class="close_img" bindtap="closeFn" lazy-load="{{true}}" src="{{ ossImgAddre + 'star_model/close.png'}}" mode="widthFix" />
+        </view>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="info_list_body">
+    <InfoListCom />
+</view>

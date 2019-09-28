@@ -1,0 +1,71 @@
+.edit_add_pub{
+    background: white;
+}
+.edit_add_pub .detail_box{
+    padding-right: 22rpx;
+}
+.edit_add_pub .detail_box .detail_{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #F4F4F4;
+    padding: 36rpx 20rpx 36rpx 41rpx;
+}
+.edit_add_pub .detail_box .detail_ .label_{
+    font-size: 30rpx;
+    color: #333333;
+    width: 150rpx;
+}
+.edit_add_pub .detail_box .detail_ .content_{
+    font-size: 26rpx;
+    color: #999999;
+    text-align: right;
+    flex: 1;
+}
+.edit_add_pub .detail_box .detail_ .content_ input{
+    width: 100%;
+}
+.edit_add_pub .detail_box .detail_ .next_ .img_{
+    width: 12rpx;
+}
+.edit_add_pub .detail_box .detail_ .address_img_{
+    width: 26rpx;
+}
+.edit_add_pub .detail_box .default_img{
+    width: 30rpx;
+}
+.edit_add_pub .detail_box .wx_img{
+    width: 32rpx;
+}
+.edit_add_pub .pick_content_{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.edit_add_pub .pick_content_ .picker{
+    margin-right: 14rpx;
+    max-width: 500rpx;
+}
+.edit_add_pub .detail_box .address_option_box{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+}
+.edit_add_pub .detail_box .address_option_box{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    padding: 30rpx 20rpx 30rpx 40rpx;
+}
+.edit_add_pub .detail_box .address_option_box .default_{
+    color: #567BFF;
+}
+.edit_add_pub .detail_box .address_option_box .wx_{
+    color: #07B906;
+}
+.edit_add_pub .bottom_btn_pub{
+    background: white;
+}
+.edit_add_pub .bottom_btn_pub .option_btn{
+    margin-top: 20rpx;
+}

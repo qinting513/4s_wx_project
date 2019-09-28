@@ -1,0 +1,39 @@
+@import "../../../../../utils/wxss/page/star_model_pub.wxss";
+.got_prize_model_body .content_ .info_box .title_{
+    color: #FFEF00;
+    font-weight: bold;
+    font-size: 48rpx;
+}
+.got_prize_model_body .content_ .info_box .get_label{
+    color: white;
+    font-size: 32rpx;
+    margin: 12rpx auto 9rpx;
+}
+.got_prize_model_body .content_ .info_box .get_prize_box{
+    text-align: left;
+    display: flex;
+    background: white;
+    padding: 12rpx 9rpx;
+    align-items: center;
+}
+.got_prize_model_body .content_ .info_box .get_prize_box .img_{
+    width: 92rpx;
+    height: 92rpx;
+    margin-right: 8rpx;
+    flex: 1;
+}
+.got_prize_model_body .content_ .info_box .get_prize_box .prize_detail_ .name_{
+    font-size: 28rpx;
+    color: #CA0707;
+    font-weight: bold;
+}
+.got_prize_model_body .content_ .info_box .get_prize_box .prize_detail_ .receive_method{
+    font-size: 22rpx;
+    color: #666666;
+    font-weight: bold;
+}
+.got_prize_model_body .content_ .info_box .look_go_{
+    color: #F0EFEF;
+    font-size: 24rpx;
+    margin-top: 15rpx;
+}

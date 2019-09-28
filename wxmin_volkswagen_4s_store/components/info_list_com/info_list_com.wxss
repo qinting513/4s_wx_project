@@ -1,0 +1,36 @@
+.info_list_pub{
+    margin: 20rpx 30rpx;
+    background: white;
+    padding: 0 42rpx;
+}
+.info_list_pub .detail_{
+    display: flex;
+    border-bottom: 2rpx solid #E2E2E2;
+    padding: 64rpx 0 46rpx;
+}
+.info_list_pub .detail_:last-child{
+    border-bottom: 0;
+}
+.info_list_pub .detail_ .left_ .title_{
+    color: #333333;
+    font-size: 29rpx;
+    line-height: 1.5;
+}
+.info_list_pub .detail_ .left_ .author_time_box{
+    display: flex;
+    color: #999999;
+    font-size: 21rpx;
+    margin-top: 28rpx;
+}
+.info_list_pub .detail_ .left_ .author_time_box .author_{
+    border: 2rpx solid #999999;
+    padding: 0 8rpx;
+    margin-right: 34rpx;
+}
+.info_list_pub .detail_ .right_ {
+    margin-left: 18rpx;
+}
+.info_list_pub .detail_ .right_ .img_{
+    width: 210rpx;
+    height: 140rpx;
+}

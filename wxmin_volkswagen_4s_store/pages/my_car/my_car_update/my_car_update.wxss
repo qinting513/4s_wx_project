@@ -1,0 +1,78 @@
+.my_car_update_body {
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+}
+.my_car_update_body .detail_box{
+    height: calc(100% - 184rpx);
+    overflow: auto;
+    width: 100%;
+    padding: 22rpx;
+    font-size: 28rpx;
+}
+.my_car_update_body .detail_box .detail_{
+    padding: 36rpx 20rpx;
+    border-bottom: 2rpx solid #F4F4F4;
+}
+.my_car_update_body .detail_box .detail_ picker .content_{
+    display: flex;
+    justify-content: space-between;
+    color: #999999;
+}
+.my_car_update_body .detail_box .detail_ .next_ .img_{
+    width: 12rpx;
+}
+.my_car_update_body .license_plate_box{
+    display: flex;
+    align-items: center;
+}
+.my_car_update_body .license_plate_box .plate_city{
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.my_car_update_body .license_plate_box .plate_city .img_{
+    width: 12rpx;
+    transform: rotate(90deg);
+    margin-left: 10rpx;
+}
+.my_car_update_body .license_plate_box .line_{
+    width: 2rpx;
+    height: 24rpx;
+    background: black;
+    margin: auto 44rpx auto 16rpx;
+}
+.my_car_update_body .miles_box{
+    display: flex;
+    justify-content: space-between;
+}
+.my_car_update_body .detail_.add_img_box{
+    border-bottom: 0;
+}
+.my_car_update_body .add_img_box .label_{
+    color: #999999;
+}
+.my_car_update_body .add_img_box .img_box{
+    border: 2rpx dashed #999999;
+    width: 262rpx;
+    margin: 37rpx auto;
+    text-align: center;
+}
+.my_car_update_body .add_img_box .img_{
+    width: 53rpx;
+    padding: 60rpx 0;
+}
+.my_car_update_body .bottom_box{
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+    background: white;
+    margin-top: 10rpx;
+}
+.my_car_update_body .bottom_box .option_btn{
+    margin-top: 30rpx;
+    background: #D2D3D6;
+    text-shadow:0px 4px 4px rgba(22,1,52,0.2);
+}

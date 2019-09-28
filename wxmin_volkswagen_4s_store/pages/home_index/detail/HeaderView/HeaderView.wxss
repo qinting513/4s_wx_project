@@ -1,0 +1,28 @@
+
+.home_header_box{
+    display: flex;
+    align-items: center;
+    padding: 16rpx 32rpx 16rpx 20rpx;
+    background: white;
+    width: 100%;
+}
+.home_header_box .home_header_address_box{
+    color: #333333;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+    max-width: 100rpx;
+}
+.home_header_box .home_header_search_good_box{
+    width: 560rpx;
+    overflow: hidden;
+}
+.home_header_box .pub_input_box input{
+    padding: 18rpx 58rpx;
+    width: calc(100% - 116rpx);
+}
+.home_header_call_box{
+    margin-left: 20rpx;
+}
+.home_header_call_box .img_{
+    width: 42rpx;
+}

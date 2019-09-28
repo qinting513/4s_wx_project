@@ -1,0 +1,2 @@
+<view wx:if="{{!isShowWait}}" class="send_code" bindtap="sendVerificationCodeFn">获取验证码</view>
+<view wx:if="{{isShowWait}}" class="send_code wait_" >重新发送{{count}}s</view>

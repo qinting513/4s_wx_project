@@ -1,0 +1,11 @@
+@import "../../../utils/wxss/page/order_detail_pub.wxss";
+.ser_order_detail_body{
+    padding-top: 4rpx;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: white;
+}
+.ser_order_detail_body .order_detail_info_body{
+    border-top: 2rpx solid #E0DDE4;
+}

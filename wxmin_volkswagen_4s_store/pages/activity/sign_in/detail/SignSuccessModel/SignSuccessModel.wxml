@@ -1,0 +1,17 @@
+<view class="got_prize_model_body star_model_pub">
+    <view class="mask_box"></view>
+    <view class="content_">
+        <view class="content_detail_box">
+            <image class="star_img" lazy-load="{{true}}" src="{{ ossImgAddre + 'star_model/star.png'}}" mode="widthFix" />
+            <view class="info_box">
+                <view class="title_">签到成功</view>
+                <view class="get_prize_box">
+                    <view class="num_integral">10个金币</view>
+                    <view class="text_has_save">已存入【我的账户】</view>
+                </view>
+                <view class="text_more_warn">每连续签到7天，奖励翻倍</view>
+            </view>
+            <image bindtap="closeFn" class="close_img" lazy-load="{{true}}" src="{{ ossImgAddre + 'star_model/close.png'}}" mode="widthFix" />
+        </view>
+    </view>
+</view>

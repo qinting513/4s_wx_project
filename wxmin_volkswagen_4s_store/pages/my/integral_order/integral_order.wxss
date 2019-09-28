@@ -1,0 +1,4 @@
+@import "../../../utils/wxss/page/order_list_pub.wxss";
+.integral_order_body .detail_box .order_info .integral_num{
+ color: #FF0000!important;
+}

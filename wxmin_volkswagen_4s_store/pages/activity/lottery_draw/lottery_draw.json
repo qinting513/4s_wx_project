@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "抽奖",
+  "usingComponents": {
+    "DrawView":"./detail/DrawView/DrawView",
+    "ActivityRule": "./detail/ActivityRule/ActivityRule",
+    "MyWinLogView": "./detail/MyWinLogView/MyWinLogView"
+  }
+}

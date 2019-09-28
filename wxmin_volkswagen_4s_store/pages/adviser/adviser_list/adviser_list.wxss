@@ -1,0 +1,46 @@
+.adviser_list_body{
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-top: 2rpx solid #f3f3f3;
+    overflow: auto;
+}
+.adviser_list_body .detail_box .detail_{
+    display: flex;
+    border-bottom: 2rpx solid #f3f3f3;
+    padding: 36rpx;
+}
+.adviser_list_body .detail_box .detail_ .img_box{
+    margin-right: 34rpx;
+}
+.adviser_list_body .detail_box .detail_ .img_box .img_{
+    width: 164rpx;
+    height: 210rpx;
+}
+.adviser_list_body .detail_box .detail_ .info_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.adviser_list_body .detail_box .detail_ .info_box .info_{
+    display: flex;
+    font-size: 24rpx;
+}
+.adviser_list_body .detail_box .detail_ .info_box .info_ .label_{
+    color: #333333;
+    width: 150rpx;
+}
+.adviser_list_body .detail_box .detail_ .info_box .info_ .content_{
+    color: #999999;
+}
+.adviser_list_body .no_data{
+    text-align: center;
+    font-size: 24rpx;
+    margin: 42rpx auto;
+}
+.adviser_list_body .no_data .line_{
+    color: #666666;
+}
+.adviser_list_body .no_data .text_{
+    color: #999999;
+}

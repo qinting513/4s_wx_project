@@ -1,0 +1,43 @@
+<view class="address_list_body fixed_pub_body {{(list && list.length === 0) ? 'white_bg' : ''}}">
+    <view class="detail_box">
+        <block wx:for="{{list}}" wx:key="{{item.id}}" wx:if="{{list && list.length > 0}}">
+            <view class="detail_" bindtap="goDetailFn" data-id="{{item.id}}">
+                <view class="address_detail_box">
+                    <view class="name_phone">
+                        <view class="name">
+                            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'address_main.png'}}" mode="widthFix" />
+                            高欢
+                        </view>
+                        <view class="phone_">13969099769</view>
+                    </view>
+                    <view class="address_">
+                        湖南省长沙市开福区开元东路中南汽配城中南汽车世界E-08栋
+                    </view>
+                </view>
+                <view class="option_address_box">
+                    <view class="detault_">
+                        <image lazy-load="true"class="default_img" src="{{ossImgAddre + 'sel.png'}}" mode="widthFix" />
+                        默认地址
+                    </view>
+                    <view class="edit_address_box">
+                        <view class="edit_" bindtap="goOtherFn" data-path="ADDRESSUPDATE">
+                            <image lazy-load="true"class="edit_img" src="{{ossImgAddre + 'edit_icon.png'}}" mode="widthFix" />
+                            <text class="text_">编辑</text>
+                        </view>
+                        <view class="del_">
+                            <image lazy-load="true"class="del_img_" src="{{ossImgAddre + 'delete_gray.png'}}" mode="widthFix" />
+                            <text class="text_">删除</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="no_data_box" wx:if="{{list && list.length === 0}}">
+            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'no_address_img.png'}}" mode="widthFix" />
+            <view class="text_">暂未添加常用地址</view>
+        </view>
+    </view>
+    <view class="bottom_btn_pub">
+        <view class="option_btn" bindtap="goOtherFn" data-path="ADDRESSADD">添加收货地址</view>
+    </view>
+</view>

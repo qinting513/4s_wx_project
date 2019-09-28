@@ -1,0 +1,48 @@
+
+<view class="info_detail_body">
+    <view class="detail_box">
+        <view class="title_box">
+            电动车请注意，交警已经盯上了你！
+        </view>
+        <view class="author_box">
+            <image lazy-load="true"class="img_" src="{{img}}" mode="aspectFill" />
+            <view class="name_time_box">
+                <view class="name_">大汉一汽4S店</view>
+                <view class="time_">2019-04-22</view>
+            </view>
+        </view>
+        <view class="detail_info_box">
+            资讯详细内容资讯详细内容资讯详细内容资讯详
+        容资讯详细内容资讯详细内容资讯详细内容资讯详细
+        资讯详细内容资讯详细内容资讯详细内容资讯详细内
+        资讯详细内容资讯详细内容资讯详细内容资讯详细内
+        资讯详细内容资讯详细内容资讯详细内容资讯详细内
+        资讯详细内容资讯详细内容资讯详细内容容容资讯详
+        资讯详细内容资讯详细内容资讯详细内容细内容容内
+        容资讯详细内容
+            <image lazy-load="true"class="img_" src="{{img}}" mode="widthFix" />
+        </view>
+        <view class="look_box">
+            <view class="number_">
+                阅读5682
+            </view>
+            <view class="look_detail_box">
+                <view class="look_img_box">
+                    <block wx:for="{{imgList}}" wx:key="{{item.id}}">
+                        <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill" />
+                    </block>
+                </view>
+                <view class="look_detail_">
+                    等19人
+                    <image lazy-load="true"class="img_" src="{{ossImgAddre + 'praise.png'}}" mode="widthFix" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="about_list_box">
+        <view class="title_label">
+            相关资讯
+        </view>
+        <InfoListCom />
+    </view>
+</view>

@@ -1,0 +1,17 @@
+.home_new_goods_body .detail_box{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24rpx;
+    justify-content: space-between;
+}
+.home_new_goods_body .detail_box .img_{
+    border-radius: 10rpx;
+    height: 208rpx;
+    margin-bottom: 8rpx;
+}
+.home_new_goods_body .detail_box .img_:nth-child(1){
+    width: 100%;
+}
+.home_new_goods_body .detail_box .img_:nth-child(n+2){
+    width: 348rpx;
+}

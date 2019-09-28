@@ -1,0 +1,22 @@
+<view class="search_goods_body">
+    <view class="search_box">
+        <view class="input_box pub_input_box">
+            <image lazy-load="true"class="img_ search_img" src="{{ossImgAddre + 'search_icon.png'}}" mode="widthFix" />
+            <input type="text" maxlength="20" placeholder="输入你想要找的商品" placeholder-style="color:#999999"/>
+        </view>
+        <view class="cancel_" bindtap="goBack">取消</view>
+    </view>
+    <view class="history_list_box">
+        <view class="title_">
+            <view class="text_">历史纪录</view>
+            <view class="img_box">
+                <image lazy-load="true"class="img_" src="{{ossImgAddre + 'delete_gray.png'}}" mode="widthFix" />
+            </view>
+        </view>
+        <view class="detail_box">
+            <block wx:for="{{list}}" wx:key="{{item.id}}">
+                <view class="detail_" bindtap="goSearchListFn" data-searchkey="{{item.text}}">{{item.text}}</view>
+            </block>
+        </view>
+    </view>
+</view>

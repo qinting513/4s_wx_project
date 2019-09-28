@@ -1,0 +1,77 @@
+.my_info_edit_body{
+    font-size: 26rpx;
+    width: 100%;
+    height: 100%;
+}
+.my_info_edit_body .detail_box{
+    height: calc(100% - 188rpx);
+    overflow: auto;
+    width: 100%;
+    background: white;
+}
+.my_info_edit_body input{
+    text-align: right;
+}
+.my_info_edit_body .base_detail_box, .my_info_edit_body .car_detail_box{
+    background: white;
+}
+.my_info_edit_body .base_detail_box{
+    padding: 0 22rpx;
+    border-bottom: 20rpx solid #f4f4f4;
+}
+.my_info_edit_body .car_detail_{
+    padding: 0 22rpx;
+    border: 4rpx solid #F4F4F4;
+}
+.my_info_edit_body .detail_{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #F4F4F4;
+    padding: 34rpx 22rpx 35rpx;
+}
+.my_info_edit_body .detail_ .label_{
+    color: black;
+    font-size: 30rpx;
+}
+.my_info_edit_body .base_detail_box .header_img_detail .header_img_{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 100%;
+    margin-right: 18rpx;
+}
+.my_info_edit_body .base_detail_box .header_img_detail .next_img{
+    width: 12rpx;
+}
+.my_info_edit_body .car_detail_box .option_car_detail .text_{
+    vertical-align: middle;
+    color: #FE0000;
+    font-size: 26rpx;
+    margin-left: 3rpx;
+}
+.my_info_edit_body .car_detail_box .option_car_detail .img_{
+    width: 29rpx;
+}
+.my_info_edit_body .car_detail_box .add_car_box{
+    background: #E6E6E6;
+    padding: 34rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: white;
+}
+.my_info_edit_body .car_detail_box .add_car_box .img_{
+    width: 30rpx;
+    margin-right: 20rpx;
+}
+.my_info_edit_body .car_detail_box .add_car_box .text_{
+    vertical-align: middle;
+}
+.my_info_edit_body .btn_bottom_box{
+    background: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.my_info_edit_body .btn_bottom_box .option_btn{
+    margin-top: 20rpx;
+}

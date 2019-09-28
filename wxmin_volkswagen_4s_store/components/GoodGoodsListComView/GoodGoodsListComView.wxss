@@ -1,0 +1,45 @@
+.good_goods_list_com_view_body{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.good_goods_list_com_view_body .detail_{
+    background: white;
+    width: calc(100% / 2);
+    margin-bottom: 4rpx;
+    position: relative;
+}
+.good_goods_list_com_view_body .detail_:nth-child(2n-1){
+    border-right: 2rpx solid #F3F3F3;
+}
+.good_goods_list_com_view_body .detail_ .img_box{
+    padding: 40rpx 40rpx 42rpx;
+}
+.good_goods_list_com_view_body .detail_ .img_box .img_{
+    width: 296rpx;
+    height: 280rpx;
+}
+.good_goods_list_com_view_body .detail_ .info_box{
+    padding: 0 20rpx 90rpx;
+    font-size: 28rpx;
+}
+.good_goods_list_com_view_body .detail_ .info_box .name_{
+    line-height: 1.5;
+    width: 100%;
+}
+.good_goods_list_com_view_body .detail_ .info_box .price_{
+    text-align: center;
+    color: #999999;
+    margin: 22rpx auto 29rpx;
+}
+.good_goods_list_com_view_body .detail_ .info_box .integral_price{
+    color: white;
+    background: #567BFF;
+    padding: 17rpx;
+    text-align: center;
+    position: absolute;
+    bottom: 20rpx;
+    width: 334rpx;
+    left: 20rpx;
+}

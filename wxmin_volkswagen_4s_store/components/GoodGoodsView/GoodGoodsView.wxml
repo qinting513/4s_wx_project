@@ -1,0 +1,24 @@
+<view class="home_good_goods_body" wx:if="{{goodList && goodList.length>0}}">
+    <view class="home_title_more_box">
+        <view class="title_name">
+            严选好礼
+        </view>
+        <view class="more_box">
+            可用会员积分兑换
+        </view>
+    </view>
+    <view class="detail_box">
+        <block wx:for="{{goodList}}" wx:key="{{item.id}}">
+            <view class="detail_ detail_info" bindtap="goGoodsDeatilFn" data-id="{{item.id}}" wx:if="{{index<6}}">
+                <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill"/>
+                <view class="name text_hidden_ellipsis">{{item.name}}</view>
+                <view class="integral_box">{{item.int}}积分</view>
+                <view class="price_box">￥{{item.oldPrice}}</view>
+            </view>
+        </block>
+        <view class="detail_ detail_more" wx:if="{{goodList.length>6}}" data-path="GOODGOODSLIST" bindtap="goOtherPageFn">
+            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'more_img.png'}}" mode="widthFix"/>
+        </view>
+        <view class="line_bg">1</view>
+    </view>
+</view>

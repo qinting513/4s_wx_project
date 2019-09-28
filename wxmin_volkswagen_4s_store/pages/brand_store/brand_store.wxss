@@ -1,0 +1,69 @@
+.brand_store_body{
+    width: 100%;
+    height: 100%;
+    background: #F3F3F3;
+    padding-bottom: 84rpx;
+    overflow: auto;
+}
+.brand_store_body .header_box .img_{
+    width: 100%;
+    height: 120rpx;
+}
+.brand_store_body .detail_box{
+    overflow: auto;
+}
+.brand_store_body .detail_box .detail_{
+    margin: 20rpx 22rpx 30rpx;
+    background: white;
+    box-shadow: 0px 4px 14px 0px rgba(22,1,52,0.2);
+    padding: 10rpx 10rpx 0;
+    overflow: hidden;
+}
+.brand_store_body .detail_box .detail_ .img_box {
+    position: relative;
+}
+.brand_store_body .detail_box .detail_ .img_box .img_{
+    width: 100%;
+    height: 340rpx;
+}
+.brand_store_body .detail_box .detail_ .img_box .work_time{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 0 40rpx 0 0;
+    color: white;
+    font-size: 28rpx;
+    padding: 4rpx 20rpx;
+}
+.brand_store_body .detail_box .detail_ .name_dis_box {
+    display: flex;
+    color: #333333;
+    align-items: flex-end;
+    margin: 32rpx 0 30rpx;
+    flex-wrap: wrap;
+}
+.brand_store_body .detail_box .detail_ .name_dis_box .name_{
+    font-size: 32rpx;
+    margin-right: 52rpx;
+    max-width: 460rpx;
+}
+.brand_store_body .detail_box .detail_ .name_dis_box .dis_{
+    font-size: 24rpx;    
+}
+.brand_store_body .detail_box .detail_ .option_body .option_detail{ 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}
+.brand_store_body .detail_box .detail_ .option_body .option_detail .name_{
+    font-size: 24rpx;
+    color: #999999;
+}
+.brand_store_body .detail_box .detail_ .option_body .option_detail .option_{
+    color: #2BADF8;
+    font-size: 24rpx;
+}
+.brand_store_body .detail_box .detail_ .option_body .option_detail .img_{
+    width: 22rpx;
+    margin-left: 16rpx;
+}

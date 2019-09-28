@@ -1,0 +1,69 @@
+<import src="../../../tpl/label_title_tpl.wxml" />
+<view class="goods_detail_body">
+    <block wx:if="{{isShowSelGoodsLayer}}">
+        <SelGoodsModel isShowSelGoodsLayer="{{isShowSelGoodsLayer}}" bind:theCloseFn="closeSelGoodsFn"/>
+    </block>
+    <view class="goods_detail_body_detail">
+        <view class="goods_info_box">
+            <view class="img_box">
+                <swiper class="goods_img_box pub_swiper_dot"
+                indicator-dots="{{true}}"
+                autoplay="{{true}}" 
+                interval="3000"
+                duration="1000"
+                circular="{{false}}"
+                >
+                <block wx:for="{{list}}" wx:key="{{item}}">
+                    <swiper-item class="item">
+                        <image lazy-load="true"class="img_" src="{{img}}" mode="aspectFill" />
+                    </swiper-item>
+                </block>
+                </swiper>
+            </view>
+            <view class="info_box">
+                <view class="name_">中粮每日坚果（30包）每日坚果每日开心中粮每日坚果（30包）每日坚果每日开心</view>
+                <view class="money_box">
+                    <view class="integral_">积分99.99</view>
+                    <view class="money_">现金价¥129.00</view>
+                </view>
+            </view>
+        </view>
+        <view class="go_rise_level_box_pub" bindtap="goVipRiseFn">
+            <image lazy-load="true" src="{{ossImgAddre + 'vip/rise_level.png'}}" class="img_" mode="widthFix"/>
+        </view>
+        <view class="goods_detail_box">
+            <view class="pub_tab_box">
+                <block wx:for="{{tabArr}}" wx:key="{{item.id}}">
+                    <view class="tab_ {{item.id===currentTabInfo.id?'active_':''}}" data-info="{{item}}" data-current="{{item.id}}" bindtap="clickTabFn">
+                        <text class="text_ ">{{item.text}}</text>
+                    </view>
+                </block>
+            </view>
+            <view class="goods_detail" hidden ="{{currentTabInfo.id === 2}}">
+                <template is="label_title_tpl" data="{{title: '商品信息', ossImgAddre}}"/>
+                <view class="get_info_">
+                    <rich-text nodes="{{goodInfo}}"></rich-text>
+                </view>
+                <view class="has_no_more_box">
+                    <text class="line_">——</text>已经到底了<text class="line_">——</text>
+                </view>
+            </view>
+            <view class="goods_evaluate"  hidden="{{currentTabInfo.id === 1}}">
+                <view class="test">商品评价</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom_box">
+        <view class="go_home has_label_" bindtap="goHomePageFn">
+            <image lazy-load="true"src="{{ossImgAddre + 'go_home.png'}}" class="img_" mode="widthFix"/>
+            <view class="text_">首页</view>
+        </view>
+        <view class="conect_ has_label_" bindtap="callServiceFn">
+            <image lazy-load="true"src="{{ossImgAddre + 'customer_ser.png'}}" class="img_" mode="widthFix"/>
+            <view class="text_">客服</view>
+        </view>
+        <view class="change_box" bindtap="changeDataFn" data-key="isShowSelGoodsLayer" data-val="{{true}}">
+            立即兑换
+        </view>
+    </view>
+</view>

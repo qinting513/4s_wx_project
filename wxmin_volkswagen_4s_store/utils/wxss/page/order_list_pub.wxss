@@ -1,0 +1,63 @@
+.order_body{
+}
+.order_body .pub_tab_box{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.order_body .detail_box{
+    padding-top: 80rpx;
+    overflow: auto;
+    padding-bottom: 180rpx;
+}
+.order_body .detail_box .detail_{
+    width: 706rpx;
+    margin: 20rpx auto 0;
+    background: white;
+    box-shadow: 0 4rpx 14rpx 0 rgba(22,1,52,0.2);
+    border-radius: 4rpx;
+    padding: 25rpx 25rpx 10rpx 20rpx;
+    font-size: 28rpx;
+}
+.order_body .detail_box .detail_ .title_box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40rpx;
+}
+.order_body .detail_box .detail_ .title_box .title_{
+    color: #666666;
+}
+.order_body .detail_box .detail_ .title_box .statue_{
+    color: #567BFF;
+}
+.order_body .detail_box .detail_ .order_info .store_name{
+    color: #333333;
+}
+.order_body .detail_box .detail_ .order_info .order_info_detail{
+    font-size: 26rpx;
+    color: #999999;
+    margin-bottom: 15rpx;
+}
+.order_body .detail_box .detail_ .btn_box{
+    display: flex;
+    justify-content: flex-end;
+}
+.order_body .detail_box .detail_ .btn_box .btn_{
+    width: 162rpx;
+    text-align: center;
+    padding: 8rpx;
+    border-radius: 40rpx;
+    border: 2rpx solid currentColor;
+}
+.order_body .detail_box .detail_ .btn_box .cancle_{
+    color: #999999;
+    margin-right: 18rpx;
+}
+.order_body .detail_box .detail_ .btn_box .connext_{
+    color: #567BFF;
+}
+.order_body.bg_white_pub .pub_tab_box{
+    border-bottom: 10rpx solid #f4f4f4;
+}

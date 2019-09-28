@@ -1,0 +1,66 @@
+<view class="my_integral_body">
+    <view class="header_box">
+        <image lazy-load="true"class="img_" src="{{ossImgAddre + 'my_integral/bg.png'}}" mode="widthFix" />
+        <view class="my_integral_info_box">
+            <view class="left_">
+                <image lazy-load="true"class="img_" src="{{ossImgAddre + 'my_integral/header_integral.png'}}" mode="widthFix" />
+                <view class="integral_box">
+                    <view class="num_box">
+                        <text class="num_">8880</text>
+                        <text class="unit_">积分</text>
+                    </view>
+                    <view class="integral_rule">
+                        <text class="text_">积分规则?</text>
+                    </view>
+                </view>
+            </view>
+            <view class="right_">
+                积分充值
+            </view>
+        </view>
+    </view>
+    <view class="integral_log_box">
+        <view class="pub_tab_box">
+            <block wx:for="{{tabArr}}" wx:key="{{item.id}}">
+                <view class="tab_ {{item.id===currentTabInfo.id?'active_':''}}">
+                    <text class="text_">{{item.text}}</text>
+                </view>
+            </block>
+        </view>
+        <scroll-view
+            scroll-y
+            class="detail_box"
+            bindscrolltoupper="upperLogFn"
+            bindscrolltolower="lowerLogFn"
+        >
+            <block wx:for="{{list}}" wx:key="{{item}}">
+                <view class="detail_">
+                    <view class="left_">
+                        <view class="name_">积分兑换</view>
+                        <view class="time_">2019-04-22 22:36:52</view>
+                    </view>
+                    <view class="right_ num_ {{index>1?'red_': ''}}">-50</view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class="how_to_get_integral_box">
+        <view class="title_box">如何赚积分？</view>
+        <view class="detail_box">
+            <block wx:for="{{howtoGetIntegralArr}}" wx:key="{{item}}">
+                <view class="detail_">
+                    <view class="left_">
+                        <view class="image_box">
+                            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'my_integral/' + item.img + '.png'}}" mode="widthFix" />
+                        </view>
+                        <view class="title_des_box">
+                            <view class="title_">{{item.title}}</view>
+                            <view class="des_">{{item.des}}</view>
+                        </view>
+                    </view>
+                    <view class="right_ num_">{{item.num}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

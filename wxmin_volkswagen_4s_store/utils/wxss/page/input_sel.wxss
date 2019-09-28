@@ -1,0 +1,61 @@
+.input_sel_body{
+    background: white;
+    height: 100%;
+    overflow: auto;
+}
+/* 头部导航 */
+.input_sel_body .header_box .img_{
+    width: 100%;
+}
+.input_sel_body .header_box{
+    padding: 20rpx 22rpx 40rpx;
+}
+/* 填写内容 */
+.input_sel_body .detail_box{
+    padding-left: 20rpx;
+}
+.input_sel_body .detail_box .detail_{
+    display: flex;
+    border-bottom: 2rpx solid #F4F4F4;
+    padding: 31rpx 40rpx 37rpx 20rpx;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1;
+}
+.input_sel_body .detail_box .detail_ input{
+    min-height: 25rpx!important;
+    height: 25rpx!important;
+}
+.input_sel_body .detail_box .detail_ .label_{
+    color: black;
+    font-size: 30rpx;
+    margin-right: 92rpx;
+}
+.input_sel_body .detail_box .detail_ picker{
+    flex: 1;
+}
+.input_sel_body .detail_box .detail_ .content_{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font-size: 26rpx;
+}
+.input_sel_body .detail_box .detail_ .content_ .picker{
+    color: #333333;
+}
+.input_sel_body .detail_box .detail_ .content_ .picker.no_sel{
+    color: #999999;
+}
+.input_sel_body .detail_box .detail_ .next_ .img_{
+    width: 12rpx;
+}
+/* 选车 */
+.input_sel_body .sel_car_box .img_box .img_{
+    width: 217rpx;
+    height: 145rpx;
+}
+.input_sel_body .sel_car_box .name_{
+    margin: auto 48rpx auto 10rpx;
+    font-size: 30rpx;
+    color: black;
+}

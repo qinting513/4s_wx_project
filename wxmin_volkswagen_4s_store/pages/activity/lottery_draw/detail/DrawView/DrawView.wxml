@@ -1,0 +1,48 @@
+<view class="lottery_draw_activity_box">
+    <GotPrizeModel wx:if="{{isShowGotPrizeModel}}" bind:theCloseFn="closeSuccessFn"/>
+    <view class="detail_border_box {{timeNum % 2 !==0 ? 'bg_2': ''}}">
+        <view class="detail_box">
+            <view class="draw_detail_box line_one_box">
+                <block wx:for="{{drawData}}" wx:key="{{item.id}}">
+                    <view class="detail_ {{isLayer && currentIndex!==index?'bg_layer':''}}" wx:if="{{index<4}}">
+                        <image class="img_" lazy-load="{{true}}" src="{{item.img}}" mode="aspectFix" />
+                        <view class="text_">{{item.text}}</view>
+                    </view>
+                </block>
+            </view>
+            <view class="draw_detail_box line_two_box">
+                <view class="left_box">
+                    <block wx:for="{{drawData}}" wx:key="{{item.id}}">
+                        <view class="detail_ {{isLayer && currentIndex!==index?'bg_layer':''}}" wx:if="{{index>9 && index<12}}">
+                            <image class="img_" lazy-load="{{true}}" src="{{item.img}}" mode="aspectFix" />
+                            <view class="text_">{{item.text}}</view>
+                        </view>
+                    </block>
+                </view>
+                <view class="click_img_box">
+                    <image bindtap="startDrawFn" class="click_img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/click_draw_btn.png'}}" mode="widthFix" />
+                </view>
+                <view class="right_box">
+                    <block wx:for="{{drawData}}" wx:key="{{item.id}}">
+                        <view class="detail_ {{isLayer && currentIndex!==index?'bg_layer':''}}" wx:if="{{index>3 && index<6}}">
+                            <image class="img_" lazy-load="{{true}}" src="{{item.img}}" mode="aspectFix" />
+                            <view class="text_">{{item.text}}</view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <view class="draw_detail_box line_three_box">
+                <block wx:for="{{drawData}}" wx:key="{{item.id}}">
+                    <view class="detail_ {{isLayer && currentIndex!==index?'bg_layer':''}}" wx:if="{{index>5 && index<10}}">
+                        <image class="img_" lazy-load="{{true}}" src="{{item.img}}" mode="aspectFix" />
+                        <view class="text_">{{item.text}}</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="has_draw_num_box">
+    <image class="img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/draw_num.png'}}" mode="widthFix" />
+    <view class="num_">您还有0次抽奖机会</view>
+</view>

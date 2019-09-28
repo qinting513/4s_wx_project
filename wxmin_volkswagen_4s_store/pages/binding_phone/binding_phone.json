@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "绑定手机号码",
+  "usingComponents": {
+    "CountDownView": "../../components/CountDownView/CountDownView"
+  }
+}

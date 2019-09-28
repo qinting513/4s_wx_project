@@ -1,0 +1,6 @@
+<import src="../../../tpl/order_store_tpl.wxml" />
+<import src="../../../tpl/order_detail_info_tpl.wxml" />
+<view class="ser_order_detail_body order_detail_pub">
+    <template is="order_store_tpl" data="{{storeInfo}}"/>
+    <template is="order_detail_info_tpl" data="{{orderDetail}}"/>
+</view>

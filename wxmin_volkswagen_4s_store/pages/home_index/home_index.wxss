@@ -1,0 +1,23 @@
+.home_index_body .goods_body{
+    background: #f3f3f3;
+    margin-top: 4rpx;
+    padding-bottom: 24rpx;
+}
+.home_title_more_box{   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38rpx 24rpx 0;
+}
+.home_title_more_box .title_name{
+    font-size: 36rpx;
+    color: #333333;
+    font-weight: bold;
+}
+.home_title_more_box .more_box{
+    font-size: 28rpx;
+    color: #999999;
+}
+.home_title_more_box .more_box .img_{
+    width: 12rpx;
+}

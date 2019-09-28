@@ -1,0 +1,22 @@
+/* 活动规则 */
+.rule_box{
+    margin: 0 27rpx 284rpx;
+    background: #FFF2DB;
+    padding: 30rpx 24rpx;
+    color: #BE8744;
+    font-size: 28rpx;
+    border-radius: 16rpx;
+    min-height: 620rpx;
+}
+.rule_box .title_{
+    text-align: center;
+}
+.rule_box .title_img_{
+    width: 240rpx;
+}
+.rule_box .detail_{
+    text-align: left;
+}
+.rule_box .detail_ .detail_s{
+    line-height: 1.5;
+}

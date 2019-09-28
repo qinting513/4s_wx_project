@@ -1,0 +1,22 @@
+@import "../../../../../utils/wxss/page/star_model_pub.wxss";
+.got_prize_model_body .content_ .info_box .title_{
+    color: #FFF77E;
+    font-size: 36rpx;
+}
+.got_prize_model_body .content_ .info_box .get_prize_box{
+    margin: 26rpx auto 46rpx;
+}
+.got_prize_model_body .content_ .info_box .get_prize_box .num_integral{
+    font-size: 26rpx;
+    color: #FFF77E;
+    margin-bottom: 10rpx;
+}
+.got_prize_model_body .content_ .info_box .get_prize_box .text_has_save{
+    font-size: 30rpx;
+    color: white;
+}
+.got_prize_model_body .content_ .info_box .text_more_warn{
+    color: white;
+    font-size: 26rpx;
+    margin-bottom: 30rpx;
+}

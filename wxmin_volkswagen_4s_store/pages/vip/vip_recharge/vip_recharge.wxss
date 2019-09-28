@@ -1,0 +1,53 @@
+.vip_recharge_body{
+    background: white;
+}
+.vip_recharge_body .discount_package_box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 30rpx 20rpx;
+    color: #567BFF;
+}
+.vip_recharge_body .discount_package_box .detail_{
+    margin-top: 20rpx;
+    border: 2rpx solid rgba(86,123,255,1);
+    border-radius: 6rpx;
+    padding: 30rpx 5rpx 23rpx;
+    text-align: center;
+    width: 220rpx;
+    overflow: hidden;
+}
+.vip_recharge_body .discount_package_box .detail_.active{
+    color: white;
+    background: #567BFF;
+}
+.vip_recharge_body .discount_package_box .detail_ .num_{
+    font-size: 36rpx;
+}
+.vip_recharge_body .discount_package_box .detail_ .des_{
+    font-size: 24rpx;
+}
+.vip_recharge_body .illustrate_box{
+    color: #F51010;
+    font-size: 24rpx;
+    padding: 0 92rpx 0 22rpx;
+}
+.vip_recharge_body .illustrate_box .detail_{
+    margin-bottom: 20rpx;
+    line-height: 2;
+}
+/* 其他金额 */
+.vip_recharge_body .other_money_box{
+    text-align: center;
+    padding: 40rpx 0 100rpx;
+}
+.vip_recharge_body .other_money_box .title_{
+    font-size: 36rpx;
+}
+.vip_recharge_body .other_money_box input{
+    font-size: 28rpx;
+    border-bottom: 2rpx solid #F4F4F4;
+    padding: 14rpx 80rpx;
+    width: 360rpx;
+    margin: 60rpx auto 0;
+}

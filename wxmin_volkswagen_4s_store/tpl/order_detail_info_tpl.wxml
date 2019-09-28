@@ -1,0 +1,31 @@
+<template name="order_detail_info_tpl">
+	<view class="order_detail_info_body">
+        <view class="order_title"><view class="line_"></view>订单信息</view>
+        <view class="order_detail_box">
+            <view class="detail_">
+                <view class="label_">订单号</view>
+                <view class="content_">{{orderDetail.orderNum}}</view>
+            </view>
+            <view class="detail_">
+                <view class="label_">订单状态</view>
+                <view class="content_">{{orderDetail.orderState}}</view>
+            </view>
+            <view class="detail_">
+                <view class="label_">联系人</view>
+                <view class="content_">{{orderDetail.connextNum}}</view>
+            </view>
+            <view class="detail_">
+                <view class="label_">手机</view>
+                <view class="content_">{{orderDetail.connextPho}}</view>
+            </view>
+            <view class="detail_">
+                <view class="label_">车型</view>
+                <view class="content_">{{orderDetail.carSize}}</view>
+            </view>
+            <view class="detail_">
+                <view class="label_">车牌号</view>
+                <view class="content_">{{orderDetail.carNum}}</view>
+            </view>
+        </view>
+    </view>
+</template>

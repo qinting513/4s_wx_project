@@ -1,0 +1,42 @@
+.binding_phone_body{
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+.binding_phone_body .detail_box {
+    padding: 0 22rpx;
+}
+.binding_phone_body .detail_box .detail_{
+    display: flex;
+    align-items: center;
+    border-bottom: 2rpx solid #f4f4f4;
+    padding: 35rpx 27rpx 36rpx 20rpx;
+}
+.binding_phone_body .detail_box .detail_ .label_{
+    font-size: 28rpx;
+    width: 160rpx;
+}
+.binding_phone_body .detail_box .detail_ .content_{
+    font-size: 24rpx;
+}
+.binding_phone_body .detail_box .detail_ .sent_code_box{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.binding_phone_body .detail_box .default_{
+    padding: 18rpx 37rpx;
+}
+.binding_phone_body .detail_box .default_ .img_{
+    width: 24rpx;
+    margin-right: 17rpx;
+}
+.binding_phone_body .detail_box .default_ .text_{
+    vertical-align: middle;
+    color: #999999;
+    font-size: 24rpx;
+}
+.binding_phone_body .option_btn{
+    margin-top: 346rpx;
+}

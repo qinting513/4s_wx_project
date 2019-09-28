@@ -1,0 +1,18 @@
+<view class="home_index_body" >
+    <!-- 头部搜索 -->
+    <HeaderView />
+    <!-- 活动轮播 -->
+    <ActivetySwiperView />
+    <!-- 天气 -->
+    <WeatherView />
+    <!-- tab_ad -->
+    <TabAdView />
+    <view class="goods_body">
+        <!-- 会员精品 -->
+        <VipQualityGoodsView />
+        <!-- 新款上线 -->
+        <NewGoodsView />
+        <!-- 严选好礼 -->
+        <GoodGoodsView />
+    </view>
+</view>

@@ -1,0 +1,7 @@
+
+ <view class="marquee_box" style="width:{{windowWidth}}px;">
+    <view class="marquee_text" style="{{orientation}}:{{marqueeDistance2}}px;font-size: {{size}}rpx;">
+      <view>{{text}}</view>
+      <view wx:show="{{marquee2copy_status}}" style="margin-left:{{marquee2_margin}}px;">{{text}}</view>
+    </view>
+</view>
