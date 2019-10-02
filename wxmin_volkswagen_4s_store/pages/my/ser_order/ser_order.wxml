@@ -8,21 +8,21 @@
         </block>
     </view>
     <view class="detail_box">
-        <block wx:for="{{list}}" wx:key="{{item.id}}">
-            <view class="detail_" bindtap="goDetailFn" data-path="SERORDERDETAIL" data-id="item.id">
+        <block wx:for="{{integralList}}" wx:key="{{item.id}}">
+            <view class="detail_">
                 <view class="title_box">
-                    <view class="title_">保养订单</view>
-                    <view class="statue_">已预约</view>
+                    <view class="title_">{{typeMap[item.type]}}订单</view>
+                    <view class="statue_">{{orderStatusMap[item.status]}}</view>
                 </view>
-                <view class="order_info">
-                    <view class="store_name">长沙一汽大众4S店销售服务有限公司</view>
-                    <view class="car_number order_info_detail">湘A5XM04（8000KM）</view>
-                    <view class="time_ order_info_detail">时间：2018-11-26 09:30</view>
-                    <view class="pre_adviser order_info_detail">预约顾问：高欢欢</view>
+                <view class="order_info" bindtap="goDetailFn" data-path="SERORDERDETAIL" data-item="{{item}}">
+                    <view class="store_name">{{shopName}}</view>
+                    <view class="car_number order_info_detail">{{item.plateNo}}（{{item.mileage}}KM）</view>
+                    <view class="time_ order_info_detail">时间：{{item.arriveTime}}</view>
+                    <view class="pre_adviser order_info_detail">预约顾问：{{item.adviserName}}</view>
                 </view>
                 <view class="btn_box">
-                    <view class="btn_ cancle_">取消预约</view>
-                    <view class="btn_ connext_">联系门店</view>
+                    <view class="btn_ cancle_" data-item="{{item}}" wx-if="{{item.status < 2}}" bindtap="cancleOrder">取消预约</view>
+                    <view class="btn_ connext_" bindtap="callServiceFn">联系门店</view>
                 </view>
             </view>
         </block>

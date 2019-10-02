@@ -6,13 +6,29 @@ Page({
   data: {
     ossImgAddre,
     img: ossImgAddre + 'demo_img/1.jpg',
-    list: [1, 2, 3, 4]
+    carlist: [],
+    queryString:{
+      // "brandId": '',
+      // "setId": '',
+      "page": 1,
+      "limit": 100
+    },
   },
   onLoad: function (options) {
-
+    this.getCarList()
   },
   onReady: function () {
 
+  },
+  getCarList(){
+    let {queryString} = this.data
+    app.globalData.request.post('/api/basic/getHotList', queryString).then(res => {
+      this.setData({
+        carlist: res.data
+      }, () => {
+        console.log('this.goodListthis.goodList', this.data.carlist)
+      })
+    })
   },
   onShow: function () {
 

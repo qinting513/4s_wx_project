@@ -23,14 +23,15 @@
 }
 .vip_index_body .vip_detail_info_box .card_info{
    margin-top: 25rpx;
-   font-size: 28rpx
+   font-size: 28rpx;
+   margin-bottom: -40rpx;
 }
-.vip_index_body .vip_detail_info_box .owned_info{
-   margin-top: 65rpx;
-   font-size: 28rpx
+.vip_index_body .vip_detail_info_box .info_center{
+    text-align: center;
+   font-size: 48rpx
 }
 .vip_index_body .vip_detail_info_box .time_box{
-   margin-top: 10rpx;
+   /* margin-top: 10rpx; */
    font-size: 22rpx;
 }
 .vip_index_body .vip_detail_info_box .time_box .rechange_btn_{
@@ -40,6 +41,9 @@
    padding: 16rpx 40rpx;
    background: #FFD956;
    border-radius: 40rpx;
+}
+.vip_index_body .vip_detail_info_box .time_box .price_{
+    font-size: 32rpx;
 }
 .vip_index_body .vip_detail_info_box .vip_card_label_box,
 .vip_index_body .vip_detail_info_box .owned_info,

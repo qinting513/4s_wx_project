@@ -1,6 +1,12 @@
-<import src="../../../tpl/order_store_tpl.wxml" />
-<import src="../../../tpl/order_detail_info_tpl.wxml" />
+<!-- <import src="../../utils/tpl/order_store_tpl.wxml" /> -->
+<import src="../../../utils/tpl/order_store_tpl.wxml" />
+
+<import src="../../../utils/tpl/set_order_detail_info_tpl.wxml" />
 <view class="ser_order_detail_body order_detail_pub">
-    <template is="order_store_tpl" data="{{storeInfo}}"/>
-    <template is="order_detail_info_tpl" data="{{orderDetail}}"/>
+    <template is="order_store_tpl" data="{{shopInfo}}"/>
+    <template is="set_order_detail_info_tpl" data="{{orderDetail}}"/>
+    <view class="bottom_more_btn_pub">
+        <view class="cancel_ btn gray_bg" data-item="{{orderDetail}}" wx-if="{{orderDetail.status < 2}}" bindtap="cancleOrder">取消预约</view>
+        <view class="cancel_ btn blue_bg" bindtap="callServiceFn">联系门店</view>
+    </view>
 </view>

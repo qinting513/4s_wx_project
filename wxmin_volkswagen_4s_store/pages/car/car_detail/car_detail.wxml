@@ -11,27 +11,27 @@
                 >
                 <block wx:for="{{list}}" wx:key="{{item}}">
                     <swiper-item class="item">
-                        <image lazy-load="true"class="img_" src="{{img}}" mode="aspectFill" />
+                        <image lazy-load="true"class="img_" src="{{item}}" mode="aspectFill" />
                     </swiper-item>
                 </block>
                 </swiper>
             </view>
             <view class="info_box">
-                <view class="name_">朗逸 2017款 1.6L 手自一体 风尚版 5座朗逸 2017款 1.6L 手自一体 风尚版 5座朗逸 2017款 1.6L 手自一体 风尚版 5座</view>
+                <view class="name_">{{goodInfo.title}}</view>
                 <view class="look_num_box">
                     <image lazy-load="true"src="{{ossImgAddre + 'car_detail/look_icon.png'}}" class="look_img" mode="widthFix"/>
-                    <text class="text_">1068人浏览</text>
+                    <text class="text_">{{goodInfo.viewNum}}人浏览</text>
                 </view>
             </view>
         </view>
         <view class="car_detail_box">
             <view class="title_box">
-                <image lazy-load="true"src="{{ossImgAddre + 'title_single_l.png'}}" class="img_" mode="widthFix"/>
+                <image lazy-load="true" src="{{ossImgAddre + 'title_single_l.png'}}" class="img_" mode="widthFix"/>
                 <text class="text_">车辆详情</text>
             </view>
             <view class="car_detail">
                 <view class="get_info_">
-                    <rich-text nodes="{{goodInfo}}"></rich-text>
+                    <rich-text nodes="{{goodInfo.detail}}"></rich-text>
                 </view>
                 <view class="has_no_more_box">
                     <text class="line_">——</text>已经到底了<text class="line_">——</text>
@@ -41,15 +41,15 @@
     </view>
     <view class="bottom_box">
         <view class="has_label_" bindtap="goMapStoreFn">
-            <image lazy-load="true"src="{{ossImgAddre + 'car_detail/detail_map.png'}}" class="img_" mode="widthFix"/>
+            <image lazy-load="true" src="{{ossImgAddre + 'car_detail/detail_map.png'}}" class="img_" mode="widthFix"/>
             <view class="text_">导航门店</view>
         </view>
         <view class="creat_poster has_label_" bindtap="goCreatPosterFn">
-            <image lazy-load="true"src="{{ossImgAddre + 'car_detail/creat_poster.png'}}" class="img_" mode="widthFix"/>
+            <image lazy-load="true" src="{{ossImgAddre + 'car_detail/creat_poster.png'}}" class="img_" mode="widthFix"/>
             <view class="text_">生成海报</view>
         </view>
         <view class="has_label_" bindtap="goBookCarFn">
-            <image lazy-load="true"src="{{ossImgAddre + 'car_detail/book_car.png'}}" class="img_" mode="widthFix"/>
+            <image lazy-load="true" src="{{ossImgAddre + 'car_detail/book_car.png'}}" class="img_" mode="widthFix"/>
             <view class="text_">预约试驾</view>
         </view>
         <view class="call_ser" bindtap="callServiceFn">

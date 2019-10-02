@@ -3,3 +3,17 @@
 .book_maintain_body .header_box .img_{
     height: 180rpx;
 }
+.book_maintain_body .add_book_car{
+    width:206rpx;
+    color:white!important;
+    font-weight:bold;
+    text-align:center;
+    border-radius:10rpx;
+    background:#567BFF;
+    padding:16rpx;
+    font-size:26rpx;
+}
+.book_maintain_body .book_car{
+    display: flex;
+    justify-content: center;
+}

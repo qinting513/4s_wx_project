@@ -1,5 +1,5 @@
 <view class="account_set_body">
-    <view class="detail_">
+    <view class="detail_" bindtap="clearCache">
         <view class="label_">清除缓存</view>
         <view class="next_">
             <image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />

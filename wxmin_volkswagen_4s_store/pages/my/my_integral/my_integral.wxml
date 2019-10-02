@@ -6,7 +6,7 @@
                 <image lazy-load="true"class="img_" src="{{ossImgAddre + 'my_integral/header_integral.png'}}" mode="widthFix" />
                 <view class="integral_box">
                     <view class="num_box">
-                        <text class="num_">8880</text>
+                        <text class="num_">{{score}}</text>
                         <text class="unit_">积分</text>
                     </view>
                     <view class="integral_rule">
@@ -14,15 +14,15 @@
                     </view>
                 </view>
             </view>
-            <view class="right_">
+            <!-- <view class="right_" bindtap="chargeScore">
                 积分充值
-            </view>
+            </view> -->
         </view>
     </view>
     <view class="integral_log_box">
         <view class="pub_tab_box">
             <block wx:for="{{tabArr}}" wx:key="{{item.id}}">
-                <view class="tab_ {{item.id===currentTabInfo.id?'active_':''}}">
+                <view class="tab_ {{item.id === currentTabInfo?'active_':''}}" bindtap="changeTab" data-item="{{item}}">
                     <text class="text_">{{item.text}}</text>
                 </view>
             </block>
@@ -33,13 +33,13 @@
             bindscrolltoupper="upperLogFn"
             bindscrolltolower="lowerLogFn"
         >
-            <block wx:for="{{list}}" wx:key="{{item}}">
+            <block wx:for="{{integralList}}" wx:key="{{item.id}}">
                 <view class="detail_">
                     <view class="left_">
-                        <view class="name_">积分兑换</view>
-                        <view class="time_">2019-04-22 22:36:52</view>
+                        <view class="name_">{{item.memo}}</view>
+                        <view class="time_">{{item.createTime}}</view>
                     </view>
-                    <view class="right_ num_ {{index>1?'red_': ''}}">-50</view>
+                    <view class="right_ num_ {{item.status === 2?'red_': ''}}">{{statusMap[item.status]}}{{item.score}}</view>
                 </view>
             </block>
         </scroll-view>

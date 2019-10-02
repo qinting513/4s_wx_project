@@ -5,17 +5,17 @@
             <input type="text" disabled bindtap="goSearchFn" placeholder="搜索你要兑换的商品" placeholder-style="color:#999999"/>
         </view>
         <scroll-view scroll-x class="tab_box">
-            <block wx:for="{{8}}" wx:key="{{item}}">
-                <view bindtap="changeTabFn" data-id="{{item}}" class="detail_ {{currentTab === item? 'active_': ''}}">
-                    <text class="text_">分类分类分类分类{{item}}</text>
+            <block wx:for="{{categoryList}}" wx:key="{{item.id}}">
+                <view bindtap="changeTabFn" data-index="{{index}}" data-id="{{item.id}}" class="detail_ {{currentTab === index? 'active_': ''}}">
+                    <text class="text_">{{item.name}}</text>
                 </view>
             </block>
         </scroll-view>
     </view>
     <view class="goods_contnet_detail_box">
         <view class="ad_box">
-            <image lazy-load="true"class="img_" src="{{img}}" mode="widthFix" />
+            <image lazy-load="true"class="img_" src="{{curImg}}" mode="widthFix" />
         </view>
-        <GoodGoodsListComView />
+        <GoodGoodsListComView integralList="{{integralList}}"/>
     </view>
 </view>

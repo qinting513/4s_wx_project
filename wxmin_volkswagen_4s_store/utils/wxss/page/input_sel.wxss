@@ -22,10 +22,10 @@
     justify-content: space-between;
     line-height: 1;
 }
-.input_sel_body .detail_box .detail_ input{
-    min-height: 25rpx!important;
-    height: 25rpx!important;
-}
+/* .input_sel_body .detail_box .detail_ input{
+    min-height: 30rpx!important;
+    height: 1.4rem;
+} */
 .input_sel_body .detail_box .detail_ .label_{
     color: black;
     font-size: 30rpx;

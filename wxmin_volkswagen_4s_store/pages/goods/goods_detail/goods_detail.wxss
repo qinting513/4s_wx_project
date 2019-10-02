@@ -3,7 +3,8 @@
 }
 .goods_detail_body .goods_info_box .goods_img_box{
     width: 100%;
-    height: 420rpx!important;
+    /* height: 420rpx!important; */
+    /* height: 420rpx!important; */
 }
 .goods_detail_body .goods_info_box .img_box .img_{
     width: 100%;
@@ -58,23 +59,48 @@
     background: white;
     padding: 10rpx;
 }
-.goods_detail_body .goods_detail_box .goods_detail .has_no_more_box{
+.goods_detail_body .goods_detail_box .has_no_more_box{
     text-align: center;
     color: #999999;
     padding: 23rpx;
     font-size: 24rpx;
 }
-.goods_detail_body .goods_detail_box .goods_detail .has_no_more_box .line_{
+.goods_detail_body .goods_detail_box .has_no_more_box .line_{
     color: #666666;
     margin: auto 20rpx;
+    font-size: 24rpx;
 }
-.bottom_box{
+.goods_detail_body .goods_evaluate .detail_{
+    margin-bottom: 2rpx;
+    background: white;
+    padding: 24rpx 36rpx 27px;
+    font-size: 24rpx;
+}
+.goods_detail_body .goods_evaluate .img_name{
+    display: flex;
+    align-items: center;
+}
+.goods_detail_body .goods_evaluate .img_name .img_{
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 100%;
+    margin-right: 20rpx;
+}
+.goods_detail_body .goods_evaluate .evaluate_{
+    margin: 32rpx auto 27rpx;
+    line-height: 1.5;
+}
+.goods_detail_body .goods_evaluate .time_{
+    color: #999999;
+    text-align: right;
+}
+.goods_detail_body .bottom_box{
     position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
 }
-.bottom_box .has_label_{
+.goods_detail_body .bottom_box .has_label_{
     background: white;
     width: 150rpx;
     padding: 20rpx 12rpx 16rpx;
@@ -82,16 +108,16 @@
     color: #999999;
     text-align: center;
 }
-.bottom_box .go_home{
+.goods_detail_body  .bottom_box .go_home{
     border-right: 2rpx solid #F4F4F4;
 }
-.bottom_box .go_home .img_{
+.goods_detail_body .bottom_box .go_home .img_{
     width: 28rpx;
 }
-.bottom_box .conect_ .img_{
+.goods_detail_body .bottom_box .conect_ .img_{
     width: 24rpx;
 }
-.bottom_box .change_box{
+.goods_detail_body .bottom_box .change_box{
     background: #567BFF;
     color: white;
     font-size: 32rpx;

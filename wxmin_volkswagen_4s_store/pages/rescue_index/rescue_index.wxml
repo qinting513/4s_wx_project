@@ -1,6 +1,6 @@
 <view class="map_page_body">
     <view class="map_current_adr" >
-        您的当前位置：长沙市岳麓区丽景路湘麓国际
+        您的当前位置：{{curPosition}}
     </view>
   <view class="map_contant">
     <map
@@ -40,14 +40,14 @@
     <view class="base_info_tel_box">
         <view class="base_info" >
             <view class="store_name" >
-                4S店中南店
+                {{shopInfo.name}}
             </view>
             <view class="store_address pubTextTwohidden" >
                 <view class="lable">
                     <image lazy-load="true"class="address_img" src="{{ossImgAddre + 'address_main.png'}}" mode="widthFix"></image>
                 </view>
                 <view class="text">
-                    湖南省长沙市岳麓区丽景路338号（勤诚达湘麓国际对面）
+                    {{shopInfo.address}}
                 </view>
             </view>
         </view>
@@ -58,7 +58,7 @@
     
     <view class="store_distance_lately" >
         <view class="distance_">
-            距离您：2.78km
+            距离您：{{distanceMile}}km
         </view>
         <view class="lately_">
             <view class="text">

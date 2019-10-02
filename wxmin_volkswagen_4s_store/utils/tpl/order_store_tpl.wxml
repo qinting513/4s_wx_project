@@ -1,0 +1,7 @@
+<template name="order_store_tpl">
+	<view class="store_detail_body">
+        <view class="name_">{{shopInfo.name}}</view>
+        <view class="address_ detail_">{{shopInfo.province}}{{shopInfo.city}}{{shopInfo.county}}{{shopInfo.address}}</view>
+        <view class="time_ detail_">预约时间：{{shopInfo.businessHours}}</view>
+    </view>
+</template>

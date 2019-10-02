@@ -3,26 +3,28 @@
         <view class="person_info_box">
             <view class="detail_box">
                 <view class="img_info_box">
-                    <image lazy-load="true" class="person_img" src="{{img}}" mode="aspectFill" />
+                    <image lazy-load="true" class="person_img" src="{{myInfoData.img}}" mode="aspectFill" />
                     <view class="info_box">
-                        <view class="name_">嗨皮哥</view>
+                        <view class="name_">{{myInfoData.nickName}}</view>
                         <view class="level_">
                             <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'my/vip_label.png'}}" mode="widthFix" />
-                            普通会员
+                            {{myInfoData.memberName}}
                         </view>
                     </view>
                 </view>
                 <view class="option_box">
                     <view class="img_box">
                         <view class="dot_"></view>
-                        <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'call_black.png'}}" mode="widthFix" />
+                        <button open-type="contact">
+                            <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'customer_ser.png'}}" mode="widthFix" />
+                        </button>
                     </view>
                     <view class="get_integral" bindtap="goOtherModelFn" data-path="SIGNIN" data-pathforce="../../activity/">
                         签到赚积分
                     </view>
                 </view>
             </view>
-            <view class="edit_info_btn" bindtap="goOtherFn" data-path="MYINFOEDIT">
+            <view class="edit_info_btn" bindtap="goOtherFn" data-path="MYINFOEDIT" data-info="{{myInfoData}}">
                 编辑个人资料
             </view>
             <view class="tab_box">
@@ -42,11 +44,11 @@
                 <view class="label_">会员权益</view>
             </view>
              <view class="detail_ coupon_detail" bindtap="goOtherFn" data-path="MYCOUPON">
-                <view class="num_">1</view>
+                <view class="num_">{{myInfoData.couponNum}}</view>
                 <view class="label_">我的卡券</view>
             </view>
-             <view class="detail_ integral_detail" bindtap="goOtherFn" data-path="MYINTEGRAL">
-                <view class="num_">4888</view>
+             <view class="detail_ integral_detail" bindtap="goOtherFn" data-score="{{myInfoData.activeScore}}" data-path="MYINTEGRAL">
+                <view class="num_">{{activeScore}}</view>
                 <view class="label_">我的积分</view>
             </view>
         </view>

@@ -4,11 +4,17 @@ var ossImgAddre = app.globalData.ossImgAddre;
 Page({
   data: {
     ossImgAddre,
-    img: ossImgAddre + 'demo_img/1.jpg',
-    detailInfo: {id: 1, name: '彭于晏', level: '一级服务顾问', experience: '3年', number: '50台（2018年）', nick: ossImgAddre + 'demo_img/1.jpg'}
+    img: ossImgAddre + 'banner/zhuanshuguwen.png',
+    detailInfo: {id: 1, name: '4S', level: '1', experience: '3', number: '50台（2018年）', nick: ossImgAddre + 'demo_img/1.jpg'},
+    levelMap: {
+      1: '销售顾问',
+      2: '服务顾问'
+    }
   },
   onLoad: function (options) {
-
+    this.setData({
+      detailInfo: JSON.parse(options.info)
+    })
   },
   onReady: function () {
 
@@ -18,7 +24,7 @@ Page({
   },
   callServiceFn: function(e){
     wx.makePhoneCall({
-      phoneNumber: '158XXXXXXXX',
+      phoneNumber: this.data.detailInfo.phone,
     })
   },
   onHide: function () {

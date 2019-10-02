@@ -3,14 +3,14 @@
         <view class="detail_">
             <view class="label_">手机号码</view>
             <view class="content_ sent_code_box">
-                <input type="number" maxlength="11" placeholder="请输入有效手机号" />
+                <input type="number" maxlength="11" bindinput="bindPhoneNum" placeholder="请输入有效手机号" />
                 <CountDownView phoneNum="{{phoneNum}}"/>
             </view>
         </view>
         <view class="detail_">
             <view class="label_">验证码</view>
             <view class="content_">
-                <input type="number" maxlength="6" placeholder="请输入六位验证码" />
+                <input type="number" bindinput="bindVerifyNum" maxlength="6" placeholder="请输入六位验证码" />
             </view>
         </view>
         <view class="default_" bindtap="isDefaultFn">
@@ -18,7 +18,7 @@
             <text class="text_">保存此号码提供以后授权使用</text>
         </view>
     </view>
-    <view class="option_btn">
+    <view class="option_btn" bindtap="commitBindPhone">
         确认绑定
     </view>
 </view>

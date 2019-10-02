@@ -1,10 +1,13 @@
 <view class="home_header_box" >
-    <view class="home_header_address_box text_hidden_ellipsis">长沙长沙</view>
+    <view class="home_header_address_box text_hidden_ellipsis">{{city}}</view>
     <view class="home_header_search_good_box pub_input_box">
         <image lazy-load="true" class="search_img" src="{{ossImgAddre + 'search_icon.png'}}" mode="widthFix" />
         <input type="text" bindtap="goSearchFn" disabled placeholder="输入你想要找的商品" placeholder-style="color:#999999"/>
     </view>
     <view class="home_header_call_box">
-        <image lazy-load="true" class="img_" src="{{ossImgAddre + 'call_black.png'}}" mode="widthFix"/>
+         <button open-type="contact">
+            <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'customer_ser.png'}}" mode="widthFix" />
+        </button>
+        <!-- <image lazy-load="true" class="img_" src="{{ossImgAddre + 'customer_ser.png'}}" mode="widthFix"/> -->
     </view>
 </view>

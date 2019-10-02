@@ -4,9 +4,8 @@ var ossImgAddre = app.globalData.ossImgAddre;
 Page({
   data: {
     ossImgAddre,
-    integralId: '',
     img: ossImgAddre + 'demo_img/1.jpg',
-    storeInfo: '',
+    shopInfo: {},
     orderDetail: {
       orderNum: 'BY001219042010086',
       orderState: '已接单',
@@ -18,7 +17,29 @@ Page({
   },
   onLoad: function (options) {
     this.setData({
-      integralId: options.id
+      orderDetail: JSON.parse(options.info),
+      shopInfo: app.globalData.shopInfo
+    })
+    console.log('shopInfoshopInfo==>>', app.globalData.shopInfo)
+  },
+  cancleOrder: function(e){
+    wx.showModal({
+      title: '提示',
+      content: '您确定要取消预约吗？',
+      success (res) {
+        if (res.confirm) {
+          app.globalData.request.post('/api/reservation/cancleReservation?id=' + e.currentTarget.dataset.item.id).then(res => {
+            wx.showToast({
+              title: '取消成功',
+              icon: 'success',
+              duration: 2000
+            })
+            this.getDetailInfo()
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
   },
   onReady: function () {

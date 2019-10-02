@@ -1,9 +1,9 @@
 <view class="adviser_list_body">
     <view class="detail_box">
         <block wx:for="{{list}}" wx:key="{{item.id}}">
-            <view class="detail_" bindtap="goDetailFn" data-id="{{item.id}}">
+            <view class="detail_" bindtap="goDetailFn" data-info="{{item}}">
                 <view class="img_box">
-                    <image lazy-load="true"class="img_" src="{{item.nick}}" mode="aspectFill" />
+                    <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill" />
                 </view>
                 <view class="info_box">
                     <view class="info_">
@@ -11,16 +11,16 @@
                         <view class="content_">{{item.name}}</view>
                     </view>
                     <view class="info_">
-                        <view class="label_">等级</view>
-                        <view class="content_">{{item.level}}</view>
+                        <view class="label_">顾问类型</view>
+                        <view class="content_">{{levelMap[item.level]}}</view>
                     </view>
                     <view class="info_">
                         <view class="label_">经验</view>
-                        <view class="content_">{{item.experience}}</view>
+                        <view class="content_">{{item.experience}}年</view>
                     </view>
                     <view class="info_">
                         <view class="label_">服务台次</view>
-                        <view class="content_">{{item.number}}</view>
+                        <view class="content_">{{item.serverCarNum || 0}}次</view>
                     </view>
                 </view>
             </view>

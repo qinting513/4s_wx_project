@@ -1,0 +1,5 @@
+@import "../../../utils/wxss/page/vip_pub.wxss";
+.vip_level_rule{
+  font-size: 26rpx;
+  padding: 30rpx 20rpx;
+}

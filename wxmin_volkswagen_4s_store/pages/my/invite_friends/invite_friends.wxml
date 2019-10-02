@@ -6,7 +6,7 @@
         <image lazy-load="true"class="img_" src="{{ossImgAddre + 'invite_friend/invite_friend_integral.png'}}" mode="widthFix" />
         <view class="text_box">
             <view class="title_">累计获得积分奖励</view>
-            <view class="num_">218</view>
+            <view class="num_">0</view>
         </view>
     </view>
     <view class="invite_result_box">
@@ -16,15 +16,15 @@
             <image lazy-load="true"class="img_" src="{{ossImgAddre + 'invite_friend/invite_friend_title_r.png'}}" mode="widthFix" />
         </view>
         <view class="detail_box">
-            <block wx:for="{{list}}" wx:key="{{item}}">
+            <block wx:for="{{invitaList}}" wx:key="{{item.id}}">
                 <view class="detail_">
                     <view class="info_box">
                         <view class="img_box">
-                            <image lazy-load="true"class="img_" src="{{img}}" mode="aspectFill" />
+                            <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill" />
                         </view>
                         <view class="name_phone_box">
-                            <view class="name_">高欢欢</view>
-                            <view class="phone_">139****9769</view>
+                            <view class="name_">{{item.nickName}}</view>
+                            <view class="phone_">{{item.phone}}</view>
                         </view>
                     </view>
                     <view class="num_">
@@ -34,7 +34,7 @@
             </block>
         </view>
     </view>
-    <view class="option_btn">
+    <button open-type="share" class="option_btn" bindtap="inviteFriends">
         邀请好友
-    </view>
+    </button>
 </view>

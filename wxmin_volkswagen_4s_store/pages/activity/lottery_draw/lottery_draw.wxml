@@ -4,7 +4,7 @@
         <swiper class="win_list_swiper_box" autoplay="true" interval="5000" duration="1000" circular="true" vertical="true" >
             <block wx:for="{{winlistSwiper}}" wx:key="{{item.id}}">
                 <swiper-item>
-                        <view class="detail_">{{item.content}}</view>
+                    <view class="detail_">{{item.content}}</view>
                 </swiper-item>
             </block>
         </swiper>

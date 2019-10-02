@@ -16,7 +16,8 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
 	"appid": "wx7adf1c37b367eda3",
-	"projectname": "wxmin_volkswagen_4s_store",
+	"appid2": "wx93b9707dd7d2423c",
+	"projectname": "%E5%90%AB%E6%8E%A5%E5%8F%A3%E7%9A%84",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -41,7 +42,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 39,
+			"current": 42,
 			"list": [
 				{
 					"id": 0,
@@ -306,6 +307,26 @@
 					"id": 39,
 					"name": "测试marquee",
 					"pathName": "pages/marquue/Marquue",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息中心",
+					"pathName": "pages/my/notice_list/notice_list",
+					"query": ""
+				},
+				{
+					"id": 41,
+					"name": "扫码进入",
+					"pathName": "pages/car/car_detail/car_detail",
+					"query": "scene=%3Fid%3D1%26shareCode%3D20190626632841",
+					"scene": "1011"
+				},
+				{
+					"id": 42,
+					"name": "测试更新",
+					"pathName": "pages/home_index/home_index",
 					"query": "",
 					"scene": null
 				}

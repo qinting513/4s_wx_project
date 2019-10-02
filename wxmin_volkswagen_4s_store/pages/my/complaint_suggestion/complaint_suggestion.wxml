@@ -1,7 +1,7 @@
 <view class="complaint_suggestion_body">
-    <textarea class="complaint_suggestion_text_" maxlength="200"
+    <textarea class="complaint_suggestion_text_" bindinput="contentInputFn" maxlength="200"
     placeholder="尊敬的客户，你可在这留下您的宝贵意见，我们会尽快为您解决！"></textarea>
-    <view class="option_btn">
+    <view class="option_btn" bindtap="commitSuggestion">
         提交
     </view>
 </view>

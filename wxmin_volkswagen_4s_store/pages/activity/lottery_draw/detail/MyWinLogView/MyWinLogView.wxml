@@ -3,7 +3,7 @@
         <image class="title_img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/win_title.png'}}" mode="widthFix" />
     </view>
     <view class="detail_">
-        <image class="bg_img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/win_record.png'}}" mode="aspectFill"/>
+        <image class="bg_img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_lottery_draw/win_record.png'}}" mode="widthFix"/>
         <view class="log_box">
             <view class="tab_th">
                 <view class="td_ time_">中奖时间</view>

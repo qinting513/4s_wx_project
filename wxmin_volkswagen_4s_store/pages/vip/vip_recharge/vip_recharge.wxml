@@ -1,16 +1,16 @@
 <view class="vip_recharge_body fixed_pub_body">
     <view class="detail_box">
         <view class="discount_package_box">
-            <block wx:for="{{discountPackage}}" wx:key="{{item}}">
-                <view class="detail_ {{index === 1 ? 'active' : ''}}">
-                    <view class="num_">500</view>
-                    <view class="des_">9999积分送9999</view>
+            <block wx:for="{{discountPackage}}" wx:key="{{item.id}}">
+                <view class="detail_ {{index === curIndex ? 'active' : ''}}" data-money="{{item.price}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="bindPackage">
+                    <view class="num_">{{item.price}}</view>
+                    <view class="des_">{{item.name}}</view>
                 </view>
             </block>
         </view>
         <view class="other_money_box">
             <view class="title_">其他金额</view>
-            <input type="digit" placeholder="请输入充值金额"/>
+            <input type="digit" value="{{chargeNum}}" bindinput="printChargeNum" placeholder="请输入充值金额"/>
         </view>
         <view class="illustrate_box">
             <view class="detail_">积分充值说明：</view>
@@ -26,6 +26,6 @@
         </view>
     </view>
     <view class="bottom_btn_pub">
-        <view class="option_btn">确定充值</view>
+        <view class="option_btn" bindtap="chargeVip">确定充值</view>
     </view>
 </view>

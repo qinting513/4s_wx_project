@@ -1,0 +1,17 @@
+<view class="notice_list_body">
+    <block wx:for="{{4}}" wx:key="{{item}}">
+        <view class="detail_" :class="{status?'':'active'}">
+            <view class="content_box" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" >
+                <image class="img_" mode="aspectFill" src="{{img}}"></image>
+                <view class="name_detail_box">
+                    <view class="name_time_">
+                        <view class="name_">大众4S店</view>
+                        <view class="time_">2019.5.24 14:20</view>
+                    </view>
+                    <view class="detail_info_ text_hidden_ellipsis">您有新的优惠您有新的优惠您有新的优惠...</view>
+                </view>
+            </view>
+            <view data-index="{{index}}" bindtap = "delItem" class="inner del">删除</view>
+        </view>
+    </block>
+</view>

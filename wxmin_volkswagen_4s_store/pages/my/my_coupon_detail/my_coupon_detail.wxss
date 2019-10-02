@@ -1,0 +1,30 @@
+.my_coupon_detail_body{
+    background: #f4f4f4;
+}
+.my_coupon_detail_body ._detail_box{
+    width:616rpx;
+    margin:212rpx auto;
+    height:686rpx;
+    padding-top: 50rpx;
+    background: #fff;
+}
+.sn_of_coupon{
+    width:574rpx;
+    margin: 0rpx auto;
+    height:98rpx;
+    background:#f4f4f4;
+    font-size:36rpx;
+    font-weight:500;
+    text-align: center;
+    color:rgba(153,153,153,1);
+    line-height: 98rpx;
+}
+.sn_of_QRCode{
+    width: 410rpx;
+    height: 410rpx;
+    margin: 40rpx auto;
+}
+.sn_of_QRCode .img_{
+    width: 410rpx;
+    height: 410rpx;
+}

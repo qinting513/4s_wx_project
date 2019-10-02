@@ -1,0 +1,7 @@
+<template name="label_title_tpl">
+	<view class="label_title_tpl_title">
+        <image lazy-load="true"class="img_l" src="{{ossImgAddre + 'title_l_r.png'}}" mode="widthFix" />
+        <text class="dot"></text>{{title}}<text class="dot"></text>
+        <image lazy-load="true"class="img_l" src="{{ossImgAddre + 'title_r_r.png'}}" mode="widthFix" />
+    </view>
+</template>

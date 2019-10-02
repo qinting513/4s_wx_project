@@ -50,8 +50,12 @@
     justify-content: space-between;
  }
  .vip_pub .other_equity_box .detail_{
+   opacity: 0.3;
     width: 25%;
     text-align: center;
+ }
+ .vip_pub .other_equity_box .active_equity{
+  opacity: 1;
  }
  .vip_pub .other_equity_box .detail_:nth-child(n+5){
     margin-top: 45rpx;

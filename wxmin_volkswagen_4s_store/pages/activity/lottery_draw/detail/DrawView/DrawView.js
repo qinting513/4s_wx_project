@@ -37,6 +37,11 @@ Component({
   created() {
     this.rollDrawFn = this.rollDrawFn.bind(this)
   },
+  pageLifetimes: {
+    hide(){
+      clearTimeout(this.data.timer);
+    }
+  },
   methods: {
     flashLightFn: function() { // 灯
       const {speed} = this.data
@@ -100,7 +105,6 @@ Component({
       }
     },
     stopDrawFn: function (index) {
-      
       this.setData({
         gotPrizeIndex: index
       })

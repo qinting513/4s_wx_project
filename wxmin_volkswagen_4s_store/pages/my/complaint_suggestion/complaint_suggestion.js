@@ -1,11 +1,12 @@
 // pages/my/complaint_suggestion/complaint_suggestion.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    content: ''
   },
 
   /**
@@ -14,7 +15,24 @@ Page({
   onLoad: function (options) {
 
   },
-
+  contentInputFn: function (e) {
+    this.setData({
+      content: e.detail.value
+    })
+  },
+  commitSuggestion: function(){
+    const { content } = this.data
+    let params = {
+      content
+    }
+    app.globalData.request.post('/api/feedback/commit', params).then(res => {
+      wx.showToast({
+        title: '已提交',
+        icon: 'success',
+        duration: 2000
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

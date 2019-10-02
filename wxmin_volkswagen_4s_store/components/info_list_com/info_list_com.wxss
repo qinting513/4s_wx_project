@@ -5,6 +5,8 @@
 }
 .info_list_pub .detail_{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 2rpx solid #E2E2E2;
     padding: 64rpx 0 46rpx;
 }

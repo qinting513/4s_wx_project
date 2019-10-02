@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "积分订单详情"
+  "navigationBarTitleText": "积分订单详情",
+  "usingComponents": {
+    "EvaluateLayer": "../integral_order/detail/EvaluateLayer/EvaluateLayer"
+  }
 }

@@ -25,5 +25,4 @@
 }
 .home_ad_box .img_{
     width: 100%;
-    height: 250rpx;
 }

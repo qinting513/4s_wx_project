@@ -7,14 +7,14 @@
             <view class="detail_">
                 <view class="img_box">
                     <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill" />
-                    <view class="work_time">营业时间：8:00-12:00</view>
+                    <view class="work_time">营业时间：{{item.businessHours}}</view>
                 </view>
                 <view class="name_dis_box">
                     <view class="name_ text_hidden_ellipsis">{{item.name}}</view>
-                    <view class="dis_">距离您{{item.dis}}km</view>
+                    <view class="dis_">距离您{{item.distanceMiles}}km</view>
                 </view>
                 <view class="option_body">
-                    <view class="option_detail">
+                    <view class="option_detail" data-item="{{item}}" bindtap="openNavTo">
                         <view class="name_">{{item.address}}</view>
                         <view class="option_">
                             到这去
@@ -22,8 +22,8 @@
                         </view>
                     </view>
                     <view class="option_detail">
-                        <view class="name_">{{item.tel}}</view>
-                        <view class="option_" bindtap="callServiceFn">
+                        <view class="name_">{{item.phone}}</view>
+                        <view class="option_" bindtap="callServiceFn" data-phone="{{item.phone}}">
                             打电话
                             <image lazy-load="true"class="img_" src="{{ossImgAddre + 'label_tell_small.png'}}" mode="widthFix" />
                         </view>

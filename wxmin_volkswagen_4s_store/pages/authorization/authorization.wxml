@@ -4,5 +4,6 @@
         <view class="label_">请确认授权以下信息</view>
         <view class="text_">获取你的公开信息（昵称、头像等）</view>
     </view>
-    <view class="option_btn">微信授权</view>
+    <!-- <view class="option_btn">微信授权</view> -->
+    <button open-type="getUserInfo" class="option_btn" lang="zh_CN" bindgetuserinfo="onGotUserInfo">微信授权</button>
 </view>

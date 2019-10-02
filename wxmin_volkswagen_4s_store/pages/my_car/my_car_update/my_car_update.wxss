@@ -59,6 +59,12 @@
     margin: 37rpx auto;
     text-align: center;
 }
+.my_car_update_body .add_img_box .img_pic{
+    /* border: 2rpx dashed #999999; */
+    width: 262rpx;
+    /* margin: 37rpx auto; */
+    /* text-align: center; */
+}
 .my_car_update_body .add_img_box .img_{
     width: 53rpx;
     padding: 60rpx 0;
@@ -75,4 +81,7 @@
     margin-top: 30rpx;
     background: #D2D3D6;
     text-shadow:0px 4px 4px rgba(22,1,52,0.2);
+}
+.my_car_update_body .bottom_box .active_btn{
+    background: #567BFF!important;
 }

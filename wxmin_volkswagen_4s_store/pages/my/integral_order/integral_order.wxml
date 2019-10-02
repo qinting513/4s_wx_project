@@ -1,4 +1,4 @@
-<import src="../../../tpl/no_more_data_tpl.wxml" />
+<import src="../../../utils/tpl/no_more_data_tpl.wxml" />
 <view class="integral_order_body order_body {{isShowNoDataImg?'bg_white_pub':''}}">
     <view class="pub_tab_box">
         <block wx:for="{{tabArr}}" wx:key="{{item.id}}">
@@ -8,24 +8,36 @@
         </block>
     </view>
     <view class="detail_box">
-        <block wx:for="{{list}}" wx:key="{{item.id}}">
-            <view class="detail_" bindtap="goDetailFn" data-path="INTEGRALORDERDETAIL" data-id="{{item.id}}">
+        <EvaluateLayer wx:if="{{isShowEvaluate}}" isShowEvaluate="{{isShowEvaluate}}" orderId="{{orderId}}" bind:closeFn="closeEvaluate"/>
+        <block wx:for="{{integralList}}" wx:key="{{item.id}}">
+            <view class="detail_">
                 <view class="title_box">
-                    <view class="title_">门店订单:JF001219042010086</view>
-                    <view class="statue_">已预约</view>
+                    <view class="title_">门店订单:{{item.sn}}</view>
+                    <view class="statue_" wx:if="{{!item.isComment&&item.status===4}}">待评价</view>
+                    <view class="statue_" wx:if="{{item.isComment&&item.status===4}}">已完成</view>
+                    <view class="statue_" wx:if="{{item.status!==4}}">{{orderStatusMap[item.status]}}</view>
                 </view>
-                <view class="order_info">
-                    <view class="store_name">长沙一汽大众4S店销售服务有限公司</view>
-                    <view class="car_number order_info_detail">湘A5XM04（8000KM）</view>
-                    <view class="time_ order_info_detail">时间：2018-11-26 09:30</view>
-                    <view class="integral_num order_info_detail">积分99</view>
+                <view class="order_info"  bindtap="goDetailFn" data-path="INTEGRALORDERDETAIL" data-id="{{item.id}}">
+                    <view class="store_name">{{shopInfo.name}}</view>
+                    <view class="car_number order_info_detail">{{item.skus[0].itemName}}等共{{item.tamount}}件商品</view>
+                    <view class="time_ order_info_detail">时间：{{item.createTime}}</view>
+                    <view class="integral_num order_info_detail">积分{{item.tscore}}</view>
                 </view>
                 <view class="btn_box">
-                    <view class="btn_ cancle_">取消预约</view>
-                    <view class="btn_ connext_">联系门店</view>
+                    <view class="btn_ connext_" data-item="{{item}}" wx:if="{{!item.isComment&&item.status===4}}" bindtap="commentOrder">评价</view>
+                    <view class="btn_ cancle_" data-item="{{item}}" wx:if="{{item.status < 3}}" bindtap="cancleOrder">取消订单</view>
+                    <view class="btn_ cancle_ connext_" data-item="{{item}}" wx:if="{{item.status===3}}" bindtap="commitReceive">确认收货</view>
+                    <view class="btn_ cancle_ connext_" wx:if="{{item.status < 3}}" bindtap="callServiceFn">联系门店</view>
                 </view>
             </view>
         </block>
         <template is="no_more_data_tpl" data="{{isShowNoMoreData,isShowNoDataImg}}"/>
+        <!-- <block wx:if="{{isShowComment}}">
+            <view class="modal_mask" bindtap="cancleModal"></view>
+            <view class="section_comment">
+                <textarea class="textarea_comment" bindinput="textareaInputFn" placeholder="请留下您宝贵的意见，分享购您的体验" name="textarea"/>
+                <button class="comment_btn" bindtap="submitCommet"> 提交 </button>
+            </view>
+        </block> -->
     </view>
 </view>

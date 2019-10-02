@@ -14,6 +14,17 @@ Page({
   onShow: function () {
 
   },
+  clearCache(){
+    wx.clearStorage({
+      success: function(){
+        wx.showToast({
+          title: '清除缓存成功',
+          icon: 'success',
+          duration: 4000
+        })
+      }
+    })
+  },
   onHide: function () {
 
   },

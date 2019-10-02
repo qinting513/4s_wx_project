@@ -10,7 +10,7 @@
             </view>
         </block>
     </view>
-    <view class="home_ad_box" bindtap="goLotteryDrawFn">
-        <image lazy-load="true" class="img_" src="{{ossImgAddre + 'demo_img/home_banner.png'}}" mode="aspectFill"/>
+    <view class="home_ad_box" bindtap="goTabAdView" data-item="{{adBannerList[0]}}">
+        <image lazy-load="true" class="img_" src="{{adBannerList[0].img}}" mode="widthFix"/>
     </view>
 </view>

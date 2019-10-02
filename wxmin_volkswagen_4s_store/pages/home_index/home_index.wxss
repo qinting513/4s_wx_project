@@ -1,5 +1,5 @@
 .home_index_body .goods_body{
-    background: #f3f3f3;
+    background: white;
     margin-top: 4rpx;
     padding-bottom: 24rpx;
 }

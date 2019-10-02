@@ -6,6 +6,7 @@ Component({
     addGlobalClass: true,
   },
   properties: {
+    newCarBannerList: Array
   },
   data: {
     ossImgAddre,
@@ -16,6 +17,15 @@ Component({
       {id: 3, img: ossImgAddre + 'demo_img/new_car3.png'}
     ],
   },
+  attached: function () {
+    // app.globalData.request.post('/api/banner/getModuleList?type=5').then(res => {
+    //   this.setData({
+    //     goodList: res.data[0].bannerList
+    //   }, () => {
+    //     console.log('this.goodListthis.goodList', this.data.goodList)
+    //   })
+    // })
+  },
   methods: {
     goListFn: function(e){
       wx.navigateTo({
@@ -23,10 +33,12 @@ Component({
       })
     },
     goDetailFn: function(e) {
-      const id = e.currentTarget.dataset.id;
-      wx.navigateTo({
-        url: '../../../../car/' + util.formatPath('CARDETAIL') + '?id=' + id
-      })
+      const jumpUrl = e.currentTarget.dataset.jumpUrl;
+      if (jumpUrl && jumpUrl.length > 0){
+        wx.navigateTo({
+          url: jumpUrl
+        })
+      }
     },
   }
 })

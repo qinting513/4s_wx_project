@@ -7,17 +7,19 @@ Page({
 		ossImgAddre,
 		id: '',
 		carDetailImg: '',
-		img: ossImgAddre + 'demo_img/1.jpg',
-		list: [
-			{id: 1, img: ossImgAddre + 'demo_img/goods_2.png'},
-			{id: 2, img: ossImgAddre + 'demo_img/goods_2.png'},
-			{id: 3, img: ossImgAddre + 'demo_img/goods_3.png'},
-			{id: 4, img: ossImgAddre + 'demo_img/goods_1.png'},
-			{id: 5, img: ossImgAddre + 'demo_img/goods_2.png'},
-			{id: 6, img: ossImgAddre + 'demo_img/goods_3.png'},
-			{id: 7, img: ossImgAddre + 'demo_img/goods_1.png'}
+		base64ImgUrl: '',
+		img: ossImgAddre + 'banner/sharebg.jpg',
+		// shareBgImgs: [
+		// 	'https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/banner/share2.png',
+		// 	'https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/banner/share3.png',
+		// 	'https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/banner/share1.png'
+		// ],
+		shareBgImgs: [
+			{id: 1, img: 'https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/banner/share1.png'},
+			{id: 2, img: 'https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/banner/share2.png'},
+			{id: 3, img: 'https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/banner/share3.png'}
 		],
-		selBgInfo: '',
+		selBgInfo: {id: 1, img: 'https://meibao.oss-cn-shenzhen.aliyuncs.com/mp4s/2019/00/banner/share1.png'},
 		qrCodePath: 'https://beta.dlm.ed58.net/client/ClientShare/shareQR?height=300&width=300&url=' + encodeURIComponent('weixin://wxpay/bizpayurl?pr=U4tmn5N'),
 		shareImage: '',
 		goodPicPath: '',
@@ -36,19 +38,21 @@ Page({
 	},
 	setImageFn: function(){
 		let this_ = this
-		let {carDetailImg, qrCodePath, selBgInfo} = this.data
+		let {carDetailImg, qrCodePath, selBgInfo, shareBgImgs, curQrCode} = this.data
+		console.log('imgimgimgimg=====>>', curQrCode, qrCodePath)
 		util.getImageInfoFn({
 			key: '背景图',
 			src: selBgInfo.img,
 			successFn: function(res){
+				// console.log('beijingtu=====>', res, 'img===>', img)
 				const setImageBg = res.path
 				util.getImageInfoFn({
 					key: '汽车详情',
-					src: carDetailImg,
+					src: carDetailImg.replace(/http:/, 'https:'),
 					successFn: function(carRes){
 						util.drawSharePic({
-							// qrCodePath: 'data:image/png;base64,' + qrCodePath,
-							qrCodePath: carRes.path,
+							qrCodePath: 'data:image/png;base64,' + curQrCode,
+							// qrCodePath: curQrCode,
 							goodPicPath: carRes.path,
 							setImageBg,
 							this_: this_
@@ -114,13 +118,33 @@ Page({
 			}
 		})
 	},
-  	onLoad: function (options) {
-		const {list} = this.data
+	getBase64ImageUrl: function(base64Data) {
+		/// 获取到base64Data
+		// var base64Data = 'xxxxxx';
+		/// 通过微信小程序自带方法将base64转为二进制去除特殊符号，再转回base64
+		base64Data = wx.arrayBufferToBase64(wx.base64ToArrayBuffer(base64Data));
+		/// 拼接请求头，data格式可以为image/png或者image/jpeg等，看需求
+		const base64ImgUrl = "data:image/png;base64," + base64Data;   
+		/// 刷新数据
 		this.setData({
-			id: options.sn,
-			carDetailImg: options.carDetailImg,
-			selBgInfo: list[0]
+				base64ImgUrl: base64ImgUrl
 		})
+	},
+  	onLoad: function (options) {
+			// console.log('options', options)
+			// this.getBase64ImageUrl(options.curQrCode)
+			this.setData({
+				list: JSON.parse(options.list),
+				id: options.sn,
+				curQrCode: options.curQrCode,
+				carDetailImg: JSON.parse(options.list)[0]
+				// selBgInfo: {img: this.data.img, id:  options.sn}
+			})
+		// this.setData({
+		// 	id: options.sn,
+		// 	carDetailImg: JSON.parse(options.list)[0],
+		// 	selBgInfo: list[0]
+		// })
 		util.messageLoadingFn('正在生成图片...');
   },
   onReady: function () {
@@ -142,7 +166,6 @@ Page({
 	// })
   },
   onShow: function () {
-
   },
   onHide: function () {
 

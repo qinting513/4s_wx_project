@@ -31,7 +31,6 @@ Page({
 
   },
   onShow: function () {
-
   },
   bindPickerStoreFn: function(e) {
     const index = e.detail.value;

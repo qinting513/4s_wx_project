@@ -2,12 +2,14 @@ var app = getApp();
 var ossImgAddre = app.globalData.ossImgAddre;
 Page({
   data: {
-    currentVipTap: 1,
+    currentVipTap: 0,
     ossImgAddre,
+    price: '',
+    memberCardId: '',
     vipTapList: [
-      {id: 1, img: ossImgAddre + 'demo_img/vip_bg_1.png'},
-      {id: 2, img: ossImgAddre + 'demo_img/vip_bg_2.png'},
-      {id: 3, img: ossImgAddre + 'demo_img/vip_bg_3.png'}
+      {id: 0, img: ossImgAddre + 'demo_img/vip_bg_1.png'},
+      {id: 1, img: ossImgAddre + 'demo_img/vip_bg_2.png'},
+      {id: 2, img: ossImgAddre + 'demo_img/vip_bg_3.png'}
     ],
     baseEquity: [
       {id: 1, text: '精品9折', img_: 'vip_label_9.png'},
@@ -37,8 +39,22 @@ Page({
     ]
   },
   swiperChange: function(e){
+    let { vipTapList, otherEquity } = this.data
+    let defaultOtherEquity = vipTapList[e.detail.current].equityList
     this.setData({
-      currentVipTap: e.detail.current
+      currentVipTap: e.detail.current,
+      memberCardId: vipTapList[e.detail.current].id,
+      price: vipTapList[e.detail.current].price,
+      baseEquity: vipTapList[e.detail.current].consumEquityList,
+      otherEquity: otherEquity.map(item => {
+        item.active = false
+        defaultOtherEquity.map(val => {
+          if (item.id === val.equityType) {
+            item.active = true
+          }
+        })
+        return item
+      })
     })
   },
   onLoad: function (options) {
@@ -48,7 +64,81 @@ Page({
 
   },
   onShow: function () {
-
+    this.getLevelList()
+  },
+  aboutVipInfo(){
+    wx.navigateTo({
+      url: '../about_vip/about_vip'
+    });
+  },
+  getMyInfo: function () {
+    app.globalData.request.post('/api/user/userInfo').then(res => {
+      app.globalData.activeScore = res.data.activeScore
+    })
+  },
+  openVipLevel () {
+    let {memberCardId, price } = this.data
+    let params = {
+      memberCardId,
+      money: price
+    }
+    app.globalData.request.post('/api/member/openMember', params).then(res => {
+      let payData =  res.data
+      let that = this
+      wx.requestPayment({
+        timeStamp: payData.timeStamp,
+        nonceStr: payData.nonceStr,
+        package: payData.package,
+        signType: payData.signType,
+        paySign: payData.paySign,
+        success (res) {
+          wx.showToast({
+            title: '充值成功',
+            icon: 'success',
+            duration: 2000
+          })
+          // wx.navigateBack()
+          that.getMyInfo()
+          that.getLevelList()
+        },
+        fail (res) {
+          wx.showToast({
+            title: '充值失败，请重试',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      })
+    })
+  },
+  getLevelList: function () {
+    let { otherEquity } = this.data
+    app.globalData.request.post('/api/member/getMemberCardList').then(res => {
+        let defaultOtherEquity = res.data[0].equityList
+        this.setData({
+          vipTapList: res.data,
+          baseEquity: res.data[0].consumEquityList,
+          memberCardId: res.data[0].id,
+          price: res.data[0].price,
+          otherEquity: otherEquity.map(item => {
+            item.active = false
+            defaultOtherEquity.map(val => {
+              if (item.id === val.equityType) {
+                item.active = true
+              }
+            })
+            return item
+          })
+        }, () => {
+          console.log('======>', this.data.otherEquity)
+        })
+      })
+  },
+  chargeLevelFn(e) {
+    console.log('eee==>>>', e)
+    this.setData({
+      
+    })
   },
   onHide: function () {
 

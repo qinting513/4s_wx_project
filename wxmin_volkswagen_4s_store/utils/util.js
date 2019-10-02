@@ -1,3 +1,4 @@
+const { getStorage }  = require('./auth.js')
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -33,7 +34,7 @@ const formatPath = input => {
     CARDETAIL: "car_detail/car_detail", // 车详情
     CARPOSTER: "../../../car_poster/car_poster", // 创建海报
     GOODGOODSLIST: "../goods/good_goods_list/good_goods_list",
-    ADVISERINDEX: "../adviser/adviser_list/adviser_list", // 顾问列表
+    ADVISERINDEX: "../../adviser/adviser_list/adviser_list", // 顾问列表
     MyADVISERINDEX: "../../adviser/adviser_list/adviser_list", // 我的顾问列表
     ADVISERDETAIL: "../adviser_detail/adviser_detail", // 顾问详情
     MYCAR: "../my_car/my_car_list/my_car_list", // 我的车
@@ -42,6 +43,7 @@ const formatPath = input => {
     INFODETAIL: "../info_detail/info_detail", // 资讯详情
     MYINFOEDIT: "../my_info_edit/my_info_edit", // 个人信息编辑
     MYCOUPON: "../my_coupon/my_coupon", // 我的卡券
+    MYCOUPONDETAIL: "../my_coupon_detail/my_coupon_detail", // 我的卡券
     MYINTEGRAL: "../my_integral/my_integral", // 我的积分
     INVITEFRIENDS: "../invite_friends/invite_friends", // 邀请好友
     COMPLAINTSUGGESTION: "../complaint_suggestion/complaint_suggestion", // 投诉建议
@@ -75,6 +77,7 @@ const base64src = function(base64data) {
     }
     const filePath = `${wx.env.USER_DATA_PATH}/${FILE_BASE_NAME}.${format}`;
     const buffer = wx.base64ToArrayBuffer(bodyData);
+    console.log('buffer=========>>>', buffer, filePath)
     fsm.writeFile({
       filePath,
       data: buffer,
@@ -108,16 +111,17 @@ const drawSharePic = obj => {
   canvasCtx.drawImage(obj.setImageBg, 0, 0, canvase_w, canvase_h);
   // canvasCtx.draw(true);
   //绘制商品图片
-	let banner_x = remSize(18);
-	let banner_y = remSize(73);
-	let banner_w = remSize(248);
+	let banner_x = remSize(0);
+	let banner_y = remSize(35);
+	let banner_w = remSize(284);
 	let banner_h = remSize(173.5);
   canvasCtx.drawImage(obj.goodPicPath, banner_x, banner_y, banner_w, banner_h);
-  // canvasCtx.draw(true)
+  canvasCtx.draw(true)
   // //绘制二维码
-	// // base64src(obj.qrCodePath).then(res=>{
-    let res = obj.goodPicPath
-    canvasCtx.drawImage(res, remSize(198), remSize(329.5), remSize(75.5), remSize(75.5));
+	base64src(obj.qrCodePath).then(Response=>{
+    console.log('Response===>>', Response)
+    // let res = obj.goodPicPath
+    canvasCtx.drawImage(Response, remSize(104.5), remSize(312), remSize(75.5), remSize(75.5));
 		canvasCtx.draw(true, setTimeout(function(){
 			wx.canvasToTempFilePath({
 				width: canvase_w,
@@ -136,7 +140,7 @@ const drawSharePic = obj => {
 				}
 			})
 		}, 1000));
-  // })
+  })
 }
 const saveImageToPhoneFn = obj =>{
 	wx.saveImageToPhotosAlbum({
@@ -182,12 +186,14 @@ const messageLoadingFn = msg =>{
   })
 }
 const getImageInfoFn = obj =>{
+  console.log('obj======>>', obj)
   wx.getImageInfo({
     src: obj.src,
     success(res) {
       obj.successFn(res)
     },
     fail(res) {
+      console.log('error --res==>>', res)
       wx.showToast({
         title: '该'+obj.key+'图片地址有问题,非本平台支持的~',
         icon: 'none',
@@ -210,8 +216,11 @@ const getDuration = (str)=>{// 保留，根据文字长度设置时间
   return this.getWidth(str)/10;
 }
 const makePhoneCallFn = ()=>{
-  wx.makePhoneCall({
-    phoneNumber: '158XXXXXXXX',
+  getStorage('shopInfo').then(res => {
+    // console.log('shopInfo=========res=======>>', res)
+    wx.makePhoneCall({
+      phoneNumber: res.data.phone,
+    })
   })
 }
 module.exports = {

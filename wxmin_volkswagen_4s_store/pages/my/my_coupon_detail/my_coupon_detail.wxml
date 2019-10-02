@@ -1,0 +1,10 @@
+<view class="my_coupon_detail_body">
+    <view class="_detail_box">
+        <view class="sn_of_coupon">兑换码：{{info.sn}}</view>
+        <view class="sn_of_QRCode">
+            <image lazy-load="true"class="img_" src="{{img}}" mode="aspactfill" />
+        </view>
+    </view>
+    <view></view>
+    <view></view>
+</view>

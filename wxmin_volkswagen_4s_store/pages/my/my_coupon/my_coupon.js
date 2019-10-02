@@ -7,11 +7,17 @@ Page({
     ossImgAddre,
     img: ossImgAddre + 'demo_img/1.jpg',
     currentTab: 1,
+    statusMap: {
+      1: '使用',
+      2: '已使用',
+      3: '已过期'
+    },
     tabArr: [
       {id: 1, text: '全部'},
       {id: 2, text: '未使用'},
       {id: 3, text: '已使用/过期'}
-    ]
+    ],
+    myCouponList: []
   },
   onLoad: function (options) {
 
@@ -20,12 +26,23 @@ Page({
 
   },
   onShow: function () {
-
+    this.myCouponList()
+  },
+  myCouponList: function () {
+    app.globalData.request.post('/api/user/couponList?status='+this.data.currentTab).then(res => {
+      this.setData({
+        myCouponList: res.data
+      }, () => {
+        console.log('this.goodListthis.goodList', this.data.myCouponList)
+      })
+    })
   },
   changeTabFn: function(e) {
     const item = e.currentTarget.dataset.item;
     this.setData({
       currentTab: item.id
+    }, () => {
+      this.myCouponList()
     })
   },
   callServiceFn: function(e){
@@ -40,7 +57,7 @@ Page({
     let url  = util.formatPath(path);
     if (dataset.id) {
       id = dataset.id;
-      url  = util.formatPath(path) + '?id=' + id;
+      url  = util.formatPath(path) + '?info=' + JSON.stringify(id);
     }
     wx.navigateTo({
       url

@@ -1,0 +1,14 @@
+<view class="evaluate_layer_body">
+    <view class="mask_box"></view>
+    <view class="evaluate_layer_detail_box">
+        <view class="title_">商品评价</view>
+        <view class="textarea_">
+            <textarea placeholder="请留下您宝贵的意见，分享购您的体验" bindinput="textareaInputFn"></textarea>
+            <view class="num_box">0/200</view>
+        </view>
+        <view class="btn_box">
+            <view class="btn_" bindtap="closeFn">取消</view>
+            <view class="btn_ blue_" bindtap="submitCommet">确定</view>
+        </view>
+    </view>
+</view>

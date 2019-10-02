@@ -1,0 +1,50 @@
+.evaluate_layer_body{
+    position: relative;
+    width: 200rpx;
+    height: 200rpx;
+}
+.evaluate_layer_body .evaluate_layer_detail_box{
+    background: white;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    padding-top: 42rpx;
+}
+.evaluate_layer_body .evaluate_layer_detail_box .title_{
+    text-align: center;
+    font-size: 32rpx;
+}
+.evaluate_layer_body .evaluate_layer_detail_box .textarea_{
+    position: relative;
+    font-size: 26rpx;
+    margin: 28rpx 30rpx 42rpx;
+}
+.evaluate_layer_body .evaluate_layer_detail_box .textarea_ textarea{
+    background: #F4F4F4;
+    padding: 20rpx 13rpx;
+    width: 100%;
+    height: 280rpx;
+}
+.evaluate_layer_body .evaluate_layer_detail_box .textarea_ .num_box{
+    position: absolute;
+    bottom: 10rpx;
+    right: 10rpx;
+    color: #999999;
+}
+.evaluate_layer_body .btn_box{
+    display: flex;
+}
+.evaluate_layer_body .btn_box .btn_{
+    flex: 1;
+    font-size: 30rpx;
+    color: white;
+    text-align: center;
+    padding: 24rpx;
+    background: #B4B4B4;
+}
+.evaluate_layer_body .btn_box .btn_.blue_{
+    background: #567BFF;
+}

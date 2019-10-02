@@ -2,16 +2,15 @@
     <!-- 头部搜索 -->
     <HeaderView />
     <!-- 活动轮播 -->
-    <ActivetySwiperView />
-    <!-- 天气 -->
-    <WeatherView />
+    <ActivetySwiperView headBannerList="{{headBannerList}}"/>
+    <!-- 天气 
+    <WeatherView newsBannerList="{{newsBannerList}}" />
+    -->
     <!-- tab_ad -->
-    <TabAdView />
+    <TabAdView adBannerList="{{adBannerList}}" />
     <view class="goods_body">
-        <!-- 会员精品 -->
-        <VipQualityGoodsView />
         <!-- 新款上线 -->
-        <NewGoodsView />
+        <NewGoodsView newCarBannerList="{{newCarBannerList}}" />
         <!-- 严选好礼 -->
         <GoodGoodsView />
     </view>

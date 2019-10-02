@@ -1,32 +1,45 @@
 <view class="my_car_list_body">
     <view class="detail_box">
-        <block wx:for="{{list}}" wx:key="{{item.id}}" wx:if="{{list && list.length>0}}">
-            <view class="detail_">
-                <view class="title_box">
-                    <view class="img_box">
-                        <image lazy-load="true"class="img_" src="{{item.nick}}" mode="aspectFill"/>
+        <scroll-view style='height:{{height}}px;' scroll-y='{{false}}' class='msg-list' bindscroll = 'onScroll'>
+        <block>
+            <view wx:for="{{list}}" wx:key="{{item.id}}" wx:if="{{list && list.length>0}}" class='msg-item' animation='{{item.wrapAnimation}}'>
+                <view  class="detail_" bindtap="chooseCarModel" animation='{{item.animation}}' bindtouchstart='ontouchstart' bindtouchmove='ontouchmove' bindtouchend='ontouchend' data-id="{{item.id}}" data-info="{{item}}">
+                    <view class="title_box">
+                        <view class="img_box">
+                            <image lazy-load="true"class="img_" src="{{item.carPic}}" mode="aspectFill"/>
+                        </view>
+                        {{item.brandName}}{{item.setName || ''}}{{item.remark}}
                     </view>
-                    奥迪A4L 2016 30TSFI 自动豪华型
+                    <view class="info_box">
+                        <view class="info_">
+                            <view class="label_">
+                                <image lazy-load="true"class="img_" src="{{ossImgAddre + 'car_num.png'}}" mode="widthFix"/>
+                            </view>
+                            <view class="content_">{{item.plateNo}}</view>
+                        </view>
+                        <view class="info_">
+                            <view class="label_">
+                                <image lazy-load="true"class="img_" src="{{ossImgAddre + 'car_dis.png'}}" mode="widthFix"/>
+                            </view>
+                            <view class="content_">
+                                行驶里程<text class="num_">{{item.mileage}}</text>公里
+                            </view>
+                        </view>
+                    </view>
                 </view>
-                <view class="info_box">
-                    <view class="info_">
-                        <view class="label_">
-                            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'car_num.png'}}" mode="widthFix"/>
-                        </view>
-                        <view class="content_">湘AXM520</view>
+                <view class='msg-menu'>
+                    <view data-id='{{item.id}}' class='menu-mark' bindtap='onMarkMsgTap' bindlongtap='onMarkMsgLongtap'>
+                        设为默认
                     </view>
-                    <view class="info_">
-                        <view class="label_">
-                            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'car_dis.png'}}" mode="widthFix"/>
-                        </view>
-                        <view class="content_">
-                            行驶里程<text class="num_">1288</text>公里
-                        </view>
+                    <view data-id='{{item.id}}' class='menu-delete' bindtap='onDeleteMsgTap' bindlongtap='onDeleteMsgLongtap'>
+                        删除
                     </view>
                 </view>
             </view>
         </block>
-        <block wx:if="{{list && list.length === 0}}">
+        </scroll-view>
+      <!-- 省略数据 -->
+      <block wx:if="{{list && list.length === 0}}">
             <view class="no_data_box">
                 <image lazy-load="true"class="no_data_img" src="{{ossImgAddre + 'no_data_img.png'}}" mode="widthFix"/>
                 <text class="no_data_text">
@@ -40,4 +53,4 @@
             新增爱车
         </view>
     </view>
-</view>
+    </view>

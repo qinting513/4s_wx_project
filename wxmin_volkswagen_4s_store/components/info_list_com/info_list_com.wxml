@@ -5,12 +5,12 @@
                 <view class="left_">
                     <view class="title_ pubTextTwohidden">{{item.title}}</view>
                     <view class="author_time_box">
-                        <view class="author_">{{item.author}}</view>
-                        <view class="time_">{{item.time}}</view>
+                        <view class="author_">{{item.label}}</view>
+                        <view class="time_">{{item.createTime}}</view>
                     </view>
                 </view>
                 <view class="right_">
-                    <image lazy-load="true"class="img_" src="{{item.img}}" mode="aspectFill" />
+                    <image lazy-load="true"class="img_" src="{{item.pic}}" mode="aspectFill" />
                 </view>
             </view>
         </block>

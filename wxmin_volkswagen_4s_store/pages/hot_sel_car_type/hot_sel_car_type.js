@@ -1,65 +1,54 @@
-// pages/hot_sel_car_type/hot_sel_car_type.js
+var app = getApp();
+const ossImgAddre = app.globalData.ossImgAddre;
+const util = require('../../utils/util.js');
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    ossImgAddre,
+    img: ossImgAddre + 'demo_img/1.jpg',
+    list: [1, 2, 3, 4]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-
+    this.getHotCarList()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+  getHotCarList: function () {
+    let params = {
+      // "brandId": 101,
+      // "setId": 12,
+      "page": 1,
+      "limit": 10
+  }
+    app.globalData.request.post('/api/basic/getHotList', params).then(res => {
+      this.setData({
+        list: res.data
+      }, () => {
+        console.log('this.goodListthis.goodList', this.data.list)
+      })
+    })
+  },
+  goDetailFn: function(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../car/' + util.formatPath('CARDETAIL') + '?id=' + id
+    })
+  },
   onHide: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
   }

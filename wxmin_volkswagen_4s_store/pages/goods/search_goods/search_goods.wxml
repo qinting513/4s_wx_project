@@ -2,7 +2,7 @@
     <view class="search_box">
         <view class="input_box pub_input_box">
             <image lazy-load="true"class="img_ search_img" src="{{ossImgAddre + 'search_icon.png'}}" mode="widthFix" />
-            <input type="text" maxlength="20" placeholder="输入你想要找的商品" placeholder-style="color:#999999"/>
+            <input type="text" name="search" confirm-type="search" bindconfirm="bindconfirm" value="{{goodsName}}" maxlength="20" placeholder="输入你想要找的商品" placeholder-style="color:#999999"/>
         </view>
         <view class="cancel_" bindtap="goBack">取消</view>
     </view>

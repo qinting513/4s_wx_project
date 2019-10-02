@@ -12,7 +12,8 @@ Page({
       {id: 4, text: '保养'},
       {id: 5, text: '酒鬼花生米'},
       {id: 6, text: '男士钱包'}
-   ]
+   ],
+   goodsName: ''
   },
   onLoad: function (options) {
 
@@ -22,6 +23,18 @@ Page({
   },
   onShow: function () {
 
+  },
+  // bindconfirm(e) {
+  //   console.log('e==>>', e)
+  // },
+  bindconfirm(e){
+    this.setData({
+      goodsName: e.detail.value
+    }, () => {
+      wx.navigateTo({
+        url: util.formatPath('SEARCHGOODSLIST') + '?searchkey=' + this.data.goodsName
+      })
+    })
   },
   goBack: function () {
     wx.navigateBack();

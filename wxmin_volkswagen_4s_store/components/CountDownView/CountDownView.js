@@ -1,4 +1,5 @@
 const util = require("../../utils/util.js");
+var app = getApp();
 Component({
   properties: {
     phoneNum: String
@@ -48,6 +49,13 @@ Component({
         })
       }
       this.startTimer();
+      app.globalData.request.post('/api/user/sendsms', {phone: this.properties.phoneNum}).then(res => {
+        wx.showToast({
+          title:'验证码已发送',
+          icon: 'none',
+          duration: 2000
+        })
+      })
     },
     pageLifetimes: {
       hide() {

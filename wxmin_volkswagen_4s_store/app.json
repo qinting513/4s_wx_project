@@ -29,6 +29,8 @@
     "pages/address/address_list/address_list",
     "pages/address/address_update/address_update",
     "pages/vip/vip_index/vip_index",
+    "pages/vip/level_rule/level_rule",
+    "pages/vip/about_vip/about_vip",
     "pages/vip/vip_recharge/vip_recharge",
     "pages/vip/vip_level_rise/vip_level_rise",
     "pages/goods/search_goods/search_goods",
@@ -44,7 +46,9 @@
     "pages/activity/sign_in/sign_in",
     "pages/activity/lottery_draw/lottery_draw",
     "pages/my/my_coupon/my_coupon",
-    "pages/marquue/Marquue"
+    "pages/my/my_coupon_detail/my_coupon_detail",
+    "pages/marquue/Marquue",
+    "pages/my/notice_list/notice_list"
   ],
   "window": {
     "backgroundTextStyle": "light",

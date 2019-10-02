@@ -1,7 +1,7 @@
 <view class="home_weather_body">
     <image lazy-load="true"class="label_img" src="{{ossImgAddre + 'home/weather_label.png'}}" mode="widthFix"></image>
     <view class="info_box">
-        <view class="weather_">24℃  4月19日</view>  
-        <Marquee />
+        <view class="weather_">{{fl}}℃  {{nowDate}}</view>  
+        <Marquee newsBannerList="{{newsBannerList}}" />
     </view>
 </view>

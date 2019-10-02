@@ -47,10 +47,14 @@
 .my_coupon_body .detail_box .detail_ .right_{
     background: white;
     padding: 27rpx 25rpx 20rpx 24rpx;
+    width:90%;
 }
 .my_coupon_body .detail_box .detail_ .right_ .content_{
     color: #999999;
     font-size: 24rpx;
+}
+.used_coupon{
+    color: #999999 !important;
 }
 .my_coupon_body .detail_box .detail_ .right_ .label_{
     display: flex;

@@ -9,8 +9,8 @@
         </view>
     </view>
     <view class="detail_box">
-        <block wx:for="{{goodList}}" wx:key="{{item.id}}">
-            <image lazy-load="true"bindtap="goDetailFn" data-id="{{item.id}}" class="img_" src="{{item.img}}" mode="aspectFill"/>
+        <block wx:for="{{newCarBannerList}}" wx:key="{{item.id}}">
+            <image lazy-load="true"bindtap="goDetailFn" data-jump-url="{{item.jumpUrl}}" class="img_" src="{{item.img}}" mode="aspectFill"/>
         </block>
     </view>
 </view>

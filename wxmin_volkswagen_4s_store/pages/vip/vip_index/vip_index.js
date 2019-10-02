@@ -1,11 +1,12 @@
 var app = getApp();
 var ossImgAddre = app.globalData.ossImgAddre;
 let util = require("../../../utils/util.js");
+const auth = require('../../../utils/auth.js')
 Page({
   data: {
     currentVipTap: 1,
     ossImgAddre,
-    vipBg: ossImgAddre + 'vip/detail_vip1.png',
+    vipBg: ossImgAddre + 'banner/mcard.png',
     vipTapList: [
       {id: 1, img: ossImgAddre + 'vip/banner_bg.png'},
       {id: 2, img: ossImgAddre + 'demo_img/2.jpg'},
@@ -36,7 +37,11 @@ Page({
       {id: 14, text: '理赔代办', img_: 'settlement_claims.png'},
       {id: 15, text: '会员活动', img_: 'vip_activity.png'},
       {id: 16, text: '联盟服务', img_: 'union_ser.png'}
-    ]
+    ],
+    vipInfoData: {},
+    equityTotal: 0,
+    shopInfo: {},
+    balance: 0
   },
   swiperChange: function(e){
     this.setData({
@@ -54,13 +59,49 @@ Page({
     });
   },
   onLoad: function (options) {
-    
+    auth.getStorage('shopInfo').then(res => {
+      this.setData({
+        shopInfo: res.data
+      })
+    })
   },
   onReady: function () {
-
   },
   onShow: function () {
-
+    this.getVipInfoData()
+  },
+  getLevelRule (){
+    wx.navigateTo({
+      url: '../level_rule/level_rule'
+    });
+  },
+  getVipInfoData(){
+    let { otherEquity } = this.data
+    // api/user/userInfo
+    app.globalData.request.post('/api/user/userInfo').then(res => {
+      this.setData({
+        balance: res.data.balance
+      })
+    })
+    
+    app.globalData.request.post('/api/member/myMemberInfo').then(res => {
+      let defaultOtherEquity = res.data.equityList
+      this.setData({
+        vipInfoData: res.data,
+        equityTotal: res.data.equityList.length,
+        otherEquity: otherEquity.map(item => {
+          item.active = false
+          defaultOtherEquity.map(val => {
+            if (item.id === val.equityType) {
+              item.active = true
+            }
+          })
+          return item
+        })
+      }, () => {
+        console.log('======>', this.data.vipInfoData)
+      })
+    })
   },
   onHide: function () {
 

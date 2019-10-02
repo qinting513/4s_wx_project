@@ -42,6 +42,19 @@ Component({
       {id: 16, text: '联盟服务', img_: 'union_ser.png'}
     ]
   },
+  pageLifetimes: {
+    show (){
+      // /api/member/getMemberCardList
+      // app.globalData.request.post('/api/member/getMemberCardList').then(res => {
+      //   this.setData({
+      //     vipInfoData: res.data
+      //   }, () => {
+      //     console.log('======>', this.data.vipInfoData)
+      //   })
+      // })
+    },
+  },
+  
   methods: {
     swiperChange: function(e){
       this.setData({

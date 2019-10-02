@@ -1,7 +1,9 @@
 
-const util = require('../../utils/util.js');
+let timer = ''
+var app = getApp();
 Component({
   properties: {
+    newsBannerList: Array
   },
   data: {
     text: '今日油价:92/93# 7.063元；95/97#',
@@ -15,27 +17,38 @@ Component({
     interval: 20 // 时间间隔
   },
   pageLifetimes: {
+    // ready() {
+      
+    // },
     show() { 
-      // 页面显示
-      var vm = this;
-      const {text, size} = this.data
-      var length = text.length * size * 0.45;//文字长度
-      var windowWidth = wx.getSystemInfoSync().windowWidth;// 屏幕宽度
-      vm.setData({
-        length,
-        windowWidth,
-        marquee2_margin: length < windowWidth ? windowWidth - length : vm.data.marquee2_margin//当文字长度小于屏幕长度时，需要增加补白
-      });
-      vm.run2();// 第一个字消失后立即从右边出现
-    }
-  },
-  created() {
+      // app.globalData.request.post('/api/banner/getModuleList?type=2').then(res => {
+      //   this.setData({
+      //     text: res.data.length>0?res.data[0].bannerList[0].moduleName : '暂无资讯'
+      //   }, () => {
+      //     // console.log('this.goodListthis.goodList', this.data.imgUrls)
+      //     // 页面显示
+      //     var vm = this;
+      //     const {text, size} = this.data
+      //     var length = text.length * size * 0.45;//文字长度
+      //     var windowWidth = wx.getSystemInfoSync().windowWidth;// 屏幕宽度
+      //     vm.setData({
+      //       length,
+      //       windowWidth,
+      //       marquee2_margin: length < windowWidth ? windowWidth - length : vm.data.marquee2_margin//当文字长度小于屏幕长度时，需要增加补白
+      //     });
+      //     vm.run2();// 第一个字消失后立即从右边出现
+      //   })
+      // })
+    },
+    hide() {
+      clearInterval(timer);
+    },
   },
   methods: {
     run2: function () {
       var vm = this;
       const {length} = this.data;
-      var interval = setInterval(function () {
+      timer = setInterval(function () {
         if (-vm.data.marqueeDistance2 < length) {
           // 如果文字滚动到出现marquee2_margin=30px的白边，就接着显示
           vm.setData({
@@ -47,10 +60,10 @@ Component({
             vm.setData({
               marqueeDistance2: vm.data.marquee2_margin // 直接重新滚动
             });
-            clearInterval(interval);
+            clearInterval(timer);
             vm.run2();
           } else {
-            clearInterval(interval);
+            clearInterval(timer);
             vm.setData({
               marqueeDistance2: -vm.data.windowWidth
             });

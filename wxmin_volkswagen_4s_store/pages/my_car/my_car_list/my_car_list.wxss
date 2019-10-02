@@ -3,12 +3,25 @@
     height: 100%;
     background: white;
     overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 .my_car_list_body .detail_box{
     height: calc(100% - 184rpx);
     overflow: auto;
     width: 100%;
 }
+.my_car_list_body .detail_box .msg-item {
+    width: 100%;
+    height: 310rpx;
+    border-bottom: 1rpx solid rgb(233, 233, 233);
+    margin: 0 20rpx;
+    position: relative;
+    left:0;
+    top:0;
+    overflow: hidden;
+  }
 .my_car_list_body .detail_box .detail_ .title_box{
     background: #567BFF;
     display: flex;
@@ -16,7 +29,7 @@
     color: white;
     padding: 24rpx 20rpx;
     align-items: center;
-    box-shadow: 0px 2px 4px 0px #567BFF;
+    box-shadow: 0px 0px 4px 0px #567BFF;
 }
 .my_car_list_body .detail_box .detail_ .title_box .img_box .img_{
     width: 68rpx;
@@ -26,10 +39,55 @@
 }
 .my_car_list_body .detail_box .detail_{
     margin: 20rpx 22rpx;
-    box-shadow: 0px 2px 5px 0px rgba(22,1,52,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(22,1,52,0.2);
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    z-index: 100;
 }
+.my_car_list_body .detail_box .msg-menu {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    z-index: 9;
+    height: 308rpx;
+  }
+  
+  .my_car_list_body .detail_box  .menu-delete {
+    position: absolute;
+    width: 150rpx;
+    height:306rpx;
+    top:20rpx;
+    font-size: 28rpx;
+    right: 0;
+    background-color: rgb(255, 58, 50);
+    color:#FFF;
+    box-shadow: 0px 0px 5px 0px rgba(22,1,52,0.2);
+    text-align: center;
+    line-height:306rpx;
+  }
+  
+  .my_car_list_body .detail_box .menu-mark {
+    position: absolute;
+    width: 150rpx;
+    height:306rpx;
+    font-size: 28rpx;
+    top:20rpx;
+    right: 150rpx;
+    background-color: rgb(200, 199, 205);
+    color:#FFF;
+    text-align: center;
+    line-height:306rpx;
+    box-shadow: 0px 2px 5px 0px rgba(22,1,52,0.2);
+  }
+
+
+
 .my_car_list_body .detail_box .detail_ .info_box{
     padding: 34rpx 46rpx 14rpx;
+    background-color: #fff;
 }
 .my_car_list_body .detail_box .detail_ .info_box .info_ {
     display: flex;

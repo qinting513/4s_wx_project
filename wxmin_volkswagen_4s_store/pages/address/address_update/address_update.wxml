@@ -3,13 +3,13 @@
         <view class="detail_">
             <view class="label_">联系人</view>
             <view class="content_">
-                <input type="text" maxlength="8" placeholder="请输入联系人姓名" />
+                <input type="text" bindinput="changeName" value="{{name}}" maxlength="8" placeholder="请输入联系人姓名" />
             </view>
         </view>
         <view class="detail_">
             <view class="label_">手机号</view>
             <view class="content_">
-                <input type="number" maxlength="11" placeholder="请输入联系人手机号码" />
+                <input type="number" bindinput="changePhone" value="{{phone}}" maxlength="11" placeholder="请输入联系人手机号码" />
             </view>
         </view>
         <view class="detail_">
@@ -33,12 +33,12 @@
         <view class="detail_">
             <view class="label_">详细地址</view>
             <view class="content_">
-                <input type="number" maxlength="50" placeholder="请输入详细地址" />
+                <input type="number" bindinput="changeAddress" value="{{address}}" maxlength="50" placeholder="请输入详细地址" />
             </view>
         </view>
     </view>
     <view class="bottom_more_btn_pub">
-        <view class="cancel_ btn gray_bg">取消预约</view>
-        <view class="contact_ btn blue_bg">联系门店</view>
+        <view class="cancel_ btn gray_bg" bindtap="deleteAddress">删除</view>
+        <view class="contact_ btn blue_bg" bindtap="saveAddress">保存</view>
     </view>
 </view>

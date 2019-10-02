@@ -4,7 +4,7 @@
     </view>
     <view class="detail_box">
         <view class="img_box">
-            <image lazy-load="true"class="img_" src="{{detailInfo.nick}}" mode="aspactfill" />
+            <image lazy-load="true"class="img_" src="{{detailInfo.img}}" mode="aspactfill" />
         </view>
         <view class="welcome_text">
             你好！我是您的专属顾问
@@ -13,12 +13,12 @@
             长沙大众4S店
         </view>
         <view class="name_join">
-            市场-周星驰
+            {{levelMap[detailInfo.level]}}-{{detailInfo.name}}
         </view>
         <view class="tel_">
-            18979699928
+            {{detailInfo.phone}}
         </view>
-        <view class="call_">
+        <view class="call_" bindtap="callServiceFn">
             拨打电话
         </view>
     </view>

@@ -1,0 +1,5 @@
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view class="vip_level_rule vip_pub">
+    <!-- {{dataInfo}} -->
+    <template is="wxParse" style="text-align:center;" data="{{wxParseData:dataInfo.nodes}}"/>
+</view>

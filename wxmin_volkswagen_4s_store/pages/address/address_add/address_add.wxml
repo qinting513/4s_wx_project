@@ -3,13 +3,13 @@
         <view class="detail_">
             <view class="label_">联系人</view>
             <view class="content_">
-                <input type="text" maxlength="8" placeholder="请输入联系人姓名" />
+                <input type="text" maxlength="8" value="{{name}}" bindinput="changeName" placeholder="请输入联系人姓名" />
             </view>
         </view>
         <view class="detail_">
             <view class="label_">手机号</view>
             <view class="content_">
-                <input type="number" maxlength="11" placeholder="请输入联系人手机号码" />
+                <input type="number" maxlength="11" value="{{phone}}" bindinput="changePhone" placeholder="请输入联系人手机号码" />
             </view>
         </view>
         <view class="detail_">
@@ -35,7 +35,7 @@
         <view class="detail_">
             <view class="label_">详细地址</view>
             <view class="content_">
-                <input type="number" maxlength="50" placeholder="请输入详细地址" />
+                <input type="text" bindinput="changeAddress" value="{{address}}"  maxlength="50" placeholder="请输入详细地址" />
             </view>
         </view>
         <view class="address_option_box">
@@ -43,13 +43,13 @@
                 <image lazy-load="true"class="default_img" src="{{ossImgAddre + 'sel.png'}}" mode="widthFix" />
                 默认地址
             </view>
-            <view class="option_ wx_">
+            <view class="option_ wx_" bindtap="importWXAddress">
                 <image lazy-load="true"class="wx_img" src="{{ossImgAddre + 'wx_label.png'}}" mode="widthFix" />
                 一键导入微信地址
             </view>
         </view>
     </view>
     <view class="bottom_btn_pub">
-        <view class="option_btn">保存</view>
+        <view class="option_btn" bindtap="submitAddress">保存</view>
     </view>
 </view>

@@ -1,56 +1,56 @@
 <view class="my_car_update_body">
     <view class="detail_box">
         <view class="detail_">
-            <picker mode="date" value="{{date}}" bindchange="bindDateChange">
-                <view class="content_">
-                    <view class="picker {{selStore ? '': 'no_sel'}}">
-                        {{date || '请选择您的车系'}}
+            <picker bindchange="bindPickeCarSeriesFn" mode = selector range-key="name" value="{{index}}" range="{{seriesList}}">
+                    <view class="content_">
+                        <view class="picker {{selSeries ? '': 'no_sel'}}">
+                            {{selSeries.name || '请选择您的车系'}}
+                        </view>
+                        <view class="next_">
+                            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />
+                        </view>
                     </view>
-                    <view class="next_">
-                        <image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />
-                    </view>
-                </view>
-            </picker>
+                </picker>
         </view>
         <view class="detail_ license_plate_box">
             <view class="plate_city">
                 湘<image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />
             </view>
             <view class="line_"></view>
-            <input type="text" placeholder="请输入您的车牌号码" />
+            <input type="text" value="{{plateNo}}" bindinput="changePlateNo" placeholder="请输入您的车牌号码" />
         </view>
         <view class="detail_">
-            <picker mode="date" value="{{date}}" bindchange="bindDateChange">
-                <view class="content_">
-                    <view class="picker {{selStore ? '': 'no_sel'}}">
-                        {{date || '请选择购车日期'}}
+             <picker mode="date" value="{{selDate}}" bindchange="bindDateChange">
+                    <view class="content_">
+                        <view class="picker {{selDate ? '': 'no_sel'}}">
+                            {{selDate || '请选择购车日期'}}
+                        </view>
+                        <view class="next_">
+                            <image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />
+                        </view>
                     </view>
-                    <view class="next_">
-                        <image lazy-load="true"class="img_" src="{{ossImgAddre + 'next_gray.png'}}" mode="widthFix" />
-                    </view>
-                </view>
-            </picker>
+                </picker>
         </view>
         <view class="detail_ miles_box">
-            <input type="digit" placeholder="请输入当前里程" />
+            <input type="digit" value="{{mileage}}" bindinput="changeMileage" placeholder="请输入当前里程" /> 
             <view class="unit_">
                 公里
             </view>
         </view>
         <view class="detail_">
-            <input type="text" placeholder="请输入车架号（可选项）" />
+            <input value="{{vin}}" bindinput="changeVin" type="text" placeholder="请输入车架号（可选项）" />
         </view>
         <view class="detail_ add_img_box">
             <view class="label_">
                 车辆照片
             </view>
             <view class="img_box">
-                <image lazy-load="true"class="img_" src="{{ossImgAddre + 'add_img.png'}}" mode="widthFix" />
+                <image lazy-load="true" class="{{carpic? 'img_pic' : 'img_'}}" bindtap="uploadPhoto" src="{{carPic? carPic : ossImgAddre + 'add_img.png'}}" mode="widthFix" />
             </view>
         </view>
     </view>
     <view class="bottom_box">
-        <view class="option_btn" bindtap="goAddFn" data-id="">
+        <view class="option_btn {{isActive?'active_btn':''}}" bindtap="goAddFn" data-id="">
             保存
         </view>
     </view>

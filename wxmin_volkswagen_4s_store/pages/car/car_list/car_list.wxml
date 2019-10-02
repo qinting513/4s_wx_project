@@ -1,8 +1,8 @@
 <view class="car_list_body">
     <view class="detail_box">
-        <block wx:for="{{list}}" wx:key="{{item}}">
-            <view class="detail_" bindtap="goDetailFn" data-id="{{item}}">
-                <image lazy-load="true"class="img_" src="{{img}}" mode="aspectFill" />
+        <block wx:for="{{carlist}}" wx:key="{{item.id}}">
+            <view class="detail_" bindtap="goDetailFn" data-id="{{item.id}}">
+                <image lazy-load="true"class="img_" src="{{item.pics}}" mode="aspectFill" />
             </view>
         </block>
     </view>

@@ -2,40 +2,46 @@
     <SignSuccessModel wx:if="{{isShowSignSuccessModel}}" bind:theCloseFn = "closeSignSuccessModelFn"/>
     <view class="header_box">
         <image class="img_" lazy-load="{{true}}" src="{{ossImgAddre + 'activity_sign_in/sign_in_hearder_bg.png'}}" mode="widthFix" />
-        <view class="sign_in_date_box">已连续签到 3 天</view>
+        <view class="sign_in_date_box">已连续签到 {{signObj.signDays}} 天</view>
     </view>
     <view class="detail_box">
-        <view class="today_date">2019年5月</view>
+        <view class="today_date">{{signObj.year}}年{{signObj.month}}月</view>
         <view class="week_box">
             <block wx:for="{{weekArr}}" wx:key="{{item}}">
                 <view class="detail_">{{item}}</view>
             </block>
         </view>
         <view class="day_box">
-            <block wx:for="{{3}}" wx:key="{{item}}">
+            <block wx:for="{{nbsp}}" wx:key="{{item}}">
                 <view class="space_ ">\n</view>
             </block>
-            <block wx:for="{{31}}" wx:key="{{item}}">
-                <view class="detail_ {{item<4? 'missed_sign': ''}} {{item>6 ? (((item + 1)%7===0)?'no_sign_special': 'no_sign_nomal') : ''}} {{(item>3 && item<7)? (((item + 1)%7===0)?'signed_special signed_': 'signed_ signed_nomal') : ''}} ">
+            <block wx:for="{{curDateSum}}" wx:key="{{item}}">
+                <!-- <view class="detail_ {{signMap[item+1] === 1? 'missed_sign': ''}} {{item>6 ? (((item + 1)%7===0)?'no_sign_special': 'no_sign_nomal') : ''}} {{(signMap[item] === 1)? (((item + 1)%7===0)?'signed_special signed_': 'signed_ signed_nomal') : ''}} ">
                     <view class="num_">{{item + 1}}</view>
-                    <view class="state_" wx:if="{{item<4}}">漏签</view>
-                    <view class="state_" wx:if="{{item>3 && item<7 && (item + 1)%7!==0}}">
+                    <view class="state_" wx:if="{{signMap[item+1] !== 0 && item+1 <= nowDay}}">漏签</view>
+                    <view class="state_" wx:if="{{signMap[item+1] === 1  && item+1 <= nowDay}}">
+                        <image lazy-load="{{true}}" class="img_get_nomal" src="{{ossImgAddre + 'activity_sign_in/got_nomal.png'}}" mode="widthFix" />
+                    </view> -->
+                <view class="detail_ {{(signMap[item+1] === 0 && item+1 < nowDay) ? 'missed_sign': ''}} {{(signMap[item+1] === 0 && item+1 < nowDay) ? (((item + 1)%7===0)?'no_sign_special': 'no_sign_nomal') : ''}} {{signMap[item+1] === 1 ? (((item + 1)%7===0)?'signed_special signed_': 'signed_ signed_nomal') : ''}} ">
+                    <view class="num_">{{item + 1}}</view>
+                    <view class="state_" wx:if="{{signMap[item+1] !== 1 && item+1 < nowDay}}">漏签</view>
+                    <view class="state_" wx:if="{{signMap[item+1] === 1  && item+1 <= nowDay && (item + 1)%7!==0}}">
                         <image lazy-load="{{true}}" class="img_get_nomal" src="{{ossImgAddre + 'activity_sign_in/got_nomal.png'}}" mode="widthFix" />
                     </view>
-                    <view class="state_" wx:if="{{item>3 && item<7 && (item + 1)%7===0}}">
+                    <view class="state_" wx:if="{{signMap[item+1] === 1 && item + 1 <= nowDay && (item + 1)%7===0}}">
                         <image lazy-load="{{true}}" class="img_get_special" src="{{ossImgAddre + 'activity_sign_in/got_special.png'}}" mode="widthFix" />
                     </view>
-                    <view class="state_" wx:if="{{item>6 && (item + 1)%7!==0}}">
+                    <view class="state_" wx:if="{{signMap[item+1] !== 1 && item + 1 >= nowDay && (item + 1)%7!==0}}">
                         <image lazy-load="{{true}}" class="img_get_nomal" src="{{ossImgAddre + 'activity_sign_in/get_nomal.png'}}" mode="widthFix" />
                     </view>
-                    <view class="state_" wx:if="{{item>6 && (item + 1)%7===0}}">
+                    <view class="state_" wx:if="{{signMap[item+1] !== 1 && item + 1 >= nowDay && (item + 1)%7===0}}">
                         <image lazy-load="{{true}}" class="img_get_special" src="{{ossImgAddre + 'activity_sign_in/get_special.png'}}" mode="widthFix" />
                     </view>
                 </view>
             </block>
         </view>
     </view>
-    <view class="warn_box"><text class="dot_"/>连续签到3天啦!再连续签到4天，可以领双倍积分!!</view>
+    <view class="warn_box"><text class="dot_"/>连续签到{{signObj.signDays}}天啦!再连续签到{{remainData}}天，可以领双倍积分!!</view>
     <view class="sign_btn" wx:if="{{!todayIsSign}}" bindtap="signBtn">签到</view>
     <view class="sign_btn is_sign" wx:if="{{todayIsSign}}">今日已签到</view>
 </view>

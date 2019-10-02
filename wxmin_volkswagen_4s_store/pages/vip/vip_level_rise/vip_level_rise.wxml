@@ -1,6 +1,6 @@
 <view class="vip_level_rise_body vip_pub">
     <view class="vip_type_box">
-        <view class="title_">了解大众会员卡</view>
+        <view class="title_" bindtap="aboutVipInfo">了解大众会员卡</view>
         <swiper class="vip_type_swiper_box"
             duration="{{1000}}"
             circular = "{{true}}"
@@ -11,7 +11,8 @@
             >
             <block wx:for="{{vipTapList}}" wx:key="{{item.id}}">
                 <swiper-item class="detail_">
-                    <image lazy-load="true" src="{{item.img}}" class="slide_image {{currentVipTap==index ? 'active': ''}}" mode="widthFix"/>
+                    <image data-item="{{item}}" lazy-load="true" src="{{item.pic}}" class="slide_image {{currentVipTap==index ? 'active': ''}}" mode="widthFix"/>
+                    <!-- <image bindtap="openVipLevel" data-item="{{item}}" lazy-load="true" src="{{item.pic}}" class="slide_image {{currentVipTap==index ? 'active': ''}}" mode="widthFix"/> -->
                     <!-- <view class="content_">
                         测试
                     </view> -->
@@ -27,8 +28,8 @@
     <view class="base_equity_box">
         <block wx:for="{{baseEquity}}" wx:key="{{item.id}}">
             <view class="detail_">
-                <image lazy-load="true"src="{{ossImgAddre + 'vip/' + item.img_}}" class="img_" mode="widthFix"/>
-                <view class="label_">{{item.text}}</view>
+                <image lazy-load="true"src="{{item.img}}" class="img_" mode="widthFix"/>
+                <view class="label_">{{item.name}}</view>
             </view>
         </block>
     </view>
@@ -38,14 +39,14 @@
         </view>
         <view class="detail_box">
             <block wx:for="{{otherEquity}}" wx:key="{{item.id}}">
-                <view class="detail_">
+                <view class="detail_ {{item.active ? 'active_equity' : ''}}">
                     <image lazy-load="true"src="{{ossImgAddre + 'vip/' + item.img_}}" class="img_" mode="widthFix"/>
                     <view class="label_">{{item.text}}</view>
                 </view>
             </block>
         </view>
     </view>
-    <view class="option_btn">
+    <!-- <view class="option_btn" bindtap="openVipLevel">
         马上开通<text class="small_">(立省800元)</text>
-    </view>
+    </view> -->
 </view>
