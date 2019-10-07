@@ -12,8 +12,8 @@ Component({
     goodList: [],
   },
   ready: function () {
-    console.log('goodListgoodListgoodList',1)
     app.globalData.request.get('/api/scoreItem/getCommentItem').then(res => {
+      console.log('严选好礼:', res);
       this.setData({
         goodList: res.data
       }, () => {

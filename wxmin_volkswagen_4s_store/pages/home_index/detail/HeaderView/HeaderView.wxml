@@ -8,6 +8,5 @@
          <button open-type="contact">
             <image lazy-load="true"class="img_" src="{{ ossImgAddre + 'customer_ser.png'}}" mode="widthFix" />
         </button>
-        <!-- <image lazy-load="true" class="img_" src="{{ossImgAddre + 'customer_ser.png'}}" mode="widthFix"/> -->
     </view>
 </view>

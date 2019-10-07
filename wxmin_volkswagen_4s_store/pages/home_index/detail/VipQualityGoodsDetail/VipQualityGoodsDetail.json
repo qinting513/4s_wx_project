@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+      "SelGoodsModel": "./Vip_SelGoodsModel/Vip_SelGoodsModel"
+    }
+}

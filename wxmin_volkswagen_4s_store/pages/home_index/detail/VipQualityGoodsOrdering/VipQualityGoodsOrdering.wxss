@@ -1,0 +1,117 @@
+.goods_ordering_body .detail_box{
+    padding-bottom: 120rpx;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.goods_ordering_body .recive_address_box{
+    background: white;
+    padding: 30rpx 48rpx 38rpx 40rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.goods_ordering_body .recive_address_box{
+    background: white;
+}
+.goods_ordering_body .recive_address_box .left_{
+    flex: 1;
+    padding-right: 30rpx;
+}
+.goods_ordering_body .recive_address_box .address_img_{
+    width: 26rpx;
+    margin-right: 16rpx;
+}
+.goods_ordering_body .recive_address_box .next_img_{
+    width: 14rpx;
+}
+.goods_ordering_body .recive_address_box .name_phone_box{
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.goods_ordering_body .recive_address_box .name_{
+    margin-right: 59rpx;
+}
+.goods_ordering_body .recive_address_box .address_{
+    font-size: 26rpx;
+    color: #999999;
+    margin-top: 22rpx;
+}
+.goods_ordering_body .order_info_box{
+    background: white;
+    margin-top: 20rpx;
+}
+.goods_ordering_body .order_info_box .pub_order_goods_detail{
+    padding: 40rpx;
+    border-bottom: 2rpx solid #f4f4f4;
+}
+.goods_ordering_body .order_info_box .other_info_box{
+    padding-left: 40rpx;
+}
+.goods_ordering_body .order_info_box .other_info_box .detail_{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34rpx 47rpx 34rpx 0;
+    border-bottom: 2rpx solid #f4f4f4;
+}
+.goods_ordering_body .order_info_box .other_info_box .detail_ .label_{
+    font-size: 30rpx;
+}
+.goods_ordering_body .order_info_box .other_info_box .detail_ .content_{
+    font-size: 26rpx;
+    color: #999999;
+}
+.goods_ordering_body .bottom_box{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 32rpx;
+}
+.goods_ordering_body .bottom_box .total_{
+    background: white;
+    padding: 12rpx 26rpx;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.goods_ordering_body .bottom_box .total_ .total_money{
+    font-size:32rpx;
+    font-family:PingFangSC;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    margin-bottom: 6rpx;
+}
+.goods_ordering_body .bottom_box .total_ .youhui{
+    font-size:21rpx;
+    font-family:PingFangSC;
+    font-weight:bold;
+    color:rgba(254,17,17,1);
+    border-radius: 21rpx;
+    border: 1rpx solid rgba(254,17,17,1);
+    padding: 5rpx 16rpx;
+    text-align: center;
+    width: 180rpx;
+}
+
+.goods_ordering_body .bottom_box .right_pay{
+    background: #567BFF;
+    text-align: center;
+    color: white;
+    padding: 34rpx;
+    width: 300rpx;
+}
+.discounts_msg {
+    font-size:26rpx;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#FF3C00;
+}
+.discounts_msg_arrow {
+  width: 14rpx;
+  height: 26rpx;
+}

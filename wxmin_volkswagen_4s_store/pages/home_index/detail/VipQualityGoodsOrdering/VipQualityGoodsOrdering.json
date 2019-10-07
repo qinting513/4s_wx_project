@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "VipDiscountsView": "./VipDiscountsView/VipDiscountsView"
+  }
+    
+}

@@ -1,0 +1,125 @@
+.sel_goods_model_body{
+    position: relative;
+}
+.sel_goods_model_body .sel_goods_box{
+    background: white;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.sel_goods_model_body .sel_goods_box .detail_box{
+    padding: 31rpx 30rpx 0 22rpx;
+    max-height: 800rpx;
+    overflow: auto;
+    position: relative;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .good_info_{
+    display: flex;
+    align-items: flex-end;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .close_{
+    text-align: right;
+    font-size: 72rpx;
+    line-height: 1;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 30rpx;
+    background: white;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .good_info_ .right_{
+    flex: 1;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .good_info_ .right_ .name_{
+    width: 60%;
+    font-size:32rpx;
+    font-family:PingFangSC;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+}
+.money_box{
+    display: flex;
+    align-items: center;
+    font-size:36rpx;
+    font-family:PingFangSC;
+    font-weight:800;
+    color:rgba(255,59,59,1);
+}
+.money_unit {
+   font-size:24rpx;
+}
+
+.sel_goods_model_body .sel_goods_box .detail_box .good_info_ .left_{
+    margin-right: 32rpx;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .good_info_ .left_ .img_{
+    width: 220rpx;
+    height: 220rpx;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .rule_box{
+    margin-top: 34rpx;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .rule_box .title_{
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .rule_box .rule_detail_box{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 28rpx;
+    color: #999999;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .rule_box .rule_detail_{
+    padding: 10rpx 25rpx;
+    border-radius: 40rpx;
+    background: #F4F4F4;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .rule_box .rule_detail_.active{
+    color: #567BFF;
+    background: #ECF0FF;
+    border: 2rpx solid currentColor;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .num_box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+.sel_goods_model_body .sel_goods_box .detail_box .num_box .label_{
+    color: #000033;
+    font-size: 24rpx;
+    margin-bottom: 63rpx;
+}
+.sel_goods_model_body .sel_goods_box .btn_{
+    background: #567BFF;
+    color: white;
+    font-size: 36rpx;
+    text-align: center;
+    padding: 32rpx;
+}
+
+.discounts_box {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+
+}
+.discounts_box_radio {
+    padding: 12rpx 30rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: #FE1111;
+}
+
+.radio_name_grey {
+  color: #999999;
+}
+.radio_img {
+  width: 36rpx;
+  height: 36rpx;
+}

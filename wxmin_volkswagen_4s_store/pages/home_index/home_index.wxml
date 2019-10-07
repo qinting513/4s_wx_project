@@ -9,6 +9,8 @@
     <!-- tab_ad -->
     <TabAdView adBannerList="{{adBannerList}}" />
     <view class="goods_body">
+        <!-- 会员精品 -->
+        <VipQualityGoodsView />
         <!-- 新款上线 -->
         <NewGoodsView newCarBannerList="{{newCarBannerList}}" />
         <!-- 严选好礼 -->

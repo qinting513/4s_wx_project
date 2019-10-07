@@ -6,6 +6,7 @@
     "WeatherView": "detail/WeatherView/WeatherView",
     "TabAdView": "detail/TabAdView/TabAdView",
     "NewGoodsView": "detail/NewGoodsView/NewGoodsView",
-    "GoodGoodsView": "../../components/GoodGoodsView/GoodGoodsView"
+    "GoodGoodsView": "../../components/GoodGoodsView/GoodGoodsView",
+    "VipQualityGoodsView": "detail/VipQualityGoodsView/VipQualityGoodsView"
   }
 }

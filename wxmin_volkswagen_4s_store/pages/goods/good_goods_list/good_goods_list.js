@@ -41,6 +41,7 @@ Page({
     })
   },
   getBannerList() {
+    console.log('======>', this.data.imageList);
     app.globalData.request.post('/api/banner/getModuleList?type=6').then(res => {
       this.setData({
         imageList: res.data[0].bannerList

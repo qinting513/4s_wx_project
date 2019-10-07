@@ -1,0 +1,19 @@
+<view class="sel_goods_model_body">
+  <view class="mask_box"></view>
+  <view class="sel_goods_box">
+    <view class="detail_box">
+      <view>商品优惠</view>
+      <view class="close_" bindtap="closeFn" data-key="isShowSelGoodsLayer" data-val="{{false}}">×</view>
+    </view>
+    <view class="discounts_box">
+        <view class="discounts_box_radio" bindtap="radioChange" wx:for="{{ruleArr}}" wx:key="{{index}}" data-index="{{index}}">
+            <view class="{{ (index == ruleArr.length - 1) ? 'radio_name_grey' : ''}}">{{item.name}}</view>
+            <view class="radio_money">{{item.price}}<text wx:if="{{index != ruleArr.length - 1}}">元</text></view>
+            <image class="radio_img" src="{{ (ruleArrIndex == index) ? '/images/sel.png' : '/images/sel_no.png' }}"></image>
+        </view>
+    </view>
+    <view class="btn_" bindtap="goGoodsOrderingFn">
+      确定
+    </view>
+  </view>
+</view>

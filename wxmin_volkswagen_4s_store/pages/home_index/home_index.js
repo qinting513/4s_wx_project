@@ -34,13 +34,15 @@ Page({
     //})
   },
   getInitData(){
-    app.globalData.request.post('/api/banner/getModuleList?type=1,2,4,5').then(res => {
+    // 1-轮播图，2-热门资讯，3-快速入口，4-宣传图,5-新款车栏位 6-积分商品轮播 7-会员精品
+    app.globalData.request.post('/api/banner/getModuleList?type=1,2,4,5,7').then(res => {
       if (res) {
+        console.log('home Index res=========>>>', res);
         this.setData({
           headBannerList: res.data[0].bannerList || [],
           newsBannerList: res.data[1].bannerList || [],
           adBannerList: res.data[2].bannerList || [],
-          newCarBannerList: res.data[3].bannerList || []
+          newCarBannerList: res.data[3].bannerList || [],
         })
       }
     }, error => {

@@ -16,10 +16,10 @@
 .my_coupon_body .detail_box .detail_{
     display: flex;
     justify-content: center;
-    width: 706rpx;
+    box-shadow:0px 4rpx 8rpx 0px rgba(22,1,52,0.2);
+    border-radius:10rpx;
     height: 200rpx;
-    margin: auto 30rpx 30rpx;
-    box-shadow: 0 4rpx 8rpx 0 rgba(22,1,52,0.2);
+    margin: 12rpx 22rpx;
 }
 .my_coupon_body .detail_box .detail_ .left_{
     display: flex;
@@ -27,31 +27,42 @@
     justify-content: center;
     font-size: 48rpx;
     color: white;
-    background: #567BFF;
-    border-radius: 10rpx 0 0 10rpx;
+    /* background: #567BFF; */
     text-align: center;
     padding:  5rpx;
-    width: 400rpx;
-    box-shadow: 0 4rpx 8rpx 0 rgba(22,1,52,0.2);
+    width: 200rpx;
+    height: 200rpx;
+    border-radius:10rpx 0px 0px 10rpx;
 }
 .my_coupon_body .detail_box .detail_ .text_{
     font-size: 36rpx;
 }
 .my_coupon_body .detail_box .detail_ .left_ .unit_,
 .my_coupon_body .detail_box .detail_ .left_ .des_{
-    font-size: 28rpx;
+    font-size: 24rpx;
 }
-.my_coupon_body .detail_box .detail_ .left_ .des_{
-    margin-top: 15rpx;
+.my_coupon_body .detail_box .detail_ .left_ .des_,
+.left_ .title_,
+.right_ .name_{
+    /* margin-top: 15rpx; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .my_coupon_body .detail_box .detail_ .right_{
     background: white;
     padding: 27rpx 25rpx 20rpx 24rpx;
-    width:90%;
+    box-sizing: border-box;
+    flex: 1;
+    border-radius: 0rpx 10rpx 10rpx 0rpx
 }
 .my_coupon_body .detail_box .detail_ .right_ .content_{
     color: #999999;
     font-size: 24rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 .used_coupon{
     color: #999999 !important;
@@ -59,13 +70,16 @@
 .my_coupon_body .detail_box .detail_ .right_ .label_{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10rpx;
 }
 .my_coupon_body .detail_box .detail_ .right_ .label_ .title_{
     font-size: 28rpx;
 }
+.left_ .title_ {
+  margin-top: 20rpx;
+  font-size: 55rpx;
+}
 .my_coupon_body .detail_box .detail_ .right_ .label_ .used_btn{
-    color: #567BFF;
+    /* color: #567BFF; */
     font-size: 24rpx;
     width: 120rpx;
     text-align: center;
@@ -87,4 +101,35 @@
     font-size: 24rpx;
     color: #CBC9CA;
     margin: 10rpx auto 140rpx;
+}
+
+.type0 {
+    background:linear-gradient(225deg,rgba(255,103,29,1),rgba(255,166,0,1));
+}
+.left_ .num_ {
+  font-size: 85rpx;
+}
+.type1 {
+    background:linear-gradient(225deg, rgba(222,30,45,1),rgba(240,1,93,1)); 
+}
+.type2 {
+   background:linear-gradient(225deg,rgba(0,132,255,1),rgba(86,165,196,1));
+}
+.right_ .name_ {
+  font-size: 34rpx;
+  width: 330rpx;
+}
+.right_ .status_0{
+  color: #FF671D;
+}
+.right_ .status_1{
+  color: #FF0756;
+}
+.right_ .status_2 {
+  color: #0289FE;
+}
+.right_ .expire_ {
+  font-size: 26rpx;
+  color: #2D2D2E;
+  margin-bottom: 10rpx;
 }

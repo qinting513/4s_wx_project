@@ -1,0 +1,85 @@
+<view class="goods_ordering_body">
+   <block wx:if="{{isShowSelGoodsLayer}}">
+        <VipDiscountsView isShowSelGoodsLayer="{{isShowSelGoodsLayer}}" goodsDetail="{{goodsData}}" bind:theCloseFn="closeSelGoodsFn"/>
+    </block>
+
+    <view class="detail_box">
+        <view class="recive_address_box" wx-if="{{receiveType === 1}}">
+            <view class="left_">
+                <view class="name_phone_box">收货人信息: </view>
+                <view class="name_phone_box">
+                    <view class="name_">
+                        {{userInfo.realName}}
+                    </view>
+                    <view class="phone_">{{userInfo.phone}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="recive_address_box" wx-if="{{receiveType === 2}}">
+            <view class="left_" wx-if="{{!curAddressModel.name}}">
+                <view class="name_phone_box">
+                    <view class="name_">
+                        <image lazy-load="true"src="{{ossImgAddre + 'address_main.png'}}" class="address_img_" mode="widthFix"/>
+                        请选择地址
+                    </view>
+                </view>
+            </view>
+            <view class="left_" wx-if="{{curAddressModel.name}}">
+                <view class="name_phone_box">
+                    <view class="name_">
+                        <image lazy-load="true"src="{{ossImgAddre + 'address_main.png'}}" class="address_img_" mode="widthFix"/>
+                        {{curAddressModel.name}}
+                    </view>
+                    <view class="phone_">{{curAddressModel.phone}}</view>
+                </view>
+                <view class="address_">{{curAddressModel.province}}{{curAddressModel.city}}{{curAddressModel.county}}{{curAddressModel.address}}</view>
+            </view>
+            <view class="right_" bindtap="chooseAddress">
+                <image lazy-load="true"src="{{ossImgAddre + 'next_black.png'}}" class="next_img_" mode="widthFix"/>
+            </view>
+        </view>
+        <view class="order_info_box">
+            <view class="pub_order_goods_detail">
+                <image lazy-load="true"class="goods_img" src="{{goodsData.picture}}" mode="aspectFill" />
+                <view class="goods_info_box">
+                    <view class="name_ text_hidden_ellipsis">{{goodsData.name}}</view>
+                    <view class="specifications_">规格: {{goodsData.rule.name}}</view>
+                    <view class="integral_">单价: ¥{{goodsData.rule.price}}</view>
+                </view>
+                <view class="num_">X 1</view>
+            </view>
+            <view class="other_info_box">
+                <view class="detail_">
+                    <view class="label_">购买数量</view>
+                    <view class="content_ pub_option_num_box">
+                        <view class="opt_ reduce_ {{goodsData.num===1? 'cant': ''}}" bindtap="optionNumFn" data-opt="-1">-</view>
+                        <view class="number_">{{goodsData.num || 1}}</view>
+                        <view class="opt_ add_" bindtap="optionNumFn" data-opt="1">+</view>
+                    </view>
+                </view>
+                <view class="detail_">
+                    <view class="label_">取货方式</view>
+                    <view class="content_">到店自取</view>
+                </view>
+                <view class="detail_">
+                    <view class="label_">支付方式</view>
+                    <view class="content_">微信支付</view>
+                </view>
+                <view class="detail_" bindtap="selDiscount">
+                    <view class="label_">商品优惠</view>
+                    <view class="discounts_msg">{{discountsMsg}}
+                     <image class="discounts_msg_arrow" 
+                          src="/images/next_black.png"></image>
+                   </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom_box">
+        <view class="total_">
+          <view class="total_money">总计：¥0.00</view>
+          <view class="youhui">优惠:￥{{totalScore}}</view>
+        </view>
+        <view class="right_pay" bindtap="commitOrder">立即支付</view>
+    </view>
+</view>
