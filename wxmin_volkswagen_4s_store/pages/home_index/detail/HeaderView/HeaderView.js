@@ -45,18 +45,23 @@ Component({
         url: url,
         data: params,
         success: function (res) {
-          var city = res.data.result.addressComponent.city;
-          var district = res.data.result.addressComponent.district;
-          var street = res.data.result.addressComponent.street;
+          if (res.data.result != null && 
+              res.data.result.addressComponent != null) {
+              var city = res.data.result.addressComponent.city;
+              var district = res.data.result.addressComponent.district;
+              var street = res.data.result.addressComponent.street;
+
+              that.setData({
+                city: city.split('市')[0],
+                district: district,
+                street: street,
+              });
+              var descCity = city.substring(0, city.length - 1);
+            // that.getWeahter(descCity);
+          }
+         
    
-          that.setData({
-            city: city.split('市')[0],
-            district: district,
-            street: street,
-          })
-   
-          var descCity = city.substring(0, city.length - 1);
-          // that.getWeahter(descCity);
+          
         },
         fail: function (res) { },
         complete: function (res) { },
