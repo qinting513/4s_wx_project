@@ -74,7 +74,7 @@ Page({
   // 获取优惠券
   getDiscountsData(goodsDetail){
     var params = {
-      "skuId": goodsDetail.rule.itemId,
+      "skuId": goodsDetail.rule.id,
       "num": goodsDetail.num
     };
     app.globalData.request.post('/api/jingpin/couponList', params).then(res => {

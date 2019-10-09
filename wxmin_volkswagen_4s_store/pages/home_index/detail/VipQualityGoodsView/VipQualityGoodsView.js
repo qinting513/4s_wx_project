@@ -34,17 +34,7 @@ Component({
       app.globalData.request.post('/api/jingpin/getJingpinItemList', {"isHomePage": 1 }).then(res => {
         if (res && res.code == 200) {
           console.log('会员精品 getJingpinItemList res=========>>>', res);
-          // var list = res.data;
-          // // 对数据的图片进行分割
-          // for(var i = 0; i < list.length; i++){
-          //   var item = list[i];
-          //   if(item.pics != null && item.pics.length > 0){
-          //     item.picArr = item.pics.split(",");
-          //   } else {
-          //     item.picArr = [];
-          //   }
-          //   list[i] = item;
-          // }
+          
           that.setData({
             vipGoodsBannerList: res.data
           });
