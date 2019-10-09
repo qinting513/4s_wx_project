@@ -6,10 +6,10 @@
       <view class="close_" bindtap="closeFn" data-key="isShowSelGoodsLayer" data-val="{{false}}">×</view>
     </view>
     <view class="discounts_box">
-        <view class="discounts_box_radio" bindtap="radioChange" wx:for="{{ruleArr}}" wx:key="{{index}}" data-index="{{index}}">
-            <view class="{{ (index == ruleArr.length - 1) ? 'radio_name_grey' : ''}}">{{item.name}}</view>
-            <view class="radio_money">{{item.price}}<text wx:if="{{index != ruleArr.length - 1}}">元</text></view>
-            <image class="radio_img" src="{{ (ruleArrIndex == index) ? '/images/sel.png' : '/images/sel_no.png' }}"></image>
+        <view class="discounts_box_radio" bindtap="radioChange" wx:for="{{discountList}}" wx:key="{{index}}" data-index="{{index}}">
+            <view class="{{ (index == discountList.length - 1) ? 'radio_name_grey' : ''}}">{{item.name}}</view>
+            <view class="radio_money">{{item.price}}<text wx:if="{{index != discountList.length - 1}}">元</text></view>
+            <image class="radio_img" src="{{ (selectedIndex == index) ? '/images/sel.png' : '/images/sel_no.png' }}"></image>
         </view>
     </view>
     <view class="btn_" bindtap="goGoodsOrderingFn">

@@ -1,6 +1,6 @@
 <view class="goods_ordering_body">
    <block wx:if="{{isShowSelGoodsLayer}}">
-        <VipDiscountsView isShowSelGoodsLayer="{{isShowSelGoodsLayer}}" goodsDetail="{{goodsData}}" bind:theCloseFn="closeSelGoodsFn"/>
+        <VipDiscountsView isShowSelGoodsLayer="{{isShowSelGoodsLayer}}" discountList="{{discountList}}" bind:theCloseFn="closeSelGoodsFn"/>
     </block>
 
     <view class="detail_box">
@@ -77,8 +77,8 @@
     </view>
     <view class="bottom_box">
         <view class="total_">
-          <view class="total_money">总计：¥0.00</view>
-          <view class="youhui">优惠:￥{{totalScore}}</view>
+          <view class="total_money">总计:￥{{totalScore}}</view>
+          <view wx:if="{{couponPrice.length > 0}}" class="youhui">{{couponPrice}}</view>
         </view>
         <view class="right_pay" bindtap="commitOrder">立即支付</view>
     </view>

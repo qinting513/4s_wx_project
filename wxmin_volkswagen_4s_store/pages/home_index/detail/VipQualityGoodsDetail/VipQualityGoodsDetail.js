@@ -18,11 +18,7 @@ Page({
     commetList: [],
     styles: "height: 750rpx"
   },
-  goSearchFn: function () {
-    wx.navigateTo({
-      url: '../' + util.formatPath('SEARCHGOODS')
-    })
-  },
+
   clickTabFn: function (e) {
     var that = this;
     const dataset = e.currentTarget.dataset

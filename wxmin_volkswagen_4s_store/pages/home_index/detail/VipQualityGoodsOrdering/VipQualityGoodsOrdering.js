@@ -6,13 +6,7 @@ const auth = require('../../../../utils/auth.js');
 Page({
   data: {
     ossImgAddre,
-    num: 1,
-    currentTabInfo: '',
     goodsData: {},
-    img: ossImgAddre + 'demo_img/1.jpg',
-    list: [1, 2, 3, 4],
-    tabArr: [{ id: 1, text: '商品详情' }, { id: 2, text: '商品评价' }],
-    goodInfo: '<img src=' + ossImgAddre + 'demo_img/1.jpg />',
     isShowSelGoodsLayer: false,
     totalScore: 0,
     curAddressModel: null,
@@ -22,18 +16,20 @@ Page({
       realName: '',
       phone: ''
     },
+    discountList: null,
     discountsMsg: "",
+    selectedDiscountIndex: -1,
+    couponPrice: "",
   },
   optionNumFn: function (e) {
     const opt = Number(e.currentTarget.dataset.opt);
     if (opt < 0 && this.data.goodsData.num === 1) return;
+    var count = this.data.goodsData.num + opt;
     this.setData({
-      ['goodsData.num']: this.data.goodsData.num + opt,
-    }, () => {
-      this.setData({
-        totalScore: this.data.goodsData.num * this.data.goodsData.rule.price
-      })
-    })
+      ['goodsData.num']: count,
+      totalScore: count * this.data.goodsData.rule.price
+    });
+    this.closeSelGoodsFn(null);
   },
   onLoad: function (options) {
     wx.setNavigationBarTitle({
@@ -79,6 +75,15 @@ Page({
     };
     app.globalData.request.post('/api/jingpin/couponList', params).then(res => {
      console.log("获取优惠券:", res);
+      if (res.code == "200") {
+        var list = res.data;
+        // 给最后一个增加一个不使用优惠券
+        list[list.length] = {"name": "不使用优惠券", "price": "","couponPrice":"", "id": "-1" };
+        this.setData({
+          discountList: list
+        });
+      }
+     
     })
   },
   chooseAddress() {
@@ -91,13 +96,20 @@ Page({
  
   commitOrder() {
     let params = {
-      skuId: this.data.goodsData.rule.itemId,
+      skuId: this.data.goodsData.rule.id,
       num: this.data.goodsData.num,
       price: this.data.totalScore,
-      coupon: '1'
     }
+    if(this.data.discountList != null &&
+      this.data.selectedDiscountIndex != -1 &&
+      this.data.selectedDiscountIndex != this.data.length -1) {
+      params.coupon = this.data.discountList[this.data.selectedDiscountIndex].id;
+    }
+    
+    console.log("支付下发参数:", params);
     app.globalData.request.post('/api/jingpin/commitOrder', params).then(res => {
       console.log("支付信息:", res);
+      
     });
   },
 
@@ -107,19 +119,28 @@ Page({
      })
   },
   closeSelGoodsFn: function (e) {
-    var index = e.detail;
+    var index = (e == null) ? this.data.selectedDiscountIndex : e.detail;
     var discountsMsg = "";
-    if(index >= this.data.goodsData.skus.length) {
-      console.log("不使用优惠券");
-      discountsMsg = "不使用优惠券";
+    var couponPrice = "";
+    // 原本总的价格
+    var totalScore = this.data.goodsData.num * this.data.goodsData.rule.price;
+    var item = this.data.discountList[index];
+    if(item.name == "不使用优惠券") {
+      discountsMsg = "不使用优惠券";    
     } else {
-      var item = this.data.goodsData.skus[index];
-      console.log("使用优惠券:", item);
       discountsMsg = item.name  + ": " + item.price + "元"
+      couponPrice = "优惠:" + item.couponPrice;
+      totalScore = totalScore - item.couponPrice;
+      // 保留2位小数
+      totalScore = totalScore.toFixed(2);
     }
+    console.log("优惠券", item, totalScore, couponPrice);
     this.setData({
       isShowSelGoodsLayer: false,
-      discountsMsg: discountsMsg
+      discountsMsg: discountsMsg,
+      selectedDiscountIndex: index,
+      couponPrice: couponPrice,
+      totalScore: totalScore,
     })
   },
 

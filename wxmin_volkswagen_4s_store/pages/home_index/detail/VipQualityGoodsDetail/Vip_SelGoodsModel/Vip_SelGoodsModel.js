@@ -58,6 +58,7 @@ Component({
       if(goodsDetail.rule == null) {
          goodsDetail.rule = goodsDetail.skus[0];
       }
+      this.triggerEvent('theCloseFn');
       wx.setStorageSync("goodsDetail", goodsDetail);
       wx.navigateTo({
         url: '../../detail/VipQualityGoodsOrdering/VipQualityGoodsOrdering'
