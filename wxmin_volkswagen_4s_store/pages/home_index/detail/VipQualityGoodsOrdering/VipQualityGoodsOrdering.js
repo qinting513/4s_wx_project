@@ -98,7 +98,7 @@ Page({
     let params = {
       skuId: this.data.goodsData.rule.id,
       num: this.data.goodsData.num,
-      price: this.data.totalScore,
+      price: Number.parseFloat(this.data.totalScore),
     }
     if(this.data.discountList != null &&
       this.data.selectedDiscountIndex != -1 &&
@@ -109,8 +109,25 @@ Page({
     console.log("支付下发参数:", params);
     app.globalData.request.post('/api/jingpin/commitOrder', params).then(res => {
       console.log("支付信息:", res);
-      
+      this.wxPay(res.data)
     });
+  },
+
+  wxPay(param) {
+    console.log('wxpay param=', param)
+    wx.requestPayment({
+      timeStamp: param.timeStamp,
+      nonceStr: param.nonceStr,
+      package: param.package,
+      signType: param.signType,
+      paySign: param.paySign,
+      success(res) {
+        console.log('pay success res=', res)
+       },
+      fail(res) {
+        console.log('pay fail res=', res)
+       }
+    })
   },
 
   selDiscount(){
@@ -119,22 +136,23 @@ Page({
      })
   },
   closeSelGoodsFn: function (e) {
-    var index = (e == null) ? this.data.selectedDiscountIndex : e.detail;
+    console.log('closeSelGoodsFn e=', e)
+    var index = (e && e.detail !== null) ? e.detail : this.data.selectedDiscountIndex;
+    console.log('index=', index)
     var discountsMsg = "";
     var couponPrice = "";
     // 原本总的价格
     var totalScore = this.data.goodsData.num * this.data.goodsData.rule.price;
-    var item = this.data.discountList[index];
-    if(item.name == "不使用优惠券") {
+    if (index == -1 || index == this.data.discountList.length -1) {
       discountsMsg = "不使用优惠券";    
     } else {
+      var item = this.data.discountList[index];
       discountsMsg = item.name  + ": " + item.price + "元"
       couponPrice = "优惠:" + item.couponPrice;
       totalScore = totalScore - item.couponPrice;
       // 保留2位小数
       totalScore = totalScore.toFixed(2);
     }
-    console.log("优惠券", item, totalScore, couponPrice);
     this.setData({
       isShowSelGoodsLayer: false,
       discountsMsg: discountsMsg,

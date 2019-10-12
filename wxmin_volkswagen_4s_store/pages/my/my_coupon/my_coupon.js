@@ -30,17 +30,19 @@ Page({
   },
   myCouponList: function () {
     app.globalData.request.post('/api/user/couponList?status='+this.data.currentTab).then(res => {
-      var list = [];
-      for(let i = 0 ; i < 4; i++) {
-        let resObj = JSON.parse(JSON.stringify(res.data[0]));
-        resObj.type  = i;
-        if (i < 2) {
-          resObj.status = 1
-        }
-        list.push(resObj);
-      }
+      // var list = [];
+      // for(let i = 0 ; i < 4; i++) {
+      //   let resObj = JSON.parse(JSON.stringify(res.data[0]));
+      //   resObj.type  = i;
+      //   if (i == 0) {
+      //     resObj.status = 2
+      //   } else if (i == 1) {
+      //     resObj.status = 3
+      //   }
+      //   list.push(resObj);
+      // }
       this.setData({
-        myCouponList: list
+        myCouponList: res.data
       }, () => {
         console.log('this.goodListthis.goodList', this.data.myCouponList)
       })

@@ -27,7 +27,7 @@ Component({
     },
 
     closeFn: function(e) {
-      this.triggerEvent('theCloseFn', e);
+      this.triggerEvent('theCloseFn', null);
     },
 
     goGoodsOrderingFn: function() {

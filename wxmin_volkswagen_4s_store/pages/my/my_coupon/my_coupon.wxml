@@ -10,35 +10,30 @@
   </view>
   <view class="detail_box">
     <block wx:for="{{myCouponList}}" wx:key="{{item.id}}">
-      <view class="detail_ {{index==3 ? 'is_disable_use': ''}}" bindtap="goDetailFn" data-path="MYCOUPONDETAIL" data-id="{{item}}">
+      <view class="detail_ {{item.status!==1 ? 'is_disable_use': ''}}" bindtap="goDetailFn" data-path="MYCOUPONDETAIL" data-id="{{item}}">
         
-        <view class="left_ type0" wx:if="{{item.type==0}}">
+        <view class="left_ type3" wx:if="{{item.couponInfo.dtype==3}}">
           <view class="title_">
             <text class="unit_">￥</text>
-            <text class="num_">188</text>
+            <text class="num_">{{item.couponInfo.dvalue}}</text>
           </view>
           <view class="des_">四轮定位使用券</view>
         </view>
-        <view class="left_ type1" wx:elif="{{item.type==1}}">
+        <view class="left_ type2" wx:elif="{{item.couponInfo.dtype==2}}">
           <view class="title_">
-           <text class="num_">8</text>
+           <text class="num_">{{item.couponInfo.dvalue}}</text>
             <text class="unit_">折</text>
           </view>
           <view class="des_">四轮定位使用券</view>
         </view>
-        <view class="left_ type2" wx:elif="{{item.type==2}}">
-          <view class="title_">免费
-          </view>
-          <view class="des_">四轮定位使用券</view>
-        </view>
-         <view class="left_ type2" wx:else>
+        <view class="left_ type1" wx:elif="{{item.couponInfo.dtype==1}}">
           <view class="title_">免费
           </view>
           <view class="des_">四轮定位使用券</view>
         </view>
         <view class="right_">
-         <view class="label_ status_{{item.type}}">
-          <view class="name_">{{item.couponName}}据看来是上课的肌肤是的
+         <view class="label_ status_{{item.couponInfo.dtype}}">
+          <view class="name_">{{item.couponInfo.name}}
           </view>
            <botton class="used_btn {{item.status !== 1 ? 'used_coupon' : ''}}">{{statusMap[item.status]}}</botton>
            </view>
