@@ -116,16 +116,24 @@ Page({
   wxPay(param) {
     console.log('wxpay param=', param)
     wx.requestPayment({
+      appId: 'wx7adf1c37b367eda3',
       timeStamp: param.timeStamp,
       nonceStr: param.nonceStr,
       package: param.package,
       signType: param.signType,
       paySign: param.paySign,
       success(res) {
-        console.log('pay success res=', res)
+        console.log('pay success res=', res);
+        wx.showToast({
+          title: '下单成功!',
+        });
        },
       fail(res) {
-        console.log('pay fail res=', res)
+        console.log('pay fail res=', res);
+        wx.showToast({
+          icon: 'none',
+          title: '下单失败!',
+        });
        }
     })
   },
