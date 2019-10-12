@@ -36,3 +36,7 @@
 .integral_order_detail_body .goods_detail_body .total_box .detail_ .content_{
     color: #666666;
 }
+
+.goods_info_box {
+  flex: 1;
+}

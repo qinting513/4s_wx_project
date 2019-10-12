@@ -21,7 +21,7 @@
                     <view class="store_name">{{shopInfo.name}}</view>
                     <view class="car_number order_info_detail">{{item.skus[0].itemName}}等共{{item.tamount}}件商品</view>
                     <view class="time_ order_info_detail">时间：{{item.createTime}}</view>
-                    <view class="integral_num order_info_detail">积分{{item.tscore}}</view>
+                    <view class="integral_num order_info_detail">￥{{item.tmoney}}</view>
                 </view>
                 <view class="btn_box">
                     <view class="btn_ connext_" data-item="{{item}}" wx:if="{{!item.isComment&&item.status===4}}" bindtap="commentOrder">评价</view>

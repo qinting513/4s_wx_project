@@ -28,21 +28,28 @@ Page({
     this.setData({
       integralId: options.id,
       shopInfo: app.globalData.shopInfo
-    }, () => {
+    }, (err) => {
       this.getDetailInfo()
     })
+    console.log('shopInfo=', this.data.shopInfo)
   },
   getDetailInfo: async function() {
     let userInfo = await auth.getStorage('userInfo')
     app.globalData.request.post('/api/scoreItem/orderDetail?orderId='+this.data.integralId).then(res => {
+      console.log('res=', res)
       let tempData = res.data
+      if (tempData.tprice == null) {
+        tempData.tprice = 0
+      }
       tempData['realName'] = userInfo.data.realName
       tempData['phone'] = userInfo.data.phone
       this.setData({
         orderDetail: tempData
       }, () => {
-        console.log('this.goodListthis.goodList', this.data.orderDetail)
+        console.log('orderDetail=', this.data.orderDetail)
       })
+    }).catch(e => {
+      console.log
     })
   },
   closeEvaluate(){

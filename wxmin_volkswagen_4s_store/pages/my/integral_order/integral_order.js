@@ -152,6 +152,7 @@ Page({
       id = dataset.id;
       url  = util.formatPath(path) + '?id=' + id;
     }
+    console.log('id=', id)
     wx.navigateTo({
       url
     })

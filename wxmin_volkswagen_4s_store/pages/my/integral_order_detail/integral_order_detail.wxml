@@ -12,18 +12,22 @@
                     <view class="goods_info_box">
                         <view class="name_ text_hidden_ellipsis">{{item.itemName}}</view>
                         <view class="specifications_">规格：{{item.skuName}}</view>
-                        <view class="integral_">积分{{item.tscore}}</view>
+                        <view class="integral_">￥{{item.tmoney}}</view>
                     </view>
                     <view class="num_">X{{item.amount}}</view>
                 </view>
                 <view class="total_box">
                     <view class="detail_">
                         <view class="label_">商品总价</view>
-                        <view class="content_">积分{{orderDetail.tscore}}</view>
+                        <view class="content_">￥{{orderDetail.tmoney}}</view>
+                    </view>
+                     <view class="detail_">
+                        <view class="label_">商品优惠</view>
+                        <view class="content_">￥{{orderDetail.tmoney - orderDetail.tprice}}</view>
                     </view>
                     <view class="detail_">
                         <view class="label_">实付款</view>
-                        <view class="content_">¥{{orderDetail.tmoney}}</view>
+                        <view class="content_">￥{{orderDetail.tprice}}</view>
                     </view>
                 </view>
             </view>

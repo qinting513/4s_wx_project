@@ -11,7 +11,7 @@ Page({
     totalScore: 0,
     curAddressModel: null,
     score: '',
-    receiveType: 1,
+    receiveType: 2,
     userInfo: {
       realName: '',
       phone: ''
@@ -35,13 +35,6 @@ Page({
     wx.setNavigationBarTitle({
       title: '下单支付',
     });
-    auth.getStorage('defaultAddress').then(res => {
-      if (res && res.data) {
-        this.setData({
-          curAddressModel: res.data
-        })
-      }
-    })
     auth.getStorage('score').then(res => {
       if (res && res.data) { 
         this.setData({
@@ -83,14 +76,13 @@ Page({
           discountList: list
         });
       }
-     
     })
   },
   chooseAddress() {
     ///address/address_list/address_list
     // MYADDRESSLIST
     wx.navigateTo({
-      url: '../../address/address_list/address_list?flag=score'
+      url: '../../../address/address_list/address_list?flag=score'
     });
   },
  
@@ -116,25 +108,35 @@ Page({
   wxPay(param) {
     console.log('wxpay param=', param)
     wx.requestPayment({
-      appId: 'wx7adf1c37b367eda3',
       timeStamp: param.timeStamp,
       nonceStr: param.nonceStr,
       package: param.package,
       signType: param.signType,
       paySign: param.paySign,
-      success(res) {
-        console.log('pay success res=', res);
-        wx.showToast({
-          title: '下单成功!',
-        });
+      success: res => {
+        console.log('pay success res=', res)
+        this.showModal('支付成功')
        },
-      fail(res) {
-        console.log('pay fail res=', res);
-        wx.showToast({
-          icon: 'none',
-          title: '下单失败!',
-        });
+      fail: res => {
+        console.log('pay fail res=', res)
+        this.showModal('支付失败')
        }
+    })
+    
+  },
+
+  showModal(msg) {
+    wx.showModal({
+      title: '提示',
+      content: msg,
+      showCancel: false,
+      success: res => {
+        if (res.confirm && msg == '支付成功') {
+          wx.navigateBack();
+        } else if (res.cancel) {
+          // console.log('用户点击取消')
+        }
+      }
     })
   },
 
@@ -169,6 +171,23 @@ Page({
       totalScore: totalScore,
     })
   },
+
+  onShow() {
+    // 选择地址回来后 刷新UI
+    auth.getStorage('defaultAddress').then(res => {
+      console.log("address ", res);
+      if (res && res.data && res.data != '') {
+        this.setData({
+          curAddressModel: res.data
+        })
+      } else {
+        this.setData({
+          receiveType: 2,
+          curAddressModel: null
+        })
+      }
+    });
+  }
 
  
 })

@@ -10,8 +10,8 @@ request.interceptors.request.use((request) => {
     title: '数据加载中',
     icon: 'loading'
   })
-  // let value = wx.getStorageSync('token')
-  let value = 123456
+  let value = wx.getStorageSync('token')
+  // let value = 123456
   request.headers['token'] = value
   console.log(request.body)
   return request

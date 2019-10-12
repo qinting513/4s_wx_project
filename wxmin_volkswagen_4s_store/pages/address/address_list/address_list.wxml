@@ -21,11 +21,11 @@
                         默认地址
                     </view>
                     <view class="edit_address_box">
-                        <view class="edit_" bindtap="goOtherFn" data-path="ADDRESSUPDATE" data-info="{{item}}">
+                        <view class="edit_" catchtap="goOtherFn" data-path="ADDRESSUPDATE" data-info="{{item}}">
                             <image lazy-load="true"class="edit_img" src="{{ossImgAddre + 'edit_icon.png'}}" mode="widthFix" />
                             <text class="text_">编辑</text>
                         </view>
-                        <view class="del_" bindtap="deleteAddress" data-item="{{item}}">
+                        <view class="del_" catchtap="deleteAddress" data-item="{{item}}">
                             <image lazy-load="true"class="del_img_" src="{{ossImgAddre + 'delete_gray.png'}}" mode="widthFix" />
                             <text class="text_">删除</text>
                         </view>

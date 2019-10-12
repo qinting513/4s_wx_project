@@ -15,7 +15,7 @@
                 </view>
             </view>
         </view>
-        <view class="recive_address_box" wx-if="{{receiveType === 2}}">
+        <view class="recive_address_box" wx-if="{{receiveType === 2}}" bindtap="chooseAddress">
             <view class="left_" wx-if="{{!curAddressModel.name}}">
                 <view class="name_phone_box">
                     <view class="name_">
@@ -34,7 +34,7 @@
                 </view>
                 <view class="address_">{{curAddressModel.province}}{{curAddressModel.city}}{{curAddressModel.county}}{{curAddressModel.address}}</view>
             </view>
-            <view class="right_" bindtap="chooseAddress">
+            <view class="right_" >
                 <image lazy-load="true"src="{{ossImgAddre + 'next_black.png'}}" class="next_img_" mode="widthFix"/>
             </view>
         </view>
