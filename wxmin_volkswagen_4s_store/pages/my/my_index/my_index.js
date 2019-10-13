@@ -29,7 +29,7 @@ Page({
     // this.getMyInfo()
   },
   onShow: function () {
-   //auth.checkUserAuth()
+  //  auth.checkUserAuth()
    this.getMyInfo()
     console.log('app.globalData==>>', app.globalData)
     this.setData({

@@ -32,6 +32,10 @@
     padding-left: 10rpx;
     padding-right: 20rpx;
     padding-top: 20rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+   -webkit-line-clamp:2;
 }
 .detail_box_one_money {
    font-family:PingFang SC;

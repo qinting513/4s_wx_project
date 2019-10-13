@@ -17,7 +17,7 @@ Page({
       phone: ''
     },
     discountList: null,
-    discountsMsg: "",
+    discountsMsg: "不使用优惠券",
     selectedDiscountIndex: -1,
     couponPrice: "",
   },

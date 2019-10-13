@@ -21,6 +21,7 @@ Page({
   },
   onShow: function () {
     //checkUserAuth()
+    this.loadVipDataList();
   },
   getUserAndShopInfo(){
     app.globalData.request.post('/api/basic/getShopInfo').then(res => {
@@ -34,8 +35,8 @@ Page({
     //})
   },
   getInitData(){
-    // 1-轮播图，2-热门资讯，3-快速入口，4-宣传图,5-新款车栏位 6-积分商品轮播 7-会员精品
-    app.globalData.request.post('/api/banner/getModuleList?type=1,2,4,5,7').then(res => {
+    // 1-轮播图，2-热门资讯，3-快速入口，4-宣传图,5-新款车栏位 6-积分商品轮播
+    app.globalData.request.post('/api/banner/getModuleList?type=1,2,4,5').then(res => {
       if (res) {
         console.log('home Index res=========>>>', res);
         this.setData({
@@ -48,6 +49,19 @@ Page({
     }, error => {
       console.log('errr=========>>>', err)
     })
+  },
+  loadVipDataList() {
+    var that = this;
+    app.globalData.request.post('/api/jingpin/getJingpinItemList', { "isHomePage": 1 }).then(res => {
+      if (res && res.code == 200) {
+        console.log('会员精品 getJingpinItemList res=========>>>', res);
+        that.setData({
+          vipGoodsBannerList: res.data || []
+        });
+      }
+    }, error => {
+      console.log('errr=========>>>', err)
+    });
   },
   
   onHide: function () {

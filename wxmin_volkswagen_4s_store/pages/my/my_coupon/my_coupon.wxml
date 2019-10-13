@@ -17,19 +17,19 @@
             <text class="unit_">￥</text>
             <text class="num_">{{item.couponInfo.dvalue}}</text>
           </view>
-          <view class="des_">四轮定位使用券</view>
+          <view class="des_">{{item.couponInfo.name}}</view>
         </view>
         <view class="left_ type2" wx:elif="{{item.couponInfo.dtype==2}}">
           <view class="title_">
            <text class="num_">{{item.couponInfo.dvalue}}</text>
             <text class="unit_">折</text>
           </view>
-          <view class="des_">四轮定位使用券</view>
+          <view class="des_">{{item.couponInfo.name}}</view>
         </view>
         <view class="left_ type1" wx:elif="{{item.couponInfo.dtype==1}}">
           <view class="title_">免费
           </view>
-          <view class="des_">四轮定位使用券</view>
+          <view class="des_">{{item.couponInfo.name}}</view>
         </view>
         <view class="right_">
          <view class="label_ status_{{item.couponInfo.dtype}}">

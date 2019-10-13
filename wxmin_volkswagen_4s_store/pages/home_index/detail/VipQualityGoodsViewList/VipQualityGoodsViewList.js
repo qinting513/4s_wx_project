@@ -9,7 +9,7 @@ Page({
     currentTab: 0,
     tabList:[],
     phValue: "输入你想要找的商品",
-
+    getInput: null
   },
   onLoad: function (options) { 
     wx.setNavigationBarTitle({
@@ -22,8 +22,9 @@ Page({
     app.globalData.request.post('/api/category/getJinpinCatgory').then(res => {
       if (res && res.code == 200) {
         console.log('会员精品 列表res=========>>>', res.data);
+        var list = res.data || [];
         that.setData({
-           tabList: res.data
+           tabList: list
         });
         var firstItem = res.data[0];
         that.loadDataList(firstItem.id, 0)
@@ -82,7 +83,40 @@ Page({
     this.setData({
       phValue: "输入你想要找的商品"
     })
+  },
+  getInput: function (e) { 
+    this.data.getInput = e.detail.value;
+    console.log("input value:", this.data.getInput);
+  },
+  gotoSearch(){
+    if (this.data.getInput.length == 0) {
+      wx.showToast({
+        title: '请输入您想要找的商品',
+      })
+    }
+    console.log("gotoSearch value:", this.data.getInput);
+    var that = this;
+    var id = this.data.tabList[this.data.currentTab].id;
+    app.globalData.request.post('/api/jingpin/getJingpinItemList', { "catId": id, "isHomePage": 1, "name": this.data.getInput }).then(res => {
+      if (res && res.code == 200) {
+        console.log('search List =========>>>', res);
+        var tabList = that.data.tabList;
+        var item = tabList[that.data.currentTab] || {};
+        // 将这个tab对应的数据设置为dataList这个数组
+        if(res.data.length == 0) {
+          wx.showToast({
+            icon:'none',
+            title: '没有搜索到您想要找的商品',
+          })
+        }
+        item.dataList = res.data;
+        tabList[that.data.currentTab] = item;
+        that.setData({
+          tabList: tabList
+        });
+      }
+    }, error => {
+      console.log('errr=========>>>', err)
+    });
   }
-
-
 })

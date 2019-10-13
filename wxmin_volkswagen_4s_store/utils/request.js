@@ -27,8 +27,8 @@ request.interceptors.response.use(
                     getApp().globalData.isAuth = now;
                     promise.reject(response.data).then(function () {
                     }, function (error) {
-                            const auth1 = require('../utils/auth')
-                            auth1.checkUserAuth()
+                          const auth1 = require('../utils/auth')
+                          auth1.checkUserAuth()
                     })
             }else{
                     promise.reject(response.data);

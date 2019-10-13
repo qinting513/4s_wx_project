@@ -28,6 +28,10 @@
     padding-left: 10rpx;
     padding-right: 20rpx;
     padding-top: 20rpx;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
 }
 .detail_box_one_money {
    font-family:PingFang SC;
@@ -72,17 +76,27 @@
 .vip_tab_view {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   background: #fff;
+  overflow-x: auto;
+  box-sizing: border-box;
 }
+.justify-center {
+  justify-content: center;
+}
+.justify-start {
+  justify-content: start;
+}
+
 .vip_tab  {
   font-size:28rpx;
   font-family:PingFang SC;
   font-weight:800;
   color:rgba(38,38,38,1);
-  padding: 20rpx 0;
-
+  padding: 20rpx 10rpx;
+  text-align: center;
+  width: 160rpx;
+  flex-shrink: 0;
 }
 .active_vip_tab {
   color:rgba(86,123,255,1);
@@ -91,6 +105,7 @@
 
 .vip_seperator_line {
   width: 1rpx;
+  min-width: 1rpx;
   height: 30rpx;
   background: #BFBFBF;
   margin-right: 11rpx;

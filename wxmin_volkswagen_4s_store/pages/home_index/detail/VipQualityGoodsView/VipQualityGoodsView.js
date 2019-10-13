@@ -12,7 +12,7 @@ Component({
     ossImgAddre,
   },
   ready: function (options) {
-    this.loadDataList();
+   console.log("vip ready function");
   },
   methods: {
     goListFn: function(e){
@@ -29,19 +29,6 @@ Component({
         url: "./detail/VipQualityGoodsDetail/VipQualityGoodsDetail?id=" + item.id
       })
     },
-    loadDataList(id) {
-      var that = this;
-      app.globalData.request.post('/api/jingpin/getJingpinItemList', {"isHomePage": 1 }).then(res => {
-        if (res && res.code == 200) {
-          console.log('会员精品 getJingpinItemList res=========>>>', res);
-          
-          that.setData({
-            vipGoodsBannerList: res.data
-          });
-        }
-      }, error => {
-        console.log('errr=========>>>', err)
-      });
-    },
+   
   }
 })

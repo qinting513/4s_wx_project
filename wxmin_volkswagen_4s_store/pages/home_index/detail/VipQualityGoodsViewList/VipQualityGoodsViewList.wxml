@@ -1,17 +1,16 @@
 <view class="home_vip_goods_body">
     <view class="vip_search_bar">
-           <input class="vip_search_bar_input" placeholder='{{phValue}}' placeholder-class="search_placeholder_style" maxlength="20" bindfocus='onFocus' bindblur='onBlur'></input>
+           <input class="vip_search_bar_input" placeholder='{{phValue}}' placeholder-class="search_placeholder_style" maxlength="20" bindfocus='onFocus' bindblur='onBlur' bindinput="getInput" confirm-type="search" bindconfirm="gotoSearch"></input> 
            <icon class="vip_search_icon" type="search" size="13" color="#82817F"/>
     </view>
 
-    <view class="vip_tab_view">
+    <view class="vip_tab_view {{(tabList.length <= 4) ? 'justify-center' : 'justify-start'}}" >
          <block wx:for="{{tabList}}" wx:key="{{index}}">
-            <view class="vip_tab {{currentTab === index ? 'active_vip_tab': ''}}" 
+            <view class="vip_tab  {{currentTab === index ? 'active_vip_tab': ''}} " 
             bindtap="changeTabFn" data-index="{{index}}">
             {{item.name}} 
             <view wx:if="{{currentTab === index}}" class="vip_seperator_bottom_line"></view>
             </view>
-            <view wx:if="{{index != 3}}" class="vip_seperator_line"></view>
          </block>
     </view>
 

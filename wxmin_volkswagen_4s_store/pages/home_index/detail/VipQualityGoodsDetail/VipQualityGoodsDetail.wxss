@@ -21,6 +21,10 @@
     font-weight:bold;
     color:rgba(51,51,51,1);
     margin-bottom: 36rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
 }
 .goods_detail_body .goods_info_box .info_box .money_box{
     display: flex;
