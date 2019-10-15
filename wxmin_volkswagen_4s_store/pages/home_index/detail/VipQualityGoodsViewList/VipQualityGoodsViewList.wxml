@@ -15,7 +15,7 @@
     </view>
 
     <view class="detail_box">
-        <view class="detail_box_one_item" wx:for="{{tabList[currentTab].dataList}}" wx:key="{{index}}">
+        <view class="detail_box_one_item" wx:for="{{goodList}}" wx:key="{{index}}">
             <image lazy-load="true" bindtap="goDetailFn" data-item="{{item}}" class="detail_box_one_img" src="{{item.pics}}" mode="aspectFill"/>
            <view class="detail_box_one_title">{{item.name}}</view>
            <view class="detail_box_one_money">

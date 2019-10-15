@@ -50,6 +50,7 @@ Page({
   },
   changeTabFn: function(e) {
     const item = e.currentTarget.dataset.item;
+    console.log("item id:", item.id);
     this.setData({
       currentTab: item.id
     }, () => {

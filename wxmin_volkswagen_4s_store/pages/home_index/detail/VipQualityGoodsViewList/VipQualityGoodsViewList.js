@@ -5,9 +5,9 @@ Page({
   data: {
     ossImgAddre,
     isAuthorModel: false,
-    goodList: [],
+    goodList: [], //要显示的数据
     currentTab: 0,
-    tabList:[],
+    tabList:[], //所有的数据
     phValue: "输入你想要找的商品",
     getInput: null
   },
@@ -45,7 +45,8 @@ Page({
         item.dataList  = res.data;
         tabList[index] = item;
         that.setData({
-          tabList: tabList
+          tabList: tabList,
+          goodList: item.dataList,
         });
       }
     }, error => {
@@ -80,13 +81,20 @@ Page({
     })
   },
   onBlur: function (e) {
+    console.log("失去焦点", e.detail.value);
     this.setData({
       phValue: "输入你想要找的商品"
-    })
+    });
   },
   getInput: function (e) { 
     this.data.getInput = e.detail.value;
     console.log("input value:", this.data.getInput);
+    if (this.data.getInput.length == 0) {
+      var list = this.data.tabList[this.data.currentTab].dataList;
+      this.setData({
+        goodList: list
+      });
+    }
   },
   gotoSearch(){
     if (this.data.getInput.length == 0) {
@@ -97,22 +105,17 @@ Page({
     console.log("gotoSearch value:", this.data.getInput);
     var that = this;
     var id = this.data.tabList[this.data.currentTab].id;
-    app.globalData.request.post('/api/jingpin/getJingpinItemList', { "catId": id, "isHomePage": 1, "name": this.data.getInput }).then(res => {
+    app.globalData.request.post('/api/jingpin/getJingpinItemList', { "isHomePage": 1, "name": this.data.getInput }).then(res => {
       if (res && res.code == 200) {
         console.log('search List =========>>>', res);
-        var tabList = that.data.tabList;
-        var item = tabList[that.data.currentTab] || {};
-        // 将这个tab对应的数据设置为dataList这个数组
         if(res.data.length == 0) {
           wx.showToast({
             icon:'none',
             title: '没有搜索到您想要找的商品',
           })
-        }
-        item.dataList = res.data;
-        tabList[that.data.currentTab] = item;
+        }        
         that.setData({
-          tabList: tabList
+          goodList: res.data
         });
       }
     }, error => {
